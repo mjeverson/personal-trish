@@ -1,3 +1,15 @@
 body {
-	
+	background: url('/_Global/images/bg-space.jpg');
+}
+
+.fwc {
+	text-align:center;
+	width:100%;
+}
+
+.title{
+	text-transform:uppercase;
+	color:yellow;
+	text-align:center;
+	font-size:82px;
 }
