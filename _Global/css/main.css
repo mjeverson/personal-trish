@@ -1,15 +1,62 @@
 body {
-	background: url('/_Global/images/bg/bg-space.jpg');
+    margin:0px;
+    background-color: rgb(0,0,0);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.fwc {
-	text-align:center;
-	width:100%;
+.outer-wrapper{
+    margin-top:10px;
+    padding: 0px 55px 55px 55px;
+    background-color: rgb(247, 247, 247);
 }
 
-.title{
-	text-transform:uppercase;
-	color:yellow;
-	text-align:center;
-	font-size:82px;
+.inner-wrapper{
+    text-align:center;
 }
+
+.smile-bg{
+    background: url('/_Global/images/bg/bg.png') no-repeat center;
+    background-size:cover;
+}
+
+.header {
+    padding-top:10px;
+    height:105px;
+}
+
+.header span {
+    font-size: 40px;
+    font-family: "Helvetica Neue";
+    color: rgb( 0, 0, 0 );
+    font-weight: bold;
+    line-height: 0.707;
+    letter-spacing: -2;
+    text-align: left;
+}
+
+.header div {
+    display:inline-block;
+}
+
+.nav-wrapper{
+    position:absolute;
+    right:55px;
+}
+
+/* on hover */
+.header span.nav:hover {
+    color: rgb( 111, 110, 110 );
+}
+
+.underline-home_hover {
+    background-color: rgb(111, 110, 110);
+    position: absolute;
+    left: 502px;
+    top: 95px;
+    width: 80px;
+    height: 11px;
+    z-index: 247;
+}
+
+
+/* Responsive */
