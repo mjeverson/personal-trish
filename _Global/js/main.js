@@ -7,6 +7,12 @@ $(document).ready(function(){
     $('.title-container .trish').removeClass('hover');
   });
 
+  // click events for the parallax sections
+  $('.parallax > div').bind('click', function(event, element){
+    var link = $(event.target).attr('data-href');
+    window.open(link, '_blank', '');
+  });
+
   //save selectors as variables to increase performance
   var $window = $(window);
   var $innerWrapperBG = $('.inner-wrapper');

@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 /*@font-face {
     font-family: 'Helvetica Neue';
     src:url('/_Global/fonts/Helvetica Neue/Helvetica Neue');format('embedded-opentype'),
@@ -51,7 +50,7 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 
 /* Main content */
  .inner-wrapper{
-     background: url('/_Global/images/bg/bg.png') scroll;
+     background: url('/_Global/images/bg/bg.png') no-repeat scroll;
      background-size: 100% auto;
      margin-top:115px;
  }
@@ -75,27 +74,39 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
  }
 
 /* parallax */
- #dodge{
-     background:url('/_Global/images/bg/DODGE.png') 50% 0 no-repeat fixed;
-     color: white;
-     height: 1300px;
-     margin: 0 auto;
-     padding: 160px 0 0 0;
- }
+section.parallax > div {
+    color: white;
+    height: 1300px;
+    margin: 0 auto;
+    padding: 160px 0 0 0;
+    cursor: pointer;
+}
 
- #ride-planner{
-     background: url('/_Global/images/bg/RIDE PLANNER.png') 50% 0 no-repeat fixed;
-     color: white;
-     height: 1300px;
-     margin: 0 auto;
-     overflow: hidden;
-     padding: 0;
- }
+#dodge{
+ background:url('/_Global/images/bg/DODGE.png') 50% 0 no-repeat fixed;
 
- #rushmore{
-     background: url('/_Global/images/bg/RUSHMORE.png') 50% 0 no-repeat fixed;
-     margin: 0;
-     color: white;
-     padding: 160px 0 0 0;
-     height: 1300px;
- }
+}
+
+#ride-planner{
+ background: url('/_Global/images/bg/RIDE PLANNER.png') 50% 0 no-repeat fixed;
+}
+
+#rushmore{
+ background: url('/_Global/images/bg/RUSHMORE.png') 50% 0 no-repeat fixed;
+}
+
+.story{
+    margin: 0 auto;
+    min-width: 980px;
+    width: 980px;
+}
+
+.story .float-left, .story .float-right{
+    padding: 100px 0 0 0;
+    position: relative;
+    width: 350px;
+}
+
+.story h2, .story p {
+    cursor:text;
+}

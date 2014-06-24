@@ -1,16 +1,18 @@
 <!doctype html>
 
 <!--todo:
+base
+  header spacing
+  content
+  header links & scroll
+  scroll auto-update header
 
-header spacing
-content
-header links & scroll
-scroll auto-update header
+  parallax gap between 2 and 3
+  double check fonts
+  double check spacing in header
 
-parallax gap between 2 and 3
-double check fonts
-double check spacing in header
 responsive
+  background image height
 
 -->
 
@@ -50,15 +52,15 @@ responsive
 
       </div>
       <div class="nav-container">
-        <div class="nav">
+        <div id="#about" class="nav">
           <span>about</span>
         </div>
         <span class="slash">/</span>
-        <div class="nav">
+        <div id="#work" class="nav">
           <span>work</span>
         </div>
         <span class="slash">/</span>
-        <div class="nav">
+        <div id="#contact" class="nav">
           <span>contact</span>
         </div>
       </div>
@@ -71,17 +73,22 @@ responsive
 
         </section>
 
-        <section id="parallax">
-          <div id="dodge">
+        <section id="bar">
+
+        </section>
+
+        <section id="about" class="parallax">
+          <div id="dodge" data-href="http://www.google.ca">
             <div class="story">
               <div class="float-left">
                 <h2>(Almost) Static Background</h2>
                 <p>This section has a background that moves slightly slower than the user scrolls. This is achieved by changing the top position of the background for every pixel the page is scrolled.</p>
               </div>
-            </div> <!--.story-->
-          </div> <!--#intro-->
+            </div>
+            <!--.story-->
+          </div>
 
-          <div id="ride-planner">
+          <div id="ride-planner" data-href="http://www.google.ca">
             <div class="story">
               <div class="float-left">
                 <h2>(Almost) Static Background</h2>
@@ -90,7 +97,7 @@ responsive
             </div> <!--.story-->
           </div>
 
-          <div id="rushmore">
+          <div id="rushmore" data-href="http://www.google.ca">
             <div class="story">
               <div class="float-left">
                 <h2>(Almost) Static Background</h2>
@@ -103,10 +110,12 @@ responsive
         <section id="outro">
 
         </section>
+
+        <section id="contact">
+
+        </section>
       </div>
-      <div class="footer">
-        &nbsp;
-      </div>
+      <div class="footer"></div>
     </div>
 </body>
 </html>
