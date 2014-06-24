@@ -117,6 +117,12 @@ section.parallax > div {
 
 
 /* Flip transform */
+section#contact > div {
+    height:250px;
+    width:300px;
+    display:inline;
+}
+
 .flipper-container {
     margin-top: 40px;
     -moz-perspective: 1000;
@@ -127,8 +133,6 @@ section.parallax > div {
 .flipper {
     display: inline-block;
     position: relative;
-    width: 11em;
-    height: 4.5em;
     -moz-transition: all 0.6s cubic-bezier(0.37, 0.74, 0.15, 1.65);
     -o-transition: all 0.6s cubic-bezier(0.37, 0.74, 0.15, 1.65);
     -webkit-transition: all 0.6s cubic-bezier(0.37, 0.74, 0.15, 1.65);
@@ -147,16 +151,12 @@ section.parallax > div {
     padding-right: 70px;
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
-    border-radius: 2px;
     -moz-backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
 
 .front-face {
-    background-color: #fc2161;
-    color: #fff;
-    text-shadow: 0 1px 1px #b50236;
     -moz-transform: rotateX(0deg) translateZ(2.25em);
     -ms-transform: rotateX(0deg) translateZ(2.25em);
     -webkit-transform: rotateX(0deg) translateZ(2.25em);
@@ -164,10 +164,17 @@ section.parallax > div {
 }
 
 .back-face {
-    background-color: #77bd42;
-    color: #53842e;
     -moz-transform: rotateX(-90deg) translateZ(2.25em);
     -ms-transform: rotateX(-90deg) translateZ(2.25em);
     -webkit-transform: rotateX(-90deg) translateZ(2.25em);
     transform: rotateX(-90deg) translateZ(2.25em);
 }
+
+.twitter-wrapper.front-face {background:url('/_Global/images/icons/twitter-resting.png') no-repeat center;}
+.twitter-wrapper.back-face {background:url('/_Global/images/icons/twitter-hover.png') no-repeat center;}
+.behance-wrapper.front-face {background:url('/_Global/images/icons/behance-default.png') no-repeat center;}
+.behance-wrapper.back-face {background:url('/_Global/images/icons/behance-hover.png') no-repeat center;}
+.linkedin-wrapper.front-face {background:url('/_Global/images/icons/linkedin-resting.png') no-repeat center;}
+.linkedin-wrapper.back-face {background:url('/_Global/images/icons/linkedin-hover.png') no-repeat center;}
+.email-wrapper.front-face {background:url('/_Global/images/icons/email-resting.png') no-repeat center;}
+.email-wrapper.back-face {background:url('/_Global/images/icons/email-hover.png') no-repeat center;}
