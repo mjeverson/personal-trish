@@ -1,15 +1,18 @@
 <!doctype html>
 
 <!--todo:
+base
+  header spacing
+  content
+  header links & scroll
+  scroll auto-update header
+  parallax gap between 2 and 3
+  double check fonts
+  double check spacing in header
+  clean up JS
 
-hover whole title should activate trish highlight
-
-fix border overflow for inner wrapper
-double check fonts
-double check spacing in header
 responsive
-
-
+  background image height
 
 -->
 
@@ -20,49 +23,132 @@ responsive
   
   <title>himynameistrish</title>
 
+  <link rel="stylesheet" href="/_Global/css/normalize.css">
   <link rel="stylesheet" href="/_Global/css/main.css">
 
   <script src="/_Global/js/framework/jquery-1.11.1.min.js"></script>
   <script src="/_Global/js/framework/jquery-ui-1.10.4.min.js"></script>
+  <script type="text/javascript" src="/_Global/js/framework/nbw-parallax.js"></script>
+  <script type="text/javascript" src="/_Global/js/framework/jquery.localscroll-1.2.7-min.js"></script>
+  <script type="text/javascript" src="/_Global/js/framework/jquery.scrollTo-1.4.2-min.js"></script>
+  <script type="text/javascript" src="/_Global/js/framework/jquery.inview.js"></script>
+
   <script src="/_Global/js/main.js"></script>
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body>
+    <!-- todo: should be a fixed frame around the page regardless of where you scroll -->
+    <div class="header">
+      <div class="header-stripe"></div>
+      <div class="title-container">
+        <div class="himynameis">
+          <span>himynameis</span>
+        </div>
+        <div class="trish nav">
+          <span>trish</span>
+        </div>
+
+      </div>
+      <div class="nav-container">
+        <div id="#about" class="nav">
+          <span>about</span>
+        </div>
+        <span class="slash">/</span>
+        <div id="#work" class="nav">
+          <span>work</span>
+        </div>
+        <span class="slash">/</span>
+        <div id="#contact" class="nav">
+          <span>contact</span>
+        </div>
+      </div>
+    </div>
+
     <div class="outer-wrapper">
-        <div class="header">
-            <div class="title-container">
-                <div>
-                    <span>himynameis</span>
-                </div>
-                <div class="nav">
-                    <span>trish</span>
-                </div>
+      <div class="inner-wrapper">
 
-            </div>
-            <div class="nav-container">
-                <div class="nav">
-                    <span>about</span>
-                </div>
-                <span class="slash">/</span>
-                <div class="nav">
-                    <span>work</span>
-                </div>
-                <span class="slash">/</span>
-                <div class="nav">
-                    <span>contact</span>
-                </div>
-            </div>
-        </div>
-        <div class="inner-wrapper">
-          <!--<div class="fwc">
+        <section id="intro">
 
+        </section>
+
+        <section id="bar">
+
+        </section>
+
+        <section id="about" class="parallax">
+          <div id="dodge" data-href="http://www.google.ca">
+            <div class="story">
+              <div class="float-left">
+                <h2>(Almost) Static Background</h2>
+                <p>This section has a background that moves slightly slower than the user scrolls. This is achieved by changing the top position of the background for every pixel the page is scrolled.</p>
+              </div>
+            </div>
           </div>
-          <div class="parallax-wrapper">
-            &nbsp;
-          </div>-->
-        </div>
+
+          <div id="ride-planner" data-href="http://www.google.ca">
+            <div class="story">
+              <div class="float-left">
+                <h2>(Almost) Static Background</h2>
+                <p>This section has a background that moves slightly slower than the user scrolls. This is achieved by changing the top position of the background for every pixel the page is scrolled.</p>
+              </div>
+            </div>
+          </div>
+
+          <div id="rushmore" data-href="http://www.google.ca">
+            <div class="story">
+              <div class="float-left">
+                <h2>(Almost) Static Background</h2>
+                <p>This section has a background that moves slightly slower than the user scrolls. This is achieved by changing the top position of the background for every pixel the page is scrolled.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="outro">
+
+        </section>
+
+        <section id="contact">
+          <div class="twitter-wrapper">
+            <a href="#id" target="_blank" class="flipper-container">
+              <div class="flipper">
+                <div class="front-face"></div>
+                <div class="back-face"></div>
+              </div>
+            </a>
+          </div>
+
+          <div class="behance-wrapper">
+            <a href="#id" target="_blank" class="flipper-container">
+              <div class="flipper">
+                <div class="front-face"></div>
+                <div class="back-face"></div>
+              </div>
+            </a>
+          </div>
+
+          <div class="linkedin-wrapper">
+            <a href="#id" target="_blank" class="flipper-container">
+              <div class="flipper">
+                <div class="front-face"></div>
+                <div class="back-face"></div>
+              </div>
+            </a>
+          </div>
+
+          <div class="email-wrapper">
+            <a href="#id" target="_blank" class="flipper-container">
+              <div class="flipper">
+                <div class="front-face"></div>
+                <div class="back-face"></div>
+              </div>
+            </a>
+          </div>
+        </section>
+      </div>
+      <div class="footer"></div>
     </div>
 </body>
 </html>
