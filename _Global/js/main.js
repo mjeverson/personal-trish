@@ -54,13 +54,13 @@ $(document).ready(function(){
     //if the second section is in view...
     if($secondBG.hasClass("inview")){
       //call the newPos function and change the background position
-      $secondBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 900, 0.3)});
+      $secondBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 1900, 0.1)});
     }
 
     //if the third section is in view...
     if($thirdBG.hasClass("inview")){
       //call the newPos function and change the background position
-      $thirdBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 900, 0.3)});
+      $thirdBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 2850, 0.1)});
     }
   }
 

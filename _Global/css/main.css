@@ -77,37 +77,25 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 /* parallax */
  #dodge{
      background:url('/_Global/images/bg/DODGE.png') 50% 0 no-repeat fixed;
-     margin: 0;
-     padding: 160px 0 0 0;
+     color: white;
      height: 1300px;
+     margin: 0 auto;
+     padding: 160px 0 0 0;
  }
 
  #ride-planner{
      background: url('/_Global/images/bg/RIDE PLANNER.png') 50% 0 no-repeat fixed;
      color: white;
      height: 1300px;
-     padding: 100px 0 0 0;
+     margin: 0 auto;
+     overflow: hidden;
+     padding: 0;
  }
 
  #rushmore{
      background: url('/_Global/images/bg/RUSHMORE.png') 50% 0 no-repeat fixed;
-     background-position: 50% 0;
-     background-color: #036;
-     background-attachment: fixed;
-     background-repeat: repeat, repeat, repeat ,no-repeat;
+     margin: 0;
      color: white;
+     padding: 160px 0 0 0;
      height: 1300px;
-     padding: 100px 0 0 0;
- }
-
- .story{
-     margin: 0 auto;
-     min-width: 980px;
-     width: 980px;
- }
-
- .story .float-left, .story .float-right{
-     padding: 100px 0 0 0;
-     position: relative;
-     width: 350px;
  }
