@@ -118,7 +118,6 @@ section.parallax > div {
 
 /* Flip transform */
 .flipper-container {
-    text-align: center;
     margin-top: 40px;
     -moz-perspective: 1000;
     -webkit-perspective: 1000;
@@ -128,10 +127,6 @@ section.parallax > div {
 .flipper {
     display: inline-block;
     position: relative;
-    text-decoration: none;
-    font-family: 'Montserrat', arial, sans-serif;
-    font-weight: 400;
-    text-transform: uppercase;
     width: 11em;
     height: 4.5em;
     -moz-transition: all 0.6s cubic-bezier(0.37, 0.74, 0.15, 1.65);
@@ -150,8 +145,6 @@ section.parallax > div {
     top: 0;
     left: 0;
     padding-right: 70px;
-    letter-spacing: 2px;
-    line-height: 4.5em;
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
     border-radius: 2px;

@@ -20,11 +20,12 @@ $(document).ready(function(){
       '-webkit-transform': 'rotateX(90deg)',
       'transform': 'rotateX(90deg)'
     });
-  },function(){
+  },
+  function(){
     $(this).css({
       '-moz-transform': 'rotateX(0deg)',
       '-webkit-transform': 'rotateX(0deg)',
-      'transform': 'rotateX(0deg)'
+      'transform': 'rotateX(deg)'
     });
   });
 
