@@ -13,6 +13,21 @@ $(document).ready(function(){
     window.open(link, '_blank', '');
   });
 
+  // Hover block rotate transforms
+  $('.flipper').hover(function(){
+    $(this).css({
+      '-moz-transform': 'rotateX(90deg)',
+      '-webkit-transform': 'rotateX(90deg)',
+      'transform': 'rotateX(90deg)'
+    });
+  },function(){
+    $(this).css({
+      '-moz-transform': 'rotateX(0deg)',
+      '-webkit-transform': 'rotateX(0deg)',
+      'transform': 'rotateX(0deg)'
+    });
+  });
+
   //save selectors as variables to increase performance
   var $window = $(window);
   var $innerWrapperBG = $('.inner-wrapper');
