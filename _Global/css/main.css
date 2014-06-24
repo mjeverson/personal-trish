@@ -1,4 +1,13 @@
-body {
+/* Global styles */
+@font-face {
+    font-family: 'Helvetica Neue';
+    src:url('/_Global/fonts/Helvetica Neue/Helvetica Neue');format('embedded-opentype'),
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    height:100%;
     margin:0px;
     background-color: rgb(0,0,0);
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -8,54 +17,42 @@ body {
     margin-top:10px;
     padding: 0px 55px 55px 55px;
     background-color: rgb(247, 247, 247);
+    height:100%;
 }
 
-.inner-wrapper{
-    text-align:center;
-}
 
-.smile-bg{
-    background: url('/_Global/images/bg/bg.png') no-repeat center;
-    background-size:cover;
-}
-
-.header {
-    padding-top:10px;
-    height:105px;
-}
+/* Header styles */
+.header { padding:32px 105px 0 105px; }
 
 .header span {
     font-size: 40px;
-    font-family: "Helvetica Neue";
     color: rgb( 0, 0, 0 );
     font-weight: bold;
-    line-height: 0.707;
     letter-spacing: -2;
     text-align: left;
 }
 
-.header div {
-    display:inline-block;
-}
+.header div { display:inline-block; }
+.header > div {height:100%;}
 
-.nav-wrapper{
-    position:absolute;
-    right:55px;
-}
+.title-container .nav { margin-left:-5px; }
+.title-container span {cursor:pointer;}
 
-/* on hover */
-.header span.nav:hover {
-    color: rgb( 111, 110, 110 );
-}
+.nav-container{float:right;}
+.nav-container span.slash {font-weight:normal;padding:0 50px 0 50px;}
 
-.underline-home_hover {
-    background-color: rgb(111, 110, 110);
-    position: absolute;
-    left: 502px;
-    top: 95px;
-    width: 80px;
-    height: 11px;
-    z-index: 247;
+.nav { height:64px; border-bottom:11px solid transparent;}
+.nav:hover{ border-bottom: 11px solid rgb( 111, 110, 110 ); cursor:pointer; }
+.nav:hover > span { color: rgb( 111, 110, 110 ); }
+
+
+
+/* Main content */
+.inner-wrapper{
+    height:100%;
+    text-align:center;
+    background: url('/_Global/images/bg/bg.png') no-repeat center top;
+    background-size:cover;
 }
 
 
