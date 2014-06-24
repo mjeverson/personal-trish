@@ -51,8 +51,7 @@ html, body {
 .inner-wrapper{
     height:100%;
     text-align:center;
-    background: url('/_Global/images/bg/bg.png') no-repeat center top;
-    background-size:cover;
+    background: url('/_Global/images/bg/bg.png') no-repeat center top fixed;
 }
 
 
