@@ -1,58 +1,113 @@
-/* Global styles */
-@font-face {
+ /*Global styles */
+ @charset "utf-8";
+/*@font-face {
     font-family: 'Helvetica Neue';
     src:url('/_Global/fonts/Helvetica Neue/Helvetica Neue');format('embedded-opentype'),
     font-weight: normal;
     font-style: normal;
-}
+}*/
 
 html, body {
-    height:100%;
-    margin:0px;
     background-color: rgb(0,0,0);
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .outer-wrapper{
-    margin-top:10px;
-    padding: 0px 55px 55px 55px;
     background-color: rgb(247, 247, 247);
     height:100%;
+    padding: 0px 55px 0px 55px;
 }
 
-
 /* Header styles */
-.header { padding:32px 105px 0 105px; }
+.header {
+    background-color: rgb(247, 247, 247);
+    position:fixed;
+    top:0px;
+    width:100%;
+    z-index:1000;
+}
 
 .header span {
     font-size: 40px;
     color: rgb( 0, 0, 0 );
     font-weight: bold;
-    letter-spacing: -2;
+    letter-spacing: -2px;
     text-align: left;
 }
 
 .header div { display:inline-block; }
 .header > div {height:100%;}
 
+ .header > div.header-stripe {
+    height:10px;
+    display:block;
+    width:100%;
+    background-color:rgb(0,0,0);
+}
+
+.title-container {margin:32px 0 0 55px;}
 .title-container .nav { margin-left:-5px; }
 .title-container span {cursor:pointer;}
 
-.nav-container{float:right;}
+.nav-container{position:absolute; top: 42px; right:55px;}
 .nav-container span.slash {font-weight:normal;padding:0 50px 0 50px;}
 
 .nav { height:64px; border-bottom:11px solid transparent;}
 .nav:hover{ border-bottom: 11px solid rgb( 111, 110, 110 ); cursor:pointer; }
 .nav:hover > span { color: rgb( 111, 110, 110 ); }
 
-
-
-/* Main content */
-.inner-wrapper{
-    height:100%;
-    text-align:center;
-    background: url('/_Global/images/bg/bg.png') no-repeat center top fixed;
+/* footer styles */
+.footer {
+    background-color: rgb(247, 247, 247);
+    position:fixed;
+    bottom:0px;
+    z-index:1000;
+    height:55px;
+    width:100%;
 }
 
+/* Main content */
+ .inner-wrapper{
+     background: url('/_Global/images/bg/bg.png') fixed;
+     background-size:cover;
+ }
 
-/* Responsive */
+
+/* parallax */
+
+ #dodge{
+     background:url('/_Global/images/bg/DODGE.png') 50% 0 no-repeat fixed;
+     margin: 0;
+     padding: 160px 0 0 0;
+     height: 1300px;
+ }
+
+ #ride-planner{
+     background: url('/_Global/images/bg/RIDE PLANNER.png') 50% 0 no-repeat fixed;
+     color: white;
+     height: 1300px;
+     padding: 100px 0 0 0;
+ }
+
+ #rushmore{
+     background: url('/_Global/images/bg/RUSHMORE.png');
+     background-position: 50% 0;
+     background-color: #036;
+     background-attachment: fixed;
+     background-repeat: repeat, repeat, repeat ,no-repeat;
+     color: white;
+     height: 1300px;
+     padding: 100px 0 0 0;
+ }
+
+ .story{
+     margin: 0 auto;
+     min-width: 980px;
+     width: 980px;
+ }
+
+ .story .float-left, .story .float-right{
+     padding: 100px 0 0 0;
+     position: relative;
+     width: 350px;
+ }
