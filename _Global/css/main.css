@@ -46,8 +46,8 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 .nav-container span.slash {font-weight:normal;padding:0 50px 0 50px;}
 
 .nav { height:64px; border-bottom:11px solid transparent;}
-.nav:hover{ border-bottom: 11px solid rgb( 111, 110, 110 ); cursor:pointer; }
-.nav:hover > span { color: rgb( 111, 110, 110 ); }
+.nav:hover, .nav.hover{ border-bottom: 11px solid rgb( 111, 110, 110 ); cursor:pointer; }
+.nav:hover > span, .nav.hover > span { color: rgb( 111, 110, 110 ); }
 
 /* Main content */
  .inner-wrapper{
@@ -90,7 +90,7 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
  }
 
  #rushmore{
-     background: url('/_Global/images/bg/RUSHMORE.png');
+     background: url('/_Global/images/bg/RUSHMORE.png') 50% 0 no-repeat fixed;
      background-position: 50% 0;
      background-color: #036;
      background-attachment: fixed;

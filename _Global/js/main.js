@@ -1,5 +1,12 @@
 $(document).ready(function(){
 
+  // Hover for himynameistrish
+  $('.title-container .himynameis').hover(function(){
+    $('.title-container .trish').addClass('hover');
+  }, function(){
+    $('.title-container .trish').removeClass('hover');
+  });
+
   //save selectors as variables to increase performance
   var $window = $(window);
   var $innerWrapperBG = $('.inner-wrapper');
@@ -47,13 +54,13 @@ $(document).ready(function(){
     //if the second section is in view...
     if($secondBG.hasClass("inview")){
       //call the newPos function and change the background position
-      $secondBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 1250, 0.3)});
+      $secondBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 900, 0.3)});
     }
 
     //if the third section is in view...
     if($thirdBG.hasClass("inview")){
       //call the newPos function and change the background position
-      $thirdBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 2850, 0.3)});
+      $thirdBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 900, 0.3)});
     }
   }
 
