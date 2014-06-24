@@ -1,5 +1,5 @@
- /*Global styles */
- @charset "utf-8";
+@charset "utf-8";
+
 /*@font-face {
     font-family: 'Helvetica Neue';
     src:url('/_Global/fonts/Helvetica Neue/Helvetica Neue');format('embedded-opentype'),
@@ -7,22 +7,21 @@
     font-style: normal;
 }*/
 
-html, body {
-    background-color: rgb(0,0,0);
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
+/* Global styles */
+
+html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .outer-wrapper{
     background-color: rgb(247, 247, 247);
     height:100%;
-    padding: 0px 55px 0px 55px;
+    padding: 0 55px 0 55px;
 }
 
 /* Header styles */
 .header {
     background-color: rgb(247, 247, 247);
     position:fixed;
-    top:0px;
+    top:0;
     width:100%;
     z-index:1000;
 }
@@ -37,13 +36,7 @@ html, body {
 
 .header div { display:inline-block; }
 .header > div {height:100%;}
-
- .header > div.header-stripe {
-    height:10px;
-    display:block;
-    width:100%;
-    background-color:rgb(0,0,0);
-}
+.header > div.header-stripe { height:10px; display:block; width:100%; background-color:rgb(0,0,0); }
 
 .title-container {margin:32px 0 0 55px;}
 .title-container .nav { margin-left:-5px; }
@@ -56,25 +49,32 @@ html, body {
 .nav:hover{ border-bottom: 11px solid rgb( 111, 110, 110 ); cursor:pointer; }
 .nav:hover > span { color: rgb( 111, 110, 110 ); }
 
-/* footer styles */
-.footer {
-    background-color: rgb(247, 247, 247);
-    position:fixed;
-    bottom:0px;
-    z-index:1000;
-    height:55px;
-    width:100%;
-}
-
 /* Main content */
  .inner-wrapper{
-     background: url('/_Global/images/bg/bg.png') fixed;
-     background-size:cover;
+     background: url('/_Global/images/bg/bg.png') scroll;
+     background-size: 100% auto;
+     margin-top:115px;
  }
 
+ #intro {
+     height:1000px;
+ }
+
+ #outro {
+     height:1000px;
+ }
+
+ /* footer styles */
+ .footer {
+     background-color: rgb(247, 247, 247);
+     position:fixed;
+     bottom:0;
+     z-index:1000;
+     height:55px;
+     width:100%;
+ }
 
 /* parallax */
-
  #dodge{
      background:url('/_Global/images/bg/DODGE.png') 50% 0 no-repeat fixed;
      margin: 0;

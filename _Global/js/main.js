@@ -2,6 +2,7 @@ $(document).ready(function(){
 
   //save selectors as variables to increase performance
   var $window = $(window);
+  var $innerWrapperBG = $('.inner-wrapper');
   var $firstBG = $('#dodge');
   var $secondBG = $('#ride-planner');
   var $thirdBG = $('#rushmore');
@@ -17,15 +18,6 @@ $(document).ready(function(){
     }
   });
 
-  //function that places the navigation in the center of the window
-  function RepositionNav(){
-    var windowHeight = $window.height(); //get the height of the window
-    var navHeight = $('#nav').height() / 2;
-    var windowCenter = (windowHeight / 2);
-    var newtop = windowCenter - navHeight;
-    $('#nav').css({"top": newtop}); //set the new top position of the navigation list
-  }
-
   //function that is called for every pixel the user scrolls. Determines the position of the background
   /*arguments:
    x = horizontal position of background
@@ -39,8 +31,12 @@ $(document).ready(function(){
   }
 
   //function to be called whenever the window is scrolled or resized
+  //move the background images in relation to the movement of the scrollbar
   function Move(){
     var pos = $window.scrollTop(); //position of the scrollbar
+
+    // Adjust the inner wrapper position
+    $innerWrapperBG.css('background-position', 'left ' + ((pos)) + 'px');
 
     //if the first section is in view...
     if($firstBG.hasClass("inview")){
@@ -61,14 +57,11 @@ $(document).ready(function(){
     }
   }
 
-  RepositionNav(); //Reposition the Navigation to center it in the window when the script loads
-
   $window.resize(function(){ //if the user resizes the window...
-    Move(); //move the background images in relation to the movement of the scrollbar
-    RepositionNav(); //reposition the navigation list so it remains vertically central
+    Move();
   });
 
   $window.bind('scroll', function(){ //when the user is scrolling...
-    Move(); //move the background images in relation to the movement of the scrollbar
+    Move();
   });
 });
