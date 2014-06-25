@@ -67,8 +67,12 @@ section.text {padding-bottom: 10%;}
     text-shadow: 0 3px 0;
 }
 
-.story .gif-copy-container {min-height:310px;}
-.story .gif { display:none; }
+.story .gif-copy-container {height:315px;padding-top:100px;}
+.story .gif { display:none; height:100%; }
+.gif.glasses { background:url('/_Global/images/gifs/glasses.gif') no-repeat center }
+.gif.poop { background:url('/_Global/images/gifs/poop.gif') no-repeat center }
+.gif.talk { background:url('/_Global/images/gifs/talk.gif') no-repeat center }
+
 .story .copy span { color: rgb(255, 255, 255); font-style: italic; }
 .story .copy {
     font-size: 35px;
@@ -85,7 +89,6 @@ section.bar .story .copy span { color: rgb(62, 62, 62); line-height: 1.542;borde
 section.bar .story .copy span.highlight { color: rgb(255, 255, 255);font-style: normal; border:none; }
 
 section.contact { padding-bottom:100px; }
-section.contact .copy {padding-top:100px;}
 
 /* footer styles */
 .footer {
