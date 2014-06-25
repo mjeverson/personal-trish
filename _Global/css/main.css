@@ -85,7 +85,7 @@ section.bar .story .copy span { color: rgb(62, 62, 62); line-height: 1.542;borde
 section.bar .story .copy span.highlight { color: rgb(255, 255, 255);font-style: normal; border:none; }
 
 section.contact { padding-bottom:100px; }
-section.contact .copy {padding-top;100px;}
+section.contact .copy {padding-top:100px;}
 
 /* footer styles */
 .footer {
