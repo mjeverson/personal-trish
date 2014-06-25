@@ -37,11 +37,11 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 .header > div {height:100%;}
 .header > div.header-stripe { height:10px; display:block; width:100%; background-color:rgb(0,0,0); }
 
-.title-container {margin:32px 0 0 55px;}
+.title-container {margin:32px 0 0 7%;}
 .title-container .nav { margin-left:-5px; }
 .title-container span {cursor:pointer;}
 
-.nav-container{position:absolute; top: 42px; right:55px;}
+.nav-container{position:absolute; top: 42px; right:7%;}
 .nav-container span.slash {font-weight:normal;padding:0 50px 0 50px;}
 
 .nav { height:64px; border-bottom:11px solid transparent;}
@@ -53,19 +53,42 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
      background: url('/_Global/images/bg/bg.png') no-repeat scroll;
      background-size: 100% auto;
      margin-top:115px;
+     color:white;
  }
 
- #intro {
-     height:1000px;
- }
+ section.text { height:1000px; }
+ section.bar { height:500px; }
+ section.contact { height:1000px; }
 
- #outro {
-     height:1000px;
- }
+.story{ margin: 0 auto; min-width: 980px; text-align:center;}
 
- #contact {
-     height:500px;
- }
+.story h1 {
+    font-size: 156px;
+    color: rgb(135, 134, 134);
+    font-weight: bold;
+    line-height: 0.957;
+    letter-spacing: -2px;
+    text-align: center;
+    text-shadow: 0 3px 0;
+}
+
+.story h1 span { color: rgb(255, 255, 255); cursor:pointer;}
+.story h1 span.highlight{ border-bottom: 11px solid; }
+.float-left { padding: 385px 0 0 0; }
+.float-left .gif { display:none; }
+
+.float-left > div span {
+    font-size: 35px;
+    font-family: "Georgia";
+    color: rgb(135, 134, 134);
+    line-height: 1.457;
+    letter-spacing: -3px;
+    text-align: center;
+    text-shadow: 0 3px 0 rgba(0, 0, 0, 0.392);
+}
+
+.float-left > div .highlight { color: rgb(255, 255, 255); font-style: italic; }
+
 
  /* footer styles */
  .footer {
@@ -99,25 +122,10 @@ section.parallax > div {
  background: url('/_Global/images/bg/RUSHMORE.png') 50% 0 no-repeat fixed;
 }
 
-.story{
-    margin: 0 auto;
-    min-width: 980px;
-    width: 980px;
-}
-
-.story .float-left, .story .float-right{
-    padding: 100px 0 0 0;
-    position: relative;
-    width: 350px;
-}
-
-.story h2, .story p {
-    cursor:text;
-}
 
 
 /* Flip transform */
-section#contact > div {
+section.contact > div {
     height:250px;
     width:300px;
     display:inline;

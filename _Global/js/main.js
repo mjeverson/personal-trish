@@ -8,14 +8,49 @@ $(document).ready(function(){
 
   // Initialize hover events
   var hoverInit = function(){
-    // Hover for himynameistrish
+    /* Hover for himynameistrish title */
     $('.title-container .himynameis').hover(function(){
       $('.title-container .trish').addClass('hover');
     }, function(){
       $('.title-container .trish').removeClass('hover');
     });
 
-    // Hover block rotate transforms
+    /* Hover events for gifs */
+    $('span.gif-trigger').hover(function(){
+      var gif = $(this).closest('.float-left').find('.gif');
+      var containers = $(this).closest('.float-left').find('.line');
+
+      containers.hide();
+      gif.show();
+    },
+    function(){
+      var gif = $(this).closest('.float-left').find('.gif');
+      var containers = $(this).closest('.float-left').find('.line');
+
+      gif.hide();
+      containers.show();
+    });
+
+    // And clicking anywhere on the body should hide the gifs
+    $('body').bind('click', function(){
+      var gif = $('.gif');
+      var containers = $('.line');
+
+      gif.hide();
+      containers.show();
+    });
+
+    // Gifs for mobile, clicking should show the gif
+    $('span.gif-trigger').bind('click', function(e){
+      e.stopPropagation();
+      var gif = $(this).closest('.float-left').find('.gif');
+      var containers = $(this).closest('.float-left').find('.line');
+
+      containers.hide();
+      gif.show();
+    });
+
+    /* Hover block rotate transforms */
     $('.flipper').hover(function(){
         $(this).css({
           '-moz-transform': 'rotateX(90deg)',
@@ -37,9 +72,9 @@ $(document).ready(function(){
     //save selectors as variables to increase performance
     var $window = $(window);
     var $innerWrapperBG = $('.inner-wrapper');
-    var $firstBG = $('#dodge');
-    var $secondBG = $('#ride-planner');
-    var $thirdBG = $('#rushmore');
+    var $firstBG = $('#rushmore');
+    var $secondBG = $('#dodge');
+    var $thirdBG = $('#ride-planner');
 
     var windowHeight = $window.height(); //get the height of the window
 
@@ -75,7 +110,7 @@ $(document).ready(function(){
       //if the first section is in view...
       if($firstBG.hasClass("inview")){
         //call the newPos function and change the background position
-        $firstBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 900, 0.3)});
+        $firstBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 900, 0.2)});
       }
 
       //if the second section is in view...
