@@ -2,8 +2,17 @@ $(document).ready(function(){
 
   // Kicks off the event and styling initialization
   var initialize = function() {
+    navInit();
     hoverInit();
     parallaxInit();
+  };
+
+  // Set up the nav
+  var navInit = function(){
+    $('.nav-container .nav').bind('click', function(){
+      var pos = $($(this).attr('id')).offset().top;
+      $("html, body").animate({ scrollTop: pos + "px" });
+    });
   };
 
   // Initialize hover events
