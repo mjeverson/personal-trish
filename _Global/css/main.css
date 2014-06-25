@@ -53,8 +53,6 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 
 section {display:block;height:auto;}
 section.text {padding-bottom: 10%;}
-section .bar-wrapper {width:100%;height:520px; background-color: rgba(247, 247, 247, 0.8); }
-section.contact { padding-bottom:100px; }
 
 .story{ margin: 0 auto; min-width: 980px; text-align:center;padding: 5% 0 0 0;}
 .story h1 span { color: rgb(255, 255, 255); cursor:pointer;}
@@ -69,6 +67,7 @@ section.contact { padding-bottom:100px; }
     text-shadow: 0 3px 0;
 }
 
+.story .gif-copy-container {min-height:310px;}
 .story .gif { display:none; }
 .story .copy span { color: rgb(255, 255, 255); font-style: italic; }
 .story .copy {
@@ -80,9 +79,13 @@ section.contact { padding-bottom:100px; }
     text-align: center;
 }
 
+section .bar-wrapper {width:100%;height:520px; background-color: rgba(247, 247, 247, 0.8); }
 section.bar .story {position:absolute;width:100%;padding-top:200px;}
 section.bar .story .copy span { color: rgb(62, 62, 62); line-height: 1.542;border-bottom: 1px solid rgba(0, 0, 0, 0.2);}
 section.bar .story .copy span.highlight { color: rgb(255, 255, 255);font-style: normal; border:none; }
+
+section.contact { padding-bottom:100px; }
+section.contact .copy {padding-top;100px;}
 
 /* footer styles */
 .footer {
