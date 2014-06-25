@@ -17,15 +17,15 @@ $(document).ready(function(){
 
     /* Hover events for gifs */
     $('span.gif-trigger').hover(function(){
-      var gif = $(this).closest('.float-left').find('.gif');
-      var containers = $(this).closest('.float-left').find('.line');
+      var gif = $(this).closest('.story').find('.gif');
+      var containers = $(this).closest('.story').find('.line');
 
       containers.hide();
       gif.show();
     },
     function(){
-      var gif = $(this).closest('.float-left').find('.gif');
-      var containers = $(this).closest('.float-left').find('.line');
+      var gif = $(this).closest('.story').find('.gif');
+      var containers = $(this).closest('.story').find('.line');
 
       gif.hide();
       containers.show();
@@ -43,8 +43,8 @@ $(document).ready(function(){
     // Gifs for mobile, clicking should show the gif
     $('span.gif-trigger').bind('click', function(e){
       e.stopPropagation();
-      var gif = $(this).closest('.float-left').find('.gif');
-      var containers = $(this).closest('.float-left').find('.line');
+      var gif = $(this).closest('.story').find('.gif');
+      var containers = $(this).closest('.story').find('.line');
 
       containers.hide();
       gif.show();
