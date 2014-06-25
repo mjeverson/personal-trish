@@ -49,16 +49,16 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 .nav:hover > span, .nav.hover > span { color: rgb( 111, 110, 110 ); }
 
 /* Main content */
- .inner-wrapper{
-     background: url('/_Global/images/bg/bg.png') no-repeat scroll;
-     background-size: 100% auto;
-     margin-top:115px;
-     color:white;
- }
+.inner-wrapper{
+ background: url('/_Global/images/bg/bg.png') no-repeat scroll;
+ background-size: 100% auto;
+ margin-top:115px;
+ color:white;
+}
 
- section.text { height:1000px; }
- section.bar { height:500px; }
- section.contact { height:1000px; }
+section.text { height:1000px; }
+section.bar { height:500px; }
+section.contact { height:1000px; }
 
 .story{ margin: 0 auto; min-width: 980px; text-align:center;}
 
@@ -73,11 +73,11 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 }
 
 .story h1 span { color: rgb(255, 255, 255); cursor:pointer;}
-.story h1 span.highlight{ border-bottom: 11px solid; }
+.story h1 span.gif-trigger{ border-bottom: 11px solid; }
 .story { padding: 385px 0 0 0; }
 .story .gif { display:none; }
 
-.story > div span {
+.story .copy {
     font-size: 35px;
     font-family: "Georgia";
     color: rgb(135, 134, 134);
@@ -87,7 +87,7 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
     text-shadow: 0 3px 0 rgba(0, 0, 0, 0.392);
 }
 
-.story > div .highlight { color: rgb(255, 255, 255); font-style: italic; }
+.story .copy span { color: rgb(255, 255, 255); font-style: italic; }
 
 
  /* footer styles */

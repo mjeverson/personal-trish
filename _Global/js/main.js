@@ -16,37 +16,37 @@ $(document).ready(function(){
     });
 
     /* Hover events for gifs */
-    $('span.gif-trigger').hover(function(){
+    $('.gif-trigger').hover(function(){
       var gif = $(this).closest('.story').find('.gif');
-      var containers = $(this).closest('.story').find('.line');
+      var copy = $(this).closest('.story').find('.copy');
 
-      containers.hide();
+      copy.hide();
       gif.show();
     },
     function(){
       var gif = $(this).closest('.story').find('.gif');
-      var containers = $(this).closest('.story').find('.line');
+      var copy = $(this).closest('.story').find('.copy');
 
       gif.hide();
-      containers.show();
+      copy.show();
     });
 
     // And clicking anywhere on the body should hide the gifs
     $('body').bind('click', function(){
       var gif = $('.gif');
-      var containers = $('.line');
+      var copy = $('.copy');
 
       gif.hide();
-      containers.show();
+      copy.show();
     });
 
     // Gifs for mobile, clicking should show the gif
     $('span.gif-trigger').bind('click', function(e){
       e.stopPropagation();
       var gif = $(this).closest('.story').find('.gif');
-      var containers = $(this).closest('.story').find('.line');
+      var copy = $(this).closest('.story').find('.copy');
 
-      containers.hide();
+      copy.hide();
       gif.show();
     });
 
