@@ -51,20 +51,26 @@ $(document).ready(function(){
     });
 
     /* Hover block rotate transforms */
-    $('.flipper').hover(function(){
-        $(this).css({
+   /* $('.flipper').hover(function(){
+        $(this).find('back-face').animate({
+          height: 'toggle'
+        });
+              *//*.css({
           '-moz-transform': 'rotateX(90deg)',
           '-webkit-transform': 'rotateX(90deg)',
           'transform': 'rotateX(90deg)'
-        });
+        });*//*
       },
       function(){
-        $(this).css({
+        $(this).find('back-face').animate({
+          height: 'toggle'
+        });
+        *//*$(this).css({
           '-moz-transform': 'rotateX(0deg)',
           '-webkit-transform': 'rotateX(0deg)',
           'transform': 'rotateX(deg)'
-        });
-      });
+        });*//*
+      });*/
   };
 
   // Initialize the parallax styles and events

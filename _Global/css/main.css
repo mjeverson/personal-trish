@@ -56,9 +56,10 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
  color:white;
 }
 
-section.text { height:1000px; }
-section.bar { height:500px; }
-section.contact { height:1000px; }
+section {display:block;height:auto;}
+/*section.text { height:1000px; }*/
+/*section.bar { height:500px; }*/
+section.contact { padding-bottom:100px; }
 
 .story{ margin: 0 auto; min-width: 980px; text-align:center;}
 
@@ -113,18 +114,29 @@ section.parallax > div {
 #dodge{ background:url('/_Global/images/bg/DODGE.png') 50% 0 no-repeat fixed; }
 #ride-planner{ background: url('/_Global/images/bg/RIDE PLANNER.png') 50% 0 no-repeat fixed; }
 
+.contact-wrapper {margin-top: 105px;}
+.contact-wrapper > div { height:250px; width:300px; display:inline-block; }
+.contact-wrapper a {display:block;height:100%;width:100%;}
+.contact-wrapper .twitter {background: url('/_Global/images/icons/twitter-resting.png') no-repeat center;}
+.contact-wrapper .twitter:hover {background: url('/_Global/images/icons/twitter-hover.png') no-repeat center;}
+.contact-wrapper .linkedin {background: url('/_Global/images/icons/linkedin-resting.png') no-repeat center;}
+.contact-wrapper .linkedin:hover {background: url('/_Global/images/icons/linkedin-hover.png') no-repeat center;}
+.contact-wrapper .behance {background: url('/_Global/images/icons/behance-default.png') no-repeat center;}
+.contact-wrapper .behance:hover {background: url('/_Global/images/icons/behance-hover.png') no-repeat center;}
+.contact-wrapper .email {background: url('/_Global/images/icons/email-resting.png') no-repeat center;}
+.contact-wrapper .email:hover {background: url('/_Global/images/icons/email-hover.png') no-repeat center;}
 
 /* Flip transform */
-section.contact > div { height:250px; width:300px; display:inline; }
-.flipper-container { margin-top: 40px; -moz-perspective: 1000; -webkit-perspective: 1000; perspective: 1000; }
+
+/*.flipper-container { margin-top: 40px; -moz-perspective: 1000; -webkit-perspective: 1000; perspective: 1000; }
 
 .flipper {
     display: inline-block;
     position: relative;
-    -moz-transition: all 0.6s cubic-bezier(0.37, 0.74, 0.15, 1.65);
-    -o-transition: all 0.6s cubic-bezier(0.37, 0.74, 0.15, 1.65);
-    -webkit-transition: all 0.6s cubic-bezier(0.37, 0.74, 0.15, 1.65);
-    transition: all 0.6s cubic-bezier(0.37, 0.74, 0.15, 1.65);
+    -moz-transition: all 1s cubic-bezier(0.37, 0.74, 0.15, 1.65);
+    -o-transition: all 1s cubic-bezier(0.37, 0.74, 0.15, 1.65);
+    -webkit-transition: all 1s cubic-bezier(0.37, 0.74, 0.15, 1.65);
+    transition: all 1s cubic-bezier(0.37, 0.74, 0.15, 1.65);
     -moz-transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
@@ -156,13 +168,15 @@ section.contact > div { height:250px; width:300px; display:inline; }
     -ms-transform: rotateX(-90deg) translateZ(2.25em);
     -webkit-transform: rotateX(-90deg) translateZ(2.25em);
     transform: rotateX(-90deg) translateZ(2.25em);
-}
+}*/
 
-.twitter-wrapper.front-face {background:url('/_Global/images/icons/twitter-resting.png') no-repeat center;}
-.twitter-wrapper.back-face {background:url('/_Global/images/icons/twitter-hover.png') no-repeat center;}
-.behance-wrapper.front-face {background:url('/_Global/images/icons/behance-default.png') no-repeat center;}
-.behance-wrapper.back-face {background:url('/_Global/images/icons/behance-hover.png') no-repeat center;}
-.linkedin-wrapper.front-face {background:url('/_Global/images/icons/linkedin-resting.png') no-repeat center;}
-.linkedin-wrapper.back-face {background:url('/_Global/images/icons/linkedin-hover.png') no-repeat center;}
-.email-wrapper.front-face {background:url('/_Global/images/icons/email-resting.png') no-repeat center;}
-.email-wrapper.back-face {background:url('/_Global/images/icons/email-hover.png') no-repeat center;}
+/*.twitter-wrapper .front-face {background:url('/_Global/images/icons/twitter-resting.png') no-repeat center;}
+.twitter-wrapper .back-face {background:url('/_Global/images/icons/twitter-hover.png') no-repeat center;}*/
+/*
+.behance-wrapper .front-face {background:url('/_Global/images/icons/behance-default.png') no-repeat center;}
+.behance-wrapper .back-face {background:url('/_Global/images/icons/behance-hover.png') no-repeat center;}
+.linkedin-wrapper .front-face {background:url('/_Global/images/icons/linkedin-resting.png') no-repeat center;}
+.linkedin-wrapper .back-face {background:url('/_Global/images/icons/linkedin-hover.png') no-repeat center;}
+.email-wrapper .front-face {background:url('/_Global/images/icons/email-resting.png') no-repeat center;}
+.email-wrapper .back-face {background:url('/_Global/images/icons/email-hover.png') no-repeat center;}
+*/
