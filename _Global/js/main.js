@@ -116,7 +116,7 @@ $(document).ready(function(){
       //if the first section is in view...
       if($firstBG.hasClass("inview")){
         //call the newPos function and change the background position
-        $firstBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 900, 0.2)});
+        $firstBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 900, 0.1)});
       }
 
       //if the second section is in view...

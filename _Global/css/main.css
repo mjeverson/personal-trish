@@ -49,20 +49,16 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 .nav:hover > span, .nav.hover > span { color: rgb( 111, 110, 110 ); }
 
 /* Main content */
-.inner-wrapper{
- background: url('/_Global/images/bg/bg.png') no-repeat scroll;
- background-size: 100% auto;
- margin-top:115px;
- color:white;
-}
+.inner-wrapper{ background: url('/_Global/images/bg/bg.png') no-repeat scroll; background-size: 100% auto; margin-top:115px; color:white; }
 
 section {display:block;height:auto;}
-/*section.text { height:1000px; }*/
-/*section.bar { height:500px; }*/
+section.text {padding-bottom: 10%;}
+section .bar-wrapper {width:100%;height:520px; background-color: rgba(247, 247, 247, 0.8); }
 section.contact { padding-bottom:100px; }
 
-.story{ margin: 0 auto; min-width: 980px; text-align:center;}
-
+.story{ margin: 0 auto; min-width: 980px; text-align:center;padding: 5% 0 0 0;}
+.story h1 span { color: rgb(255, 255, 255); cursor:pointer;}
+.story h1 span.gif-trigger{ border-bottom: 11px solid; }
 .story h1 {
     font-size: 156px;
     color: rgb(135, 134, 134);
@@ -73,11 +69,8 @@ section.contact { padding-bottom:100px; }
     text-shadow: 0 3px 0;
 }
 
-.story h1 span { color: rgb(255, 255, 255); cursor:pointer;}
-.story h1 span.gif-trigger{ border-bottom: 11px solid; }
-.story { padding: 385px 0 0 0; }
 .story .gif { display:none; }
-
+.story .copy span { color: rgb(255, 255, 255); font-style: italic; }
 .story .copy {
     font-size: 35px;
     font-family: "Georgia";
@@ -85,21 +78,21 @@ section.contact { padding-bottom:100px; }
     line-height: 1.457;
     letter-spacing: -3px;
     text-align: center;
-    text-shadow: 0 3px 0 rgba(0, 0, 0, 0.392);
 }
 
-.story .copy span { color: rgb(255, 255, 255); font-style: italic; }
+section.bar .story {position:absolute;width:100%;padding-top:200px;}
+section.bar .story .copy span { color: rgb(62, 62, 62); line-height: 1.542;border-bottom: 1px solid rgba(0, 0, 0, 0.2);}
+section.bar .story .copy span.highlight { color: rgb(255, 255, 255);font-style: normal; border:none; }
 
-
- /* footer styles */
- .footer {
-     background-color: rgb(247, 247, 247);
-     position:fixed;
-     bottom:0;
-     z-index:1000;
-     height:55px;
-     width:100%;
- }
+/* footer styles */
+.footer {
+ background-color: rgb(247, 247, 247);
+ position:fixed;
+ bottom:0;
+ z-index:1000;
+ height:55px;
+ width:100%;
+}
 
 /* parallax */
 section.parallax > div {
