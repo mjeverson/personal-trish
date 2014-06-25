@@ -88,7 +88,9 @@ section.bar .story {position:absolute;width:100%;padding-top:200px;}
 section.bar .story .copy span { color: rgb(62, 62, 62); line-height: 1.542;border-bottom: 1px solid rgba(0, 0, 0, 0.2);}
 section.bar .story .copy span.highlight { color: rgb(255, 255, 255);font-style: normal; border:none; }
 
-section.contact { padding-bottom:100px; }
+section.contact .gif-copy-container {padding-top: 0;}
+section.contact {padding-bottom:100px;}
+section.contact .copy { padding-top:100px; }
 
 /* footer styles */
 .footer {
