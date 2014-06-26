@@ -122,34 +122,21 @@ section.parallax > div {
 #dodge{ background:url('/_Global/images/bg/DODGE.png') 50% 0 no-repeat fixed; }
 #ride-planner{ background: url('/_Global/images/bg/RIDE PLANNER.png') 50% 0 no-repeat fixed; }
 
-/* contact links / flip */
+/* flip */
 .contact-wrapper {height:200px;}
 .contact-wrapper > div { height:100%; width:15%; display:inline-block; transition: background 0.2s ease-in-out;-webkit-transition: background 0.2s ease-in-out;-moz-transition: background 0.2s ease-in-out;-o-transition: background 0.2s ease-in-out;}
 .contact-wrapper a {display:block;height:100%;}
-.contact-wrapper .twitter {background: url('/_Global/images/icons/twitter-resting.png') no-repeat center;}
-.contact-wrapper .twitter:hover {background: url('/_Global/images/icons/twitter-hover.png') no-repeat center;}
-.contact-wrapper .linkedin {background: url('/_Global/images/icons/linkedin-resting.png') no-repeat center;}
-.contact-wrapper .linkedin:hover {background: url('/_Global/images/icons/linkedin-hover.png') no-repeat center;}
-.contact-wrapper .behance {background: url('/_Global/images/icons/behance-default.png') no-repeat center;}
-.contact-wrapper .behance:hover {background: url('/_Global/images/icons/behance-hover.png') no-repeat center;}
-.contact-wrapper .email {background: url('/_Global/images/icons/email-resting.png') no-repeat center;}
-.contact-wrapper .email:hover {background: url('/_Global/images/icons/email-hover.png') no-repeat center;}
-
-/* flip */
 
 #f1_container {
     position: relative;
-    margin: 10px auto;
-    width: 450px;
-    height: 281px;
     z-index: 1;
-}
-#f1_container {
     perspective: 1000;
     -webkit-perspective: 1000;
     -moz-perspective: 1000;
     -o-perspective: 1000;
+    padding-right:10px;
 }
+
 #f1_card {
     width: 100%;
     height: 100%;
@@ -157,10 +144,10 @@ section.parallax > div {
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     -o-transform-style: preserve-3d;
-    transition: all 0.5s linear;
-    -webkit-transition: all 0.5s linear;
-    -moz-transition: all 0.5s linear;
-    -o-transition: all 0.5s linear;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
 }
 #f1_container:hover #f1_card {
     transform: rotateX(180deg);
@@ -182,3 +169,12 @@ section.parallax > div {
     -moz-transform: rotateX(-180deg);
     -o-transform: rotateX(-180deg);
 }
+
+.twitter .front{background: url('/_Global/images/icons/twitter-resting.png') no-repeat center;}
+.twitter .back{background: url('/_Global/images/icons/twitter-hover.png') no-repeat center;}
+.linkedin .front {background: url('/_Global/images/icons/linkedin-resting.png') no-repeat center;}
+.linkedin .back {background: url('/_Global/images/icons/linkedin-hover.png') no-repeat center;}
+.behance .front {background: url('/_Global/images/icons/behance-default.png') no-repeat center;}
+.behance .back {background: url('/_Global/images/icons/behance-hover.png') no-repeat center;}
+.email .front {background: url('/_Global/images/icons/email-resting.png') no-repeat center;}
+.email .back {background: url('/_Global/images/icons/email-hover.png') no-repeat center;}

@@ -137,7 +137,7 @@ $(document).ready(function(){
       var visibilityZoneHeight = (windowHeight * y);
 
       if(distanceFromViewportTop <= visibilityZoneHeight){
-        return 1 - (distanceFromViewportTop / visibilityZoneHeight);
+        return 1 - (distanceFromViewportTop/ visibilityZoneHeight);
       }else{
         return 0;
       }
@@ -149,7 +149,7 @@ $(document).ready(function(){
       var pos = $(window).scrollTop(); //position of the scrollbar
 
       // Adjust the contact us section's opacity
-      $contact.css('opacity', newOpacity(0.5, windowHeight, pos));
+      $contact.css('opacity', newOpacity(0.5, windowHeight, pos, 5));
 
       // Adjust the inner wrapper position for main "Trish" BG
       $innerWrapperBG.css('background-position', 'left ' + ((pos)) + 'px');
