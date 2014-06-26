@@ -35,6 +35,12 @@ $(document).ready(function(){
 
   // Initialize hover events
   var hoverInit = function(){
+    $('#card').hover(function(){
+      $(this).toggleClass('flipped');
+    }, function(){
+      $(this).toggleClass('flipped');
+    });
+
     /* Hover for himynameistrish title */
     $('.title-container .himynameis').hover(function(){
       $('.title-container .trish').addClass('hover');
@@ -125,18 +131,14 @@ $(document).ready(function(){
       return x + "% " + (-((windowHeight + pos) - adjuster) * inertia)  + "px";
     };
 
-
     var newOpacity = function(y, windowHeight, pos){
       //only start when the div is y% away from the top of the page
-/*      var halfwayPointOfScreen = pos + (windowHeight * (1 - y));*/
       var distanceFromViewportTop = $contact.offset().top - pos;
       var visibilityZoneHeight = (windowHeight * y);
 
       if(distanceFromViewportTop <= visibilityZoneHeight){
-        console.log('changing opacity', distanceFromViewportTop, ' ', visibilityZoneHeight, ' ', 1 - (distanceFromViewportTop / visibilityZoneHeight));
         return 1 - (distanceFromViewportTop / visibilityZoneHeight);
       }else{
-        console.log('changing opacity', distanceFromViewportTop, ' ', visibilityZoneHeight, ' ', 0);
         return 0;
       }
     };
