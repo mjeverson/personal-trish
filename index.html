@@ -2,17 +2,18 @@
 
 <!--todo:
 base
-  header spacing
-  content
-  header links & scroll
   scroll auto-update header
-  parallax gap between 2 and 3
+  padding between contact text/gif and title/links
+  bottom div fade in as scroll
   double check fonts
   double check spacing in header
   clean up JS
+  gif/copy spacing tweaking for center vertically
 
 responsive
   background image height
+  parallax scroll distance
+  content spacing
 
 -->
 
@@ -25,21 +26,22 @@ responsive
 
   <link rel="stylesheet" href="/_Global/css/normalize.css">
   <link rel="stylesheet" href="/_Global/css/main.css">
+  <!--<link rel="stylesheet" href="/_Global/css/boxroll-slider.css">-->
 
   <script src="/_Global/js/framework/jquery-1.11.1.min.js"></script>
   <script src="/_Global/js/framework/jquery-ui-1.10.4.min.js"></script>
-  <script type="text/javascript" src="/_Global/js/framework/nbw-parallax.js"></script>
-  <script type="text/javascript" src="/_Global/js/framework/jquery.localscroll-1.2.7-min.js"></script>
-  <script type="text/javascript" src="/_Global/js/framework/jquery.scrollTo-1.4.2-min.js"></script>
+<!--  <script type="text/javascript" src="/_Global/js/framework/nbw-parallax.js"></script>-->
+  <!--<script type="text/javascript" src="/_Global/js/framework/jquery.localscroll-1.2.7-min.js"></script>-->
+  <!--<script type="text/javascript" src="/_Global/js/framework/jquery.scrollTo-1.4.2-min.js"></script>-->
   <script type="text/javascript" src="/_Global/js/framework/jquery.inview.js"></script>
+  <script type="text/javascript" src="/_Global/js/framework/waypoints.min.js"></script>
+  <!--<script type="text/javascript" src="/_Global/js/framework/jquery.boxroll-slider.min.js"></script>-->
 
   <script src="/_Global/js/main.js"></script>
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
-<body>
-    <!-- todo: should be a fixed frame around the page regardless of where you scroll -->
     <div class="header">
       <div class="header-stripe"></div>
       <div class="title-container">
@@ -52,15 +54,15 @@ responsive
 
       </div>
       <div class="nav-container">
-        <div id="#about" class="nav">
+        <div id="#about" order="1" class="nav">
           <span>about</span>
         </div>
         <span class="slash">/</span>
-        <div id="#work" class="nav">
+        <div id="#work" order="2" class="nav">
           <span>work</span>
         </div>
         <span class="slash">/</span>
-        <div id="#contact" class="nav">
+        <div id="#contact" order="3" class="nav">
           <span>contact</span>
         </div>
       </div>
@@ -68,83 +70,80 @@ responsive
 
     <div class="outer-wrapper">
       <div class="inner-wrapper">
-
-        <section id="intro">
-
-        </section>
-
-        <section id="bar">
-
-        </section>
-
-        <section id="about" class="parallax">
-          <div id="dodge" data-href="http://www.google.ca">
+        <div id="about" order="1">
+          <section class="text">
             <div class="story">
-              <div class="float-left">
-                <h2>(Almost) Static Background</h2>
-                <p>This section has a background that moves slightly slower than the user scrolls. This is achieved by changing the top position of the background for every pixel the page is scrolled.</p>
+              <h1>himynameis<span class="gif-trigger">trish</span><span>.</span></h1>
+              <div class="gif-copy-container">
+                <div class="gif glasses">&nbsp;</div>
+                <div class="copy">
+                  <div>I am an <span>interactive art director</span></div>
+                  <div>based out of <span>Toronto</span> who believes in</div>
+                  <div><span>magic, Joe Rogan,</span> and <span>working my ass off.</span></div>
+                  <div>Standing still is <span>hard.</span></div>
+                </div>
               </div>
             </div>
-          </div>
+          </section>
 
-          <div id="ride-planner" data-href="http://www.google.ca">
-            <div class="story">
-              <div class="float-left">
-                <h2>(Almost) Static Background</h2>
-                <p>This section has a background that moves slightly slower than the user scrolls. This is achieved by changing the top position of the background for every pixel the page is scrolled.</p>
+         <section id="bar-1" class="bar">
+           <div class="story">
+              <div class="copy">
+                <div><span>"...You can have the best strategy in the world;</span></div>
+                <div><span>The difference between <span class="highlight">the excellent</span> and <span class="highlight">the incompetent</span></span></div>
+                <div><span>is <span class="highlight">execution, execution, execution...</span>" - Domenico De Sole</span></div>
               </div>
             </div>
-          </div>
+           <div class="bar-wrapper">&nbsp;</div>
+          </section>
 
-          <div id="rushmore" data-href="http://www.google.ca">
+          <section id="text-2" class="text">
             <div class="story">
-              <div class="float-left">
-                <h2>(Almost) Static Background</h2>
-                <p>This section has a background that moves slightly slower than the user scrolls. This is achieved by changing the top position of the background for every pixel the page is scrolled.</p>
+              <h1>imake<span class="gif-trigger">things</span><span>.</span></h1>
+              <div class="gif-copy-container">
+                <div class="gif poop">&nbsp;</div>
+                <div class="copy">
+                  <div>I specialize in <span>advertising, interaction,</span> and <span>interfaces,</span></div>
+                  <div>best served with some <span>multi-disciplinary collaboration</span></div>
+                  <div>and an <span>open mind.</span> No one person whistles a <span>symphony.</span></div>
+                </div>
               </div>
             </div>
-          </div>
+          </section>
+
+          <section id="bar-2" class="bar">
+            <div class="story">
+              <div class="copy">
+                <div><span>Break the rules <span class="highlight">so well,</span></span></div>
+                <div><span>That no one will <span class="highlight">notice.</span></span></div>
+              </div>
+            </div>
+            <div class="bar-wrapper">&nbsp;</div>
+          </section>
+        </div>
+
+        <section id="work" order="2" class="parallax">
+          <div id="rushmore" data-href="https://www.behance.net/gallery/Harley-Davidsons-Project-Rushmore/13524395"></div>
+          <div id="dodge" data-href="https://www.behance.net/gallery/Dodge-Dart-Global-Rallycross/11290979"></div>
+          <div id="ride-planner" data-href="https://www.behance.net/gallery/Harley-Davidson-Ride-Planner/13340045"></div>
         </section>
 
-        <section id="outro">
-
-        </section>
-
-        <section id="contact">
-          <div class="twitter-wrapper">
-            <a href="#id" target="_blank" class="flipper-container">
-              <div class="flipper">
-                <div class="front-face"></div>
-                <div class="back-face"></div>
+        <section id="contact" order="3" class="contact">
+          <div class="story">
+            <h1>weshould<span class="highlight gif-trigger">talk</span><span>.</span></h1>
+            <div class="gif-copy-container">
+              <div class="gif talk">&nbsp;</div>
+              <div class="copy">
+                <div>This city is a <span>small one.</span></div>
+                <div>Let's be <span>friends</span> and <span>make something.</span></div>
               </div>
-            </a>
-          </div>
-
-          <div class="behance-wrapper">
-            <a href="#id" target="_blank" class="flipper-container">
-              <div class="flipper">
-                <div class="front-face"></div>
-                <div class="back-face"></div>
-              </div>
-            </a>
-          </div>
-
-          <div class="linkedin-wrapper">
-            <a href="#id" target="_blank" class="flipper-container">
-              <div class="flipper">
-                <div class="front-face"></div>
-                <div class="back-face"></div>
-              </div>
-            </a>
-          </div>
-
-          <div class="email-wrapper">
-            <a href="#id" target="_blank" class="flipper-container">
-              <div class="flipper">
-                <div class="front-face"></div>
-                <div class="back-face"></div>
-              </div>
-            </a>
+            </div>
+            <div class="contact-wrapper">
+              <div class="twitter"><a href="https://twitter.com/himynameistrish" target="_blank"></a></div>
+              <div class="behance"><a href="http://be.net/himynameistrish" target="_blank"></a></div>
+              <div class="linkedin"><a href="http://www.linkedin.com/pub/trish-lamanna/12/306/6b5" target="_blank"></a></div>
+              <div class="email"><a href="mailto:himynameistrish@gmail.com"></a></div>
+            </div>
           </div>
         </section>
       </div>
