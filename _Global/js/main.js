@@ -107,11 +107,12 @@ $(document).ready(function(){
     var $firstBG = $('#rushmore');
     var $secondBG = $('#dodge');
     var $thirdBG = $('#ride-planner');
+    var $contact = $('.contact');
 
     var windowHeight = $(window).height(); //get the height of the window
 
     //apply the class "inview" to a section that is in the viewport
-    $('#dodge, #ride-planner, #rushmore').bind('inview', function (event, visible) {
+    $('#dodge, #ride-planner, #rushmore, #contact').bind('inview', function (event, visible) {
       if (visible == true) {
         $(this).addClass("inview");
       } else {
@@ -124,16 +125,33 @@ $(document).ready(function(){
       return x + "% " + (-((windowHeight + pos) - adjuster) * inertia)  + "px";
     };
 
+
+    var newOpacity = function(y, windowHeight, pos){
+      //only start when the div is y% away from the top of the page
+/*      var halfwayPointOfScreen = pos + (windowHeight * (1 - y));*/
+      var distanceFromViewportTop = $contact.offset().top - pos;
+      var visibilityZoneHeight = (windowHeight * y);
+
+      if(distanceFromViewportTop <= visibilityZoneHeight){
+        console.log('changing opacity', distanceFromViewportTop, ' ', visibilityZoneHeight, ' ', 1 - (distanceFromViewportTop / visibilityZoneHeight));
+        return 1 - (distanceFromViewportTop / visibilityZoneHeight);
+      }else{
+        console.log('changing opacity', distanceFromViewportTop, ' ', visibilityZoneHeight, ' ', 0);
+        return 0;
+      }
+    };
+
     //function to be called whenever the window is scrolled or resized
     //move the background images in relation to the movement of the scrollbar
     var move = function(){
       var pos = $(window).scrollTop(); //position of the scrollbar
 
+      // Adjust the contact us section's opacity
+      $contact.css('opacity', newOpacity(0.5, windowHeight, pos));
+
       // Adjust the inner wrapper position for main "Trish" BG
       $innerWrapperBG.css('background-position', 'left ' + ((pos)) + 'px');
 
-      // Fade in contacts div with scroll
-      $('.contact').css({'opacity':( 100-$(window).scrollTop() )/100});
 
       //if the first section is in view...
       if($firstBG.hasClass("inview")){

@@ -90,7 +90,9 @@ section.bar .story {position:absolute;padding-top:200px;left:0;right:0;}
 section.bar .story .copy span { color: rgb(62, 62, 62); line-height: 1.542;border-bottom: 1px solid rgba(0, 0, 0, 0.2);}
 section.bar .story .copy span.highlight { color: rgb(255, 255, 255);font-style: normal; border:none; }
 
-section.contact {padding-bottom:75px;}
+section.parallax {padding-bottom: 200px;}
+
+section.contact {padding-bottom:75px;opacity:0;}
 section.contact .gif-copy-container {padding-top: 100px; height: 300px;}
 section.contact .story h1 {margin:0 0 0 50px;}
 section.contact .copy { padding-top:50px; }
