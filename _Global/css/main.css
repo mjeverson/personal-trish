@@ -55,8 +55,8 @@ section {display:block;height:auto;}
 section.text {padding-bottom: 10%;}
 
 .story{ margin: 0 auto; min-width: 980px; text-align:center;padding: 5% 0 0 0;}
-.story h1 span { color: rgb(255, 255, 255); cursor:pointer;}
-.story h1 span.gif-trigger{ border-bottom: 11px solid; }
+.story h1 span { color: rgb(255, 255, 255); }
+.story h1 span.gif-trigger{ border-bottom: 11px solid; cursor:pointer;}
 .story h1 {
     font-size: 156px;
     color: rgb(135, 134, 134);
@@ -67,10 +67,10 @@ section.text {padding-bottom: 10%;}
     text-shadow: 0 3px 0;
 }
 
-.story .gif-copy-container {height:315px;padding-top:100px;}
+.story .gif-copy-container {height:315px;}
 .story .gif { display:none; height:100%; }
 .gif.glasses { background:url('/_Global/images/gifs/glasses.gif') no-repeat center }
-.gif.poop { background:url('/_Global/images/gifs/poop.gif') no-repeat center }
+.gif.poop { background:url('/_Global/images/gifs/poop.gif') no-repeat center; padding-top:90px; }
 .gif.talk { background:url('/_Global/images/gifs/talk.gif') no-repeat center }
 
 .story .copy span { color: rgb(255, 255, 255); font-style: italic; }
@@ -83,6 +83,8 @@ section.text {padding-bottom: 10%;}
     text-align: center;
 }
 
+section.text .copy, section.contact .copy { padding-top:100px; }
+
 section .bar-wrapper {width:100%;height:520px; background-color: rgba(247, 247, 247, 0.8); }
 section.bar .story {position:absolute;width:100%;padding-top:200px;}
 section.bar .story .copy span { color: rgb(62, 62, 62); line-height: 1.542;border-bottom: 1px solid rgba(0, 0, 0, 0.2);}
@@ -90,7 +92,8 @@ section.bar .story .copy span.highlight { color: rgb(255, 255, 255);font-style: 
 
 section.contact .gif-copy-container {padding-top: 0;}
 section.contact {padding-bottom:100px;}
-section.contact .copy { padding-top:100px; }
+
+
 
 /* footer styles */
 .footer {
@@ -116,7 +119,7 @@ section.parallax > div {
 #ride-planner{ background: url('/_Global/images/bg/RIDE PLANNER.png') 50% 0 no-repeat fixed; }
 
 .contact-wrapper {margin-top: 105px;}
-.contact-wrapper > div { height:250px; width:300px; display:inline-block; }
+.contact-wrapper > div { height:250px; width:15%; display:inline-block; }
 .contact-wrapper a {display:block;height:100%;width:100%;}
 .contact-wrapper .twitter {background: url('/_Global/images/icons/twitter-resting.png') no-repeat center;}
 .contact-wrapper .twitter:hover {background: url('/_Global/images/icons/twitter-hover.png') no-repeat center;}
