@@ -2,15 +2,12 @@
 
 <!--todo:
 base
-  scroll auto-update header
-  padding between contact text/gif and title/links
-  bottom div fade in as scroll
-  double check fonts
-  double check spacing in header
-  clean up JS
-  gif/copy spacing tweaking for center vertically
+  new fonts
+  cross browser testing
+  resolution testing
+  3d block transform for contact
 
-responsive
+responsive (find width breakpoints and add fixes into css)
   background image height
   parallax scroll distance
   content spacing
@@ -26,22 +23,18 @@ responsive
 
   <link rel="stylesheet" href="/_Global/css/normalize.css">
   <link rel="stylesheet" href="/_Global/css/main.css">
-  <!--<link rel="stylesheet" href="/_Global/css/boxroll-slider.css">-->
 
   <script src="/_Global/js/framework/jquery-1.11.1.min.js"></script>
   <script src="/_Global/js/framework/jquery-ui-1.10.4.min.js"></script>
-<!--  <script type="text/javascript" src="/_Global/js/framework/nbw-parallax.js"></script>-->
-  <!--<script type="text/javascript" src="/_Global/js/framework/jquery.localscroll-1.2.7-min.js"></script>-->
-  <!--<script type="text/javascript" src="/_Global/js/framework/jquery.scrollTo-1.4.2-min.js"></script>-->
   <script type="text/javascript" src="/_Global/js/framework/jquery.inview.js"></script>
   <script type="text/javascript" src="/_Global/js/framework/waypoints.min.js"></script>
-  <!--<script type="text/javascript" src="/_Global/js/framework/jquery.boxroll-slider.min.js"></script>-->
 
   <script src="/_Global/js/main.js"></script>
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
+<body>
     <div class="header">
       <div class="header-stripe"></div>
       <div class="title-container">
@@ -139,6 +132,18 @@ responsive
               </div>
             </div>
             <div class="contact-wrapper">
+              <div id="f1_container">
+                <div id="f1_card" class="shadow">
+                  <a href="https://twitter.com/himynameistrish" target="_blank">
+                  <div class="front face">
+                    <img src="/_Global/images/icons/twitter-resting.png"/>
+                  </div>
+                  <div class="back face center">
+                    <img src="/_Global/images/icons/twitter-hover.png"/>
+                  </div>
+                    </a>
+                </div>
+              </div>
               <div class="twitter"><a href="https://twitter.com/himynameistrish" target="_blank"></a></div>
               <div class="behance"><a href="http://be.net/himynameistrish" target="_blank"></a></div>
               <div class="linkedin"><a href="http://www.linkedin.com/pub/trish-lamanna/12/306/6b5" target="_blank"></a></div>

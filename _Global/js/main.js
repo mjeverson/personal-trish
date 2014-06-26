@@ -35,6 +35,12 @@ $(document).ready(function(){
 
   // Initialize hover events
   var hoverInit = function(){
+    $('#card').hover(function(){
+      $(this).toggleClass('flipped');
+    }, function(){
+      $(this).toggleClass('flipped');
+    });
+
     /* Hover for himynameistrish title */
     $('.title-container .himynameis').hover(function(){
       $('.title-container .trish').addClass('hover');
@@ -58,15 +64,6 @@ $(document).ready(function(){
       copy.show();
     });
 
-    // And clicking anywhere on the body should hide the gifs
-    $('body').bind('click', function(){
-      var gif = $('.gif');
-      var copy = $('.copy');
-
-      gif.hide();
-      copy.show();
-    });
-
     // Gifs for mobile, clicking should show the gif
     $('span.gif-trigger').bind('click', function(e){
       e.stopPropagation();
@@ -75,6 +72,15 @@ $(document).ready(function(){
 
       copy.hide();
       gif.show();
+    });
+
+    // Clicking anywhere on the body should hide the gifs
+    $('body').bind('click', function(){
+      var gif = $('.gif');
+      var copy = $('.copy');
+
+      gif.hide();
+      copy.show();
     });
 
     /* Hover block rotate transforms */
@@ -107,11 +113,12 @@ $(document).ready(function(){
     var $firstBG = $('#rushmore');
     var $secondBG = $('#dodge');
     var $thirdBG = $('#ride-planner');
+    var $contact = $('.contact');
 
     var windowHeight = $(window).height(); //get the height of the window
 
     //apply the class "inview" to a section that is in the viewport
-    $('#dodge, #ride-planner, #rushmore').bind('inview', function (event, visible) {
+    $('#dodge, #ride-planner, #rushmore, #contact').bind('inview', function (event, visible) {
       if (visible == true) {
         $(this).addClass("inview");
       } else {
@@ -120,15 +127,20 @@ $(document).ready(function(){
     });
 
     //function that is called for every pixel the user scrolls. Determines the position of the background
-    /*arguments:
-     x = horizontal position of background
-     windowHeight = height of the viewport
-     pos = position of the scrollbar
-     adjuster = adjust the position of the background
-     inertia = how fast the background moves in relation to scrolling
-     */
     var newPos = function (x, windowHeight, pos, adjuster, inertia){
       return x + "% " + (-((windowHeight + pos) - adjuster) * inertia)  + "px";
+    };
+
+    var newOpacity = function(y, windowHeight, pos){
+      //only start when the div is y% away from the top of the page
+      var distanceFromViewportTop = $contact.offset().top - pos;
+      var visibilityZoneHeight = (windowHeight * y);
+
+      if(distanceFromViewportTop <= visibilityZoneHeight){
+        return 1 - (distanceFromViewportTop / visibilityZoneHeight);
+      }else{
+        return 0;
+      }
     };
 
     //function to be called whenever the window is scrolled or resized
@@ -136,8 +148,12 @@ $(document).ready(function(){
     var move = function(){
       var pos = $(window).scrollTop(); //position of the scrollbar
 
+      // Adjust the contact us section's opacity
+      $contact.css('opacity', newOpacity(0.5, windowHeight, pos));
+
       // Adjust the inner wrapper position for main "Trish" BG
       $innerWrapperBG.css('background-position', 'left ' + ((pos)) + 'px');
+
 
       //if the first section is in view...
       if($firstBG.hasClass("inview")){
