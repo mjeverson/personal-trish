@@ -58,15 +58,6 @@ $(document).ready(function(){
       copy.show();
     });
 
-    // And clicking anywhere on the body should hide the gifs
-    $('body').bind('click', function(){
-      var gif = $('.gif');
-      var copy = $('.copy');
-
-      gif.hide();
-      copy.show();
-    });
-
     // Gifs for mobile, clicking should show the gif
     $('span.gif-trigger').bind('click', function(e){
       e.stopPropagation();
@@ -75,6 +66,15 @@ $(document).ready(function(){
 
       copy.hide();
       gif.show();
+    });
+
+    // Clicking anywhere on the body should hide the gifs
+    $('body').bind('click', function(){
+      var gif = $('.gif');
+      var copy = $('.copy');
+
+      gif.hide();
+      copy.show();
     });
 
     /* Hover block rotate transforms */
@@ -120,13 +120,6 @@ $(document).ready(function(){
     });
 
     //function that is called for every pixel the user scrolls. Determines the position of the background
-    /*arguments:
-     x = horizontal position of background
-     windowHeight = height of the viewport
-     pos = position of the scrollbar
-     adjuster = adjust the position of the background
-     inertia = how fast the background moves in relation to scrolling
-     */
     var newPos = function (x, windowHeight, pos, adjuster, inertia){
       return x + "% " + (-((windowHeight + pos) - adjuster) * inertia)  + "px";
     };
@@ -138,6 +131,9 @@ $(document).ready(function(){
 
       // Adjust the inner wrapper position for main "Trish" BG
       $innerWrapperBG.css('background-position', 'left ' + ((pos)) + 'px');
+
+      // Fade in contacts div with scroll
+      $('.contact').css({'opacity':( 100-$(window).scrollTop() )/100});
 
       //if the first section is in view...
       if($firstBG.hasClass("inview")){
