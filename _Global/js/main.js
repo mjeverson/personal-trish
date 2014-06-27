@@ -149,19 +149,19 @@ $(document).ready(function(){
       //if the first section is in view...
       if($firstBG.hasClass("inview")){
         //call the newPos function and change the background position
-        $firstBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 900, 0.05)});
+        $firstBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 900, 0.025)});
       }
 
       //if the second section is in view...
       if($secondBG.hasClass("inview")){
         //call the newPos function and change the background position
-        $secondBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 1900, 0.1)});
+        $secondBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 1900, 0.05)});
       }
 
       //if the third section is in view...
       if($thirdBG.hasClass("inview")){
         //call the newPos function and change the background position
-        $thirdBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 2850, 0.05)});
+        $thirdBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 2850, 0.025)});
       }
     };
 
