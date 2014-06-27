@@ -35,6 +35,8 @@ $(document).ready(function(){
 
   // Initialize hover events
   var hoverInit = function(){
+    var gifShown = false;
+
     $('#card').hover(function(){
       $(this).toggleClass('flipped');
     }, function(){
@@ -57,6 +59,10 @@ $(document).ready(function(){
       gif.show();
     },
     function(){
+      if(gifShown){
+          return false;
+      }
+        
       var gif = $(this).closest('.story').find('.gif');
       var copy = $(this).closest('.story').find('.copy');
 
@@ -67,6 +73,8 @@ $(document).ready(function(){
     // Gifs for mobile, clicking should show the gif
     $('span.gif-trigger').bind('click', function(e){
       e.stopPropagation();
+
+      gifShown = true;
       var gif = $(this).closest('.story').find('.gif');
       var copy = $(this).closest('.story').find('.copy');
 
@@ -76,6 +84,7 @@ $(document).ready(function(){
 
     // Clicking anywhere on the body should hide the gifs
     $('body').bind('click', function(){
+      gifShown = false;
       var gif = $('.gif');
       var copy = $('.copy');
 

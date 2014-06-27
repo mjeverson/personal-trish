@@ -134,7 +134,7 @@ section.parallax > div {
     -webkit-perspective: 1000;
     -moz-perspective: 1000;
     -o-perspective: 1000;
-    padding-right:10px;
+    margin-right:10px;
 }
 
 .f1_card {
@@ -161,6 +161,8 @@ section.parallax > div {
     height: 100%;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
 }
 .face.back {
     display: block;
