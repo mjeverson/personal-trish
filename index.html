@@ -2,8 +2,9 @@
 
 <!--todo:
 base
-  new fonts
-  responsive (find width breakpoints and add fixes into css)
+  New fonts
+  Responsive -> Do we want relative to actual device size or viewport size?
+
   cross browser testing (IE9, IE10, IE11, Chrome, FF, Safari)
     IE Edge background positioning & parallax (IE Smooth Scrolling issue)
     IE Edge flip backside not appearing
@@ -30,6 +31,7 @@ base
   <![endif]-->
 </head>
 <body>
+    <!-- Header section -->
     <div class="header">
       <div class="header-stripe"></div>
       <div class="title-container">
@@ -56,8 +58,11 @@ base
       </div>
     </div>
 
+    <!-- Main content -->
     <div class="outer-wrapper">
       <div class="inner-wrapper">
+
+        <!-- About -->
         <div id="about" order="1">
           <section class="text">
             <div class="story">
@@ -74,7 +79,7 @@ base
             </div>
           </section>
 
-         <section id="bar-1" class="bar">
+         <section class="bar">
            <div class="story">
               <div class="copy">
                 <div><span>"...You can have the best strategy in the world;</span></div>
@@ -85,7 +90,7 @@ base
            <div class="bar-wrapper">&nbsp;</div>
           </section>
 
-          <section id="text-2" class="text">
+          <section class="text">
             <div class="story">
               <h1>imake<span class="gif-trigger">things</span><span>.</span></h1>
               <div class="gif-copy-container">
@@ -99,7 +104,7 @@ base
             </div>
           </section>
 
-          <section id="bar-2" class="bar">
+          <section class="bar">
             <div class="story">
               <div class="copy">
                 <div><span>Break the rules <span class="highlight">so well,</span></span></div>
@@ -110,12 +115,14 @@ base
           </section>
         </div>
 
+        <!-- Work / Parallax -->
         <section id="work" order="2" class="parallax">
           <div id="rushmore" data-href="https://www.behance.net/gallery/Harley-Davidsons-Project-Rushmore/13524395"></div>
           <div id="dodge" data-href="https://www.behance.net/gallery/Dodge-Dart-Global-Rallycross/11290979"></div>
           <div id="ride-planner" data-href="https://www.behance.net/gallery/Harley-Davidson-Ride-Planner/13340045"></div>
         </section>
 
+        <!-- Contact -->
         <section id="contact" order="3" class="contact">
           <div class="story">
             <h1>weshould<span class="highlight gif-trigger">talk</span><span>.</span></h1>

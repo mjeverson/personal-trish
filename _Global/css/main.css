@@ -8,7 +8,7 @@
 
 /* Global styles */
 
-html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; box-sizing: border-box; }
 
 .outer-wrapper{
     background-color: rgb(247, 247, 247);
@@ -54,7 +54,7 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 section {display:block;height:auto;}
 section.text {padding-bottom: 10%;}
 
-.story{ margin: 0 auto; min-width: 980px; text-align:center;padding: 5% 0 0 0;}
+.story{ margin: 0 auto; text-align:center;padding: 5% 0 0 0;}
 .story h1 span { color: rgb(255, 255, 255); }
 .story h1 span.gif-trigger{ border-bottom: 11px solid; cursor:pointer;}
 .story h1 {
@@ -93,7 +93,7 @@ section.bar .story .copy span.highlight { color: rgb(255, 255, 255);font-style: 
 
 section.parallax {padding-bottom: 200px;}
 
-section.contact {padding-bottom:175px;opacity:0;}
+section.contact {padding-bottom:75px;opacity:0;}
 section.contact .gif-copy-container {padding-top: 100px; height: 300px;}
 section.contact .story h1 {margin:0 0 0 50px;}
 section.contact .copy { padding-top:50px; }
@@ -184,3 +184,18 @@ section.parallax > div {
     transform: rotateX(89deg); /* Text bleed at 90º */
 }
 
+/* Responsive */
+
+/* @media screen and (max-width: 1980px){}*/
+
+@media screen and (max-width: 1024px){
+    .header span {  font-size:30px;}
+}
+
+@media screen and (max-width: 768px){
+    .header span {  font-size:26px;}
+}
+
+@media screen and (max-width: 480px){
+    .header span {  font-size:20px;}
+}
