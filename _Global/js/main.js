@@ -15,8 +15,12 @@ $(document).ready(function(){
       $(this).addClass('hover');
 
       var pos = $($(this).attr('id')).offset().top;
-      $("html, body").animate({ scrollTop: pos + "px" });
+      $('html, body').animate({ scrollTop: pos + 'px' });
     });
+
+      $('.title-container').bind('click', function(){
+          $('html, body').animate({ scrollTop: '0px' });
+      });
 
     /* Update headers while scrolling */
     $('#about, #work, #contact').waypoint(function(d){
@@ -62,7 +66,7 @@ $(document).ready(function(){
       if(gifShown){
           return false;
       }
-        
+
       var gif = $(this).closest('.story').find('.gif');
       var copy = $(this).closest('.story').find('.copy');
 
@@ -91,28 +95,6 @@ $(document).ready(function(){
       gif.hide();
       copy.show();
     });
-
-    /* Hover block rotate transforms */
-   /* $('.flipper').hover(function(){
-        $(this).find('back-face').animate({
-          height: 'toggle'
-        });
-              *//*.css({
-          '-moz-transform': 'rotateX(90deg)',
-          '-webkit-transform': 'rotateX(90deg)',
-          'transform': 'rotateX(90deg)'
-        });*//*
-      },
-      function(){
-        $(this).find('back-face').animate({
-          height: 'toggle'
-        });
-        *//*$(this).css({
-          '-moz-transform': 'rotateX(0deg)',
-          '-webkit-transform': 'rotateX(0deg)',
-          'transform': 'rotateX(deg)'
-        });*//*
-      });*/
   };
 
   // Initialize the parallax styles and events
@@ -161,7 +143,7 @@ $(document).ready(function(){
       $contact.css('opacity', newOpacity(0.5, windowHeight, pos, 5));
 
       // Adjust the inner wrapper position for main "Trish" BG
-      $innerWrapperBG.css('background-position', 'left ' + ((pos)) + 'px');
+      //$innerWrapperBG.css('background-position', 'left ' + ((pos)) + 'px');
 
 
       //if the first section is in view...

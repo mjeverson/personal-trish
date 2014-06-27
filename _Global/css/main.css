@@ -49,7 +49,7 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 .nav:hover > span, .nav.hover > span { color: rgb( 111, 110, 110 ); }
 
 /* Main content */
-.inner-wrapper{ background: url('/_Global/images/bg/bg.png') no-repeat scroll; background-size: 100% auto; margin-top:115px; color:white; }
+.inner-wrapper{ background: url('/_Global/images/bg/bg.png') left 115px no-repeat fixed; background-size: 100% auto; color:white; z-index:1;}
 
 section {display:block;height:auto;}
 section.text {padding-bottom: 10%;}
