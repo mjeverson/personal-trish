@@ -99,9 +99,9 @@ section.bar .story .copy span.highlight { color: rgb(255, 255, 255);font-style: 
 section.bar .story .copy.inverse span { font-style:normal;}
 section.bar .story .copy.inverse span.highlight { font-style: italic; }
 
-section.parallax {padding-bottom: 200px;}
+/*section.parallax {padding-bottom: 200px;}*/
 
-section.contact {padding-bottom:75px;opacity:0;}
+section.contact {padding-bottom:125px;opacity:0;padding-top:325px;}
 section.contact .gif-copy-container {height: 200px;}
 section.contact .story h1 {margin:0 0 0 50px;}
 section.contact .copy { padding-top:25px; }
