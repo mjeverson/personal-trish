@@ -2,6 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcd2bda1-58b5-4b45-9bc1-14eb3e60839b" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_Global/images/icons/behance-default.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_Global/images/icons/con-1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_Global/images/icons/linkeding-resting.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_Global/images/icons/new21.gif" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_Global/images/icons/behance-hover.png" afterPath="$PROJECT_DIR$/_Global/images/icons/behance-hover.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_Global/images/icons/email-hover.png" afterPath="$PROJECT_DIR$/_Global/images/icons/email-hover.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_Global/images/icons/email-resting.png" afterPath="$PROJECT_DIR$/_Global/images/icons/email-resting.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_Global/images/icons/linkedin-hover.png" afterPath="$PROJECT_DIR$/_Global/images/icons/linkedin-hover.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_Global/images/icons/linkedin-resting.png" afterPath="$PROJECT_DIR$/_Global/images/icons/linkedin-resting.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_Global/images/icons/twitter-hover.png" afterPath="$PROJECT_DIR$/_Global/images/icons/twitter-hover.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_Global/images/icons/twitter-resting.png" afterPath="$PROJECT_DIR$/_Global/images/icons/twitter-resting.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_Global/css/main.css" afterPath="$PROJECT_DIR$/_Global/css/main.css" />
     </list>
     <ignored path="personal-trish.iws" />
@@ -28,8 +39,8 @@
       <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_Global/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35532233" vertical-offset="393" max-vertical-offset="3240">
-              <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.08545727" vertical-offset="1923" max-vertical-offset="3240">
+              <caret line="132" column="26" selection-start-line="132" selection-start-column="26" selection-end-line="132" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -630,8 +641,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_Global/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35532233" vertical-offset="393" max-vertical-offset="3240">
-          <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.08545727" vertical-offset="1923" max-vertical-offset="3240">
+          <caret line="132" column="26" selection-start-line="132" selection-start-column="26" selection-end-line="132" selection-end-column="26" />
           <folding />
         </state>
       </provider>

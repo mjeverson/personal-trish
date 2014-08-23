@@ -130,18 +130,18 @@ section.parallax > div {
 #ride-planner{ background: url('/_Global/images/bg/RIDE PLANNER.png') 50% 0 no-repeat fixed; background-size:cover;}
 
 /* flip */
-.contact-wrapper{height:200px;}
+.contact-wrapper{height:150px;}
 .contact-wrapper > div { width:15%; display:inline-block; }
 .contact-wrapper a {display:block;height:100%;}
 
-.twitter .front{background: url('/_Global/images/icons/twitter-resting.png') no-repeat center;}
-.twitter .back{background: url('/_Global/images/icons/twitter-hover.png') no-repeat center;}
-.linkedin .front {background: url('/_Global/images/icons/linkedin-resting.png') no-repeat center;}
-.linkedin .back {background: url('/_Global/images/icons/linkedin-hover.png') no-repeat center;}
-.behance .front {background: url('/_Global/images/icons/behance-default.png') no-repeat center;}
-.behance .back {background: url('/_Global/images/icons/behance-hover.png') no-repeat center;}
-.email .front {background: url('/_Global/images/icons/email-resting.png') no-repeat center;}
-.email .back {background: url('/_Global/images/icons/email-hover.png') no-repeat center;}
+.twitter .front{background: url('/_Global/images/icons/twitter-resting.png') no-repeat center;background-size:contain;}
+.twitter .back{background: url('/_Global/images/icons/twitter-hover.png') no-repeat center;background-size:contain;}
+.linkedin .front {background: url('/_Global/images/icons/linkedin-resting.png') no-repeat center;background-size:contain;}
+.linkedin .back {background: url('/_Global/images/icons/linkedin-hover.png') no-repeat center;background-size:contain;}
+.behance .front {background: url('/_Global/images/icons/behance-resting.png') no-repeat center;background-size:contain;}
+.behance .back {background: url('/_Global/images/icons/behance-hover.png') no-repeat center;background-size:contain;}
+.email .front {background: url('/_Global/images/icons/email-resting.png') no-repeat center;background-size:contain;}
+.email .back {background: url('/_Global/images/icons/email-hover.png') no-repeat center;background-size:contain;}
 
 /* Rotate the cube */
 
@@ -178,10 +178,10 @@ section.parallax > div {
 }
 
 .back {
-    -webkit-transform: rotateX(-90deg) translateZ(-75px);
-    -moz-transform: rotateX(-90deg) translateZ(-75px);
-    -o-transform: rotateX(-90deg) translateZ(-75px);
-    transform: rotateX(-90deg) translateZ(-75px);
+    -webkit-transform: rotateX(-90deg) translateZ(-85px);
+    -moz-transform: rotateX(-90deg) translateZ(-85px);
+    -o-transform: rotateX(-90deg) translateZ(-85px);
+    transform: rotateX(-90deg) translateZ(-85px);
 }
 
 /* Rotate the cube */
