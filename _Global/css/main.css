@@ -44,7 +44,7 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 .title-container span {cursor:pointer;}
 
 .nav-container{position:absolute; /*top: 42px; */right:7%;}
-.nav-container span.slash {font-weight:normal;padding:0 30px 0 30px;}
+.nav-container span.slash {font-weight:normal;padding:0 40px 0 40px;font-size:18px;color:rgb( 111, 110, 110 );}
 
 .nav { /*height:64px;*/ border-bottom:5px solid transparent;padding:10px 0 6px 0;}
 .nav:hover, .nav.hover{ border-bottom: 5px solid rgb( 111, 110, 110 ); cursor:pointer; }
@@ -54,7 +54,7 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 .inner-wrapper{ background: url('/_Global/images/bg/bg.png') left top no-repeat fixed; background-size: 100% auto; color:white; z-index:1; margin-top:55px;}
 
 section {display:block;height:auto;}
-section.text {padding-bottom: 295px;}
+section.text {padding-bottom: 150px;}
 
 .story{ /*margin: 0 auto;*/ text-align:center;padding-top:150px;}
 .story h1 span { color: rgb(255, 255, 255); }
@@ -72,7 +72,7 @@ section.text {padding-bottom: 295px;}
     margin: 0;
 }
 
-.story .gif-copy-container {height:315px;margin-top:50px;}
+.story .gif-copy-container {height:250px;margin-top:50px;}
 .story .gif { display:none; height:75%; }
 .gif.glasses { background:url('/_Global/images/gifs/glasses.gif') no-repeat center; background-size: contain; }
 .gif.poop { background:url('/_Global/images/gifs/poop.gif') no-repeat center; background-size: contain; }
@@ -91,15 +91,18 @@ section.text {padding-bottom: 295px;}
 /*section.text .gif { padding-top:50px; }
 section.text .copy { padding-top:50px; }*/
 
-section .bar-wrapper {width:100%;height:520px; background-color: rgba(247, 247, 247, 0.8); }
-section.bar .story {position:absolute;padding-top:200px;left:0;right:0;}
+section .bar-wrapper {width:100%;height:350px; background-color: rgba(247, 247, 247, 0.8); }
+section.bar .story {position:absolute;padding-top:100px;left:0;right:0;}
+section.bar .story.short {position:absolute;padding-top:120px;left:0;right:0;}
 section.bar .story .copy span { color: rgb(62, 62, 62); line-height: 1.542;border-bottom: 1px solid rgba(0, 0, 0, 0.2);}
 section.bar .story .copy span.highlight { color: rgb(255, 255, 255);font-style: normal; border:none; }
+section.bar .story .copy.inverse span { font-style:normal;}
+section.bar .story .copy.inverse span.highlight { font-style: italic; }
 
 section.parallax {padding-bottom: 200px;}
 
 section.contact {padding-bottom:75px;opacity:0;}
-section.contact .gif-copy-container {padding-top: 100px; height: 300px;}
+section.contact .gif-copy-container {height: 250px;}
 section.contact .story h1 {margin:0 0 0 50px;}
 section.contact .copy { padding-top:50px; }
 
