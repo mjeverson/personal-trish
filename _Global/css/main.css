@@ -101,7 +101,7 @@ section.bar .story .copy.inverse span.highlight { font-style: italic; }
 
 /*section.parallax {padding-bottom: 200px;}*/
 
-section.contact {padding-bottom:125px;opacity:0;padding-top:325px;}
+section.contact {padding-bottom:125px;opacity:0;}
 section.contact .gif-copy-container {height: 200px;}
 section.contact .story h1 {margin:0 0 0 50px;}
 section.contact .copy { padding-top:25px; }

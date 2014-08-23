@@ -34,7 +34,7 @@ $(document).ready(function(){
       else if (d == 'up'){
         $('.nav-container .nav[order="' + order + '"]').addClass('hover');
       }
-    }, { offset: 0 });
+    }, { offset: 55 });
   };
 
   // Initialize hover events
