@@ -15,8 +15,12 @@ $(document).ready(function(){
       $(this).addClass('hover');
 
       var pos = $($(this).attr('id')).offset().top;
-      $("html, body").animate({ scrollTop: pos + "px" });
+      $('html, body').animate({ scrollTop: pos + 'px' });
     });
+
+      $('.title-container').bind('click', function(){
+          $('html, body').animate({ scrollTop: '0px' });
+      });
 
     /* Update headers while scrolling */
     $('#about, #work, #contact').waypoint(function(d){
@@ -30,11 +34,13 @@ $(document).ready(function(){
       else if (d == 'up'){
         $('.nav-container .nav[order="' + order + '"]').addClass('hover');
       }
-    }, { offset: 117 });
+    }, { offset: 55 });
   };
 
   // Initialize hover events
   var hoverInit = function(){
+    var gifShown = false;
+
     $('#card').hover(function(){
       $(this).toggleClass('flipped');
     }, function(){
@@ -57,6 +63,10 @@ $(document).ready(function(){
       gif.show();
     },
     function(){
+      if(gifShown){
+          return false;
+      }
+
       var gif = $(this).closest('.story').find('.gif');
       var copy = $(this).closest('.story').find('.copy');
 
@@ -67,6 +77,8 @@ $(document).ready(function(){
     // Gifs for mobile, clicking should show the gif
     $('span.gif-trigger').bind('click', function(e){
       e.stopPropagation();
+
+      gifShown = true;
       var gif = $(this).closest('.story').find('.gif');
       var copy = $(this).closest('.story').find('.copy');
 
@@ -76,34 +88,13 @@ $(document).ready(function(){
 
     // Clicking anywhere on the body should hide the gifs
     $('body').bind('click', function(){
+      gifShown = false;
       var gif = $('.gif');
       var copy = $('.copy');
 
       gif.hide();
       copy.show();
     });
-
-    /* Hover block rotate transforms */
-   /* $('.flipper').hover(function(){
-        $(this).find('back-face').animate({
-          height: 'toggle'
-        });
-              *//*.css({
-          '-moz-transform': 'rotateX(90deg)',
-          '-webkit-transform': 'rotateX(90deg)',
-          'transform': 'rotateX(90deg)'
-        });*//*
-      },
-      function(){
-        $(this).find('back-face').animate({
-          height: 'toggle'
-        });
-        *//*$(this).css({
-          '-moz-transform': 'rotateX(0deg)',
-          '-webkit-transform': 'rotateX(0deg)',
-          'transform': 'rotateX(deg)'
-        });*//*
-      });*/
   };
 
   // Initialize the parallax styles and events
@@ -137,7 +128,7 @@ $(document).ready(function(){
       var visibilityZoneHeight = (windowHeight * y);
 
       if(distanceFromViewportTop <= visibilityZoneHeight){
-        return 1 - (distanceFromViewportTop / visibilityZoneHeight);
+        return 1 - (distanceFromViewportTop/ visibilityZoneHeight);
       }else{
         return 0;
       }
@@ -149,28 +140,28 @@ $(document).ready(function(){
       var pos = $(window).scrollTop(); //position of the scrollbar
 
       // Adjust the contact us section's opacity
-      $contact.css('opacity', newOpacity(0.5, windowHeight, pos));
+      $contact.css('opacity', newOpacity(0.5, windowHeight, pos, 5));
 
       // Adjust the inner wrapper position for main "Trish" BG
-      $innerWrapperBG.css('background-position', 'left ' + ((pos)) + 'px');
+      //$innerWrapperBG.css('background-position', 'left ' + ((pos)) + 'px');
 
 
       //if the first section is in view...
       if($firstBG.hasClass("inview")){
         //call the newPos function and change the background position
-        $firstBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 900, 0.05)});
+        $firstBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 900, 0.015)});
       }
 
       //if the second section is in view...
       if($secondBG.hasClass("inview")){
         //call the newPos function and change the background position
-        $secondBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 1900, 0.1)});
+        $secondBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 1900, 0.015)});
       }
 
       //if the third section is in view...
       if($thirdBG.hasClass("inview")){
         //call the newPos function and change the background position
-        $thirdBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 2850, 0.05)});
+        $thirdBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 2850, 0.015)});
       }
     };
 
