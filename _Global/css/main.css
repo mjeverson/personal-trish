@@ -40,7 +40,7 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 .header > div.header-stripe { height:5px; display:block; background-color:rgb(0,0,0); }
 
 .title-container {/*margin:32px 0 0 7%;*/margin-left:7%;}
-.title-container .nav { margin-left:-5px; }
+.title-container .nav { margin-left:-8px; }
 .title-container span {cursor:pointer;}
 
 .nav-container{position:absolute; /*top: 42px; */right:7%;}
@@ -102,9 +102,9 @@ section.bar .story .copy.inverse span.highlight { font-style: italic; }
 section.parallax {padding-bottom: 200px;}
 
 section.contact {padding-bottom:75px;opacity:0;}
-section.contact .gif-copy-container {height: 250px;}
+section.contact .gif-copy-container {height: 200px;}
 section.contact .story h1 {margin:0 0 0 50px;}
-section.contact .copy { padding-top:50px; }
+section.contact .copy { padding-top:25px; }
 
 /* footer styles */
 .footer {
@@ -150,7 +150,7 @@ section.parallax > div {
     width: 15%;
     text-align: center;
     margin: 0 auto;
-    height: 200px;
+    height: 150px;
     padding-right:10px;
 
     -webkit-transition: -webkit-transform .33s;
@@ -178,10 +178,10 @@ section.parallax > div {
 }
 
 .back {
-    -webkit-transform: rotateX(-90deg) translateZ(-100px);
-    -moz-transform: rotateX(-90deg) translateZ(-100px);
-    -o-transform: rotateX(-90deg) translateZ(-100px);
-    transform: rotateX(-90deg) translateZ(-100px);
+    -webkit-transform: rotateX(-90deg) translateZ(-75px);
+    -moz-transform: rotateX(-90deg) translateZ(-75px);
+    -o-transform: rotateX(-90deg) translateZ(-75px);
+    transform: rotateX(-90deg) translateZ(-75px);
 }
 
 /* Rotate the cube */
