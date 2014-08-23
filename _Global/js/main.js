@@ -34,7 +34,7 @@ $(document).ready(function(){
       else if (d == 'up'){
         $('.nav-container .nav[order="' + order + '"]').addClass('hover');
       }
-    }, { offset: 117 });
+    }, { offset: 55 });
   };
 
   // Initialize hover events
@@ -149,19 +149,19 @@ $(document).ready(function(){
       //if the first section is in view...
       if($firstBG.hasClass("inview")){
         //call the newPos function and change the background position
-        $firstBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 900, 0.025)});
+        $firstBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 900, 0.01)});
       }
 
       //if the second section is in view...
       if($secondBG.hasClass("inview")){
         //call the newPos function and change the background position
-        $secondBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 1900, 0.05)});
+        $secondBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 1900, 0.01)});
       }
 
       //if the third section is in view...
       if($thirdBG.hasClass("inview")){
         //call the newPos function and change the background position
-        $thirdBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 2850, 0.025)});
+        $thirdBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 2850, 0.01)});
       }
     };
 

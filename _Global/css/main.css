@@ -12,8 +12,8 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 
 .outer-wrapper{
     background-color: rgb(247, 247, 247);
-    height:100%;
-    padding: 0 55px 0 55px;
+    /*height:100%;*/
+    padding: 0 30px 0 30px;
 }
 
 /* Header styles */
@@ -23,51 +23,56 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
     top:0;
     width:100%;
     z-index:1000;
+    height:55px;
+    font-size:24px;
+    letter-spacing:0px;
 }
 
 .header span {
-    font-size: 40px;
     color: rgb( 0, 0, 0 );
     font-weight: bold;
-    letter-spacing: -2px;
     text-align: left;
 }
 
 .header div { display:inline-block; }
-.header > div {height:100%;}
-.header > div.header-stripe { height:10px; display:block; background-color:rgb(0,0,0); }
+.header > div {height:45px; }
+/*.header > div {height:100%;}*/
+.header > div.header-stripe { height:5px; display:block; background-color:rgb(0,0,0); }
 
-.title-container {margin:32px 0 0 7%;}
+.title-container {/*margin:32px 0 0 7%;*/margin-left:7%;}
 .title-container .nav { margin-left:-5px; }
 .title-container span {cursor:pointer;}
 
-.nav-container{position:absolute; top: 42px; right:7%;}
-.nav-container span.slash {font-weight:normal;padding:0 50px 0 50px;}
+.nav-container{position:absolute; /*top: 42px; */right:7%;}
+.nav-container span.slash {font-weight:normal;padding:0 30px 0 30px;}
 
-.nav { height:64px; border-bottom:11px solid transparent;}
-.nav:hover, .nav.hover{ border-bottom: 11px solid rgb( 111, 110, 110 ); cursor:pointer; }
+.nav { /*height:64px;*/ border-bottom:5px solid transparent;padding:10px 0 6px 0;}
+.nav:hover, .nav.hover{ border-bottom: 5px solid rgb( 111, 110, 110 ); cursor:pointer; }
 .nav:hover > span, .nav.hover > span { color: rgb( 111, 110, 110 ); }
 
 /* Main content */
-.inner-wrapper{ background: url('/_Global/images/bg/bg.png') left 115px no-repeat fixed; background-size: 100% auto; color:white; z-index:1;}
+.inner-wrapper{ background: url('/_Global/images/bg/bg.png') left top no-repeat fixed; background-size: 100% auto; color:white; z-index:1; margin-top:55px;}
 
 section {display:block;height:auto;}
-section.text {padding-bottom: 10%;}
+section.text {padding-bottom: 295px;}
 
-.story{ margin: 0 auto; text-align:center;padding: 5% 0 0 0;}
+.story{ /*margin: 0 auto;*/ text-align:center;padding-top:150px;}
 .story h1 span { color: rgb(255, 255, 255); }
-.story h1 span.gif-trigger{ border-bottom: 11px solid; cursor:pointer;}
+.story h1 span.gif-trigger{ border-bottom: 5px solid; cursor:pointer;}
 .story h1 {
-    font-size: 156px;
+    font-size: 96px;
     color: rgb(135, 134, 134);
     font-weight: bold;
-    line-height: 0.957;
-    letter-spacing: -2px;
+    /*line-height: 0.957;*/
+    letter-spacing: -3px;
     text-align: center;
-    text-shadow: 0 3px 0;
+    text-shadow: 0 1px 0;
+    /*margin-top:200px;*/
+    opacity: 0.8;
+    margin: 0;
 }
 
-.story .gif-copy-container {height:315px;}
+.story .gif-copy-container {height:315px;margin-top:50px;}
 .story .gif { display:none; height:75%; }
 .gif.glasses { background:url('/_Global/images/gifs/glasses.gif') no-repeat center; background-size: contain; }
 .gif.poop { background:url('/_Global/images/gifs/poop.gif') no-repeat center; background-size: contain; }
@@ -75,16 +80,16 @@ section.text {padding-bottom: 10%;}
 
 .story .copy span { color: rgb(255, 255, 255); font-style: italic; }
 .story .copy {
-    font-size: 35px;
+    font-size: 30px;
     font-family: "Georgia";
     color: rgb(135, 134, 134);
     line-height: 1.457;
-    letter-spacing: -3px;
+    letter-spacing: -1px;
     text-align: center;
 }
 
-section.text .gif { padding-top:50px; }
-section.text .copy { padding-top:50px; }
+/*section.text .gif { padding-top:50px; }
+section.text .copy { padding-top:50px; }*/
 
 section .bar-wrapper {width:100%;height:520px; background-color: rgba(247, 247, 247, 0.8); }
 section.bar .story {position:absolute;padding-top:200px;left:0;right:0;}
@@ -104,7 +109,7 @@ section.contact .copy { padding-top:50px; }
  position:fixed;
  bottom:0;
  z-index:1000;
- height:55px;
+ height:30px;
  width:100%;
 }
 
@@ -186,7 +191,9 @@ section.parallax > div {
 
 /* Responsive */
 
-/* @media screen and (max-width: 1980px){}*/
+@media screen and (max-width: 1920px){
+
+}
 
 @media screen and (max-width: 1024px){
     .header span {  font-size:30px;}
