@@ -2,17 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcd2bda1-58b5-4b45-9bc1-14eb3e60839b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_Global/images/icons/behance-default.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_Global/images/icons/con-1.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_Global/images/icons/linkeding-resting.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_Global/images/icons/new21.gif" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_Global/images/icons/behance-hover.png" afterPath="$PROJECT_DIR$/_Global/images/icons/behance-hover.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_Global/images/icons/email-hover.png" afterPath="$PROJECT_DIR$/_Global/images/icons/email-hover.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_Global/images/icons/email-resting.png" afterPath="$PROJECT_DIR$/_Global/images/icons/email-resting.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_Global/images/icons/linkedin-hover.png" afterPath="$PROJECT_DIR$/_Global/images/icons/linkedin-hover.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_Global/images/icons/linkedin-resting.png" afterPath="$PROJECT_DIR$/_Global/images/icons/linkedin-resting.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_Global/images/icons/twitter-hover.png" afterPath="$PROJECT_DIR$/_Global/images/icons/twitter-hover.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_Global/images/icons/twitter-resting.png" afterPath="$PROJECT_DIR$/_Global/images/icons/twitter-resting.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_Global/css/main.css" afterPath="$PROJECT_DIR$/_Global/css/main.css" />
     </list>
     <ignored path="personal-trish.iws" />
@@ -39,8 +28,8 @@
       <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_Global/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.08545727" vertical-offset="1923" max-vertical-offset="3240">
-              <caret line="132" column="26" selection-start-line="132" selection-start-column="26" selection-end-line="132" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.3328336" vertical-offset="1218" max-vertical-offset="3240">
+              <caret line="96" column="75" selection-start-line="96" selection-start-column="75" selection-end-line="96" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -49,7 +38,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.3" vertical-offset="1230" max-vertical-offset="2475">
+            <state vertical-scroll-proportion="14.375" vertical-offset="1590" max-vertical-offset="2475">
               <caret line="83" column="38" selection-start-line="83" selection-start-column="38" selection-end-line="83" selection-end-column="38" />
               <folding />
             </state>
@@ -59,8 +48,8 @@
       <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_Global/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.923077" vertical-offset="2213" max-vertical-offset="2880">
-              <caret line="163" column="85" selection-start-line="163" selection-start-column="85" selection-end-line="163" selection-end-column="85" />
+            <state vertical-scroll-proportion="-0.26923078" vertical-offset="533" max-vertical-offset="2880">
+              <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -119,7 +108,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -256,6 +244,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -279,6 +268,14 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -289,12 +286,14 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
+    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" />
+      <option name="executablePath" />
       <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -302,16 +301,6 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
-      <option name="cucumberJsArguments" />
-      <option name="executablePath" />
-      <option name="filePath" />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -377,6 +366,30 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/_Global/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1308" max-vertical-offset="3240">
+          <caret line="103" column="66" selection-start-line="103" selection-start-column="66" selection-end-line="103" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1590" max-vertical-offset="2475">
+          <caret line="83" column="38" selection-start-line="83" selection-start-column="38" selection-end-line="83" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_Global/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="2880">
+          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_Global/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="3090">
@@ -625,7 +638,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.3" vertical-offset="1230" max-vertical-offset="2475">
+        <state vertical-scroll-proportion="14.375" vertical-offset="1590" max-vertical-offset="2475">
           <caret line="83" column="38" selection-start-line="83" selection-start-column="38" selection-end-line="83" selection-end-column="38" />
           <folding />
         </state>
@@ -633,16 +646,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_Global/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.923077" vertical-offset="2213" max-vertical-offset="2880">
-          <caret line="163" column="85" selection-start-line="163" selection-start-column="85" selection-end-line="163" selection-end-column="85" />
+        <state vertical-scroll-proportion="-0.26923078" vertical-offset="533" max-vertical-offset="2880">
+          <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_Global/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08545727" vertical-offset="1923" max-vertical-offset="3240">
-          <caret line="132" column="26" selection-start-line="132" selection-start-column="26" selection-end-line="132" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.3328336" vertical-offset="1218" max-vertical-offset="3240">
+          <caret line="96" column="75" selection-start-line="96" selection-start-column="75" selection-end-line="96" selection-end-column="75" />
           <folding />
         </state>
       </provider>
