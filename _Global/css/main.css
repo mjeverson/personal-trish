@@ -37,6 +37,7 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 
 .nav-container{position:absolute;right:7%;}
 .nav-container span.slash {font-weight:normal;padding:0 40px 0 40px;font-size:18px;color:rgb( 111, 110, 110 );}
+.header .mobile-menu {background: url('/_Global/images/icons/icon-menu.svg') center center no-repeat; cursor:pointer;height:50px;width:50px;border:none;padding:0;position:absolute;right:3%;display:none;}
 
 .nav { border-bottom:5px solid transparent;padding:10px 0 6px 0;}
 .nav:hover, .nav.hover{ border-bottom: 5px solid rgb( 111, 110, 110 ); cursor:pointer; }
@@ -116,7 +117,7 @@ section.parallax > div {
 
 /* flip */
 .contact-wrapper{height:150px;}
-.contact-wrapper > div { width:15%; display:inline-block; }
+.contact-wrapper > div { width:15%; min-width: 150px; display:inline-block; }
 .contact-wrapper a {display:block;height:100%;}
 
 .twitter .front{background: url('/_Global/images/icons/twitter-resting.png') no-repeat center;background-size:contain;}
@@ -179,18 +180,32 @@ section.parallax > div {
 
 /* Responsive */
 
-@media screen and (max-width: 1920px){
+@media screen and (min-width: 1600px){
  /* TODO: Increase spacing on higher res */
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (min-width: 1024px) and (max-width: 1600px){
+ /* This is sort of what everything else is targeted to */
+}
 
+@media screen and (min-width: 768px) and (max-width: 1024px){
+ .nav-container span.slash {padding:0 10px 0 10px;}
 }
 
 @media screen and (max-width: 768px){
+/* TODO:
+    Hide  main head nav
+    Show mobile icon
+    JS click event to show subheaders
+    background size (trish & parallax)
+    link icons min width
 
+*/
+    .story h1 {font-size:60px;}
+    .header .mobile-menu {display:inline-block;}
+    .header .nav-container {display:none;}
 }
 
 @media screen and (max-width: 480px){
-
+ .story h1 {font-size:40px;}
 }
