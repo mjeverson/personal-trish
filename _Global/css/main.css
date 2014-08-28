@@ -46,10 +46,12 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 /* Main content */
 .inner-wrapper{ background: url('/_Global/images/bg/bg.png') right top no-repeat fixed; background-color:black; background-size: cover; color:white; z-index:1; margin-top:55px;}
 
-section {display:block;height:auto;}
-section.text {padding-bottom: 150px;}
+section {display:block;}
+section.text {height:70vh;padding-top:15vh;padding-bottom:15vh;}
+section.text .story.primary {padding-top:5%;}
+section.text .story.secondary {padding-top:10%;}
 
-.story{ text-align:center;padding-top:150px;}
+.story{ text-align:center;}
 .story h1 span { color: rgb(255, 255, 255); }
 .story h1 span.gif-trigger{ border-bottom: 5px solid; cursor:pointer;}
 .story h1 {
@@ -181,7 +183,7 @@ section.parallax > div {
 /* Responsive */
 
 @media screen and (min-width: 1600px){
- /* TODO: Increase spacing on higher res */
+ /* TODO: Increase spacing on higher res  - done by vh and padding-top%? */
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1600px){
@@ -201,9 +203,15 @@ section.parallax > div {
     link icons min width
 
 */
-    .story h1 {font-size:60px;}
     .header .mobile-menu {display:inline-block;}
     .header .nav-container {display:none;}
+
+    section.text .story.primary {padding-top:20%;}
+    section.text .story.secondary {padding-top:25%;}
+
+    .story h1 {font-size:60px;}
+    .story .copy { font-size: 22px; }
+
 
    /* .inner-wrapper{ background: url('/_Global/images/bg/bg-mobile.png') right top no-repeat fixed; background-size:cover; background-color:black; color:white; z-index:1; padding-top:155px;}*/
 }
