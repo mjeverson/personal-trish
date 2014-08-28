@@ -49,7 +49,6 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 section {display:block;}
 section.text {height:70vh;padding-top:15vh;padding-bottom:15vh;}
 section.text .story.primary {padding-top:5%;}
-section.text .story.secondary {padding-top:10%;}
 
 .story{ text-align:center;}
 .story h1 span { color: rgb(255, 255, 255); }
@@ -89,9 +88,10 @@ section.bar .story .copy span.highlight { color: rgb(255, 255, 255);font-style: 
 section.bar .story .copy.inverse span { font-style:normal;}
 section.bar .story .copy.inverse span.highlight { font-style: italic; }
 
-section.contact {padding-bottom:125px;opacity:0;}
+section.contact {height:70vh;padding-top:30vh;padding-bottom:25vh;}
+section.contact {/*padding-bottom:125px;*/opacity:0;}
 section.contact .gif-copy-container {height: 200px;}
-section.contact .story h1 {margin:0 0 0 50px;}
+section.contact .story h1 {/*margin:0 0 0 50px;*/padding-top:10%;}
 section.contact .copy { padding-top:25px; }
 
 /* footer styles */
@@ -174,10 +174,10 @@ section.parallax > div {
 
 /* Rotate the cube */
 .cube:hover {
-    -webkit-transform: rotateX(89deg);
-    -moz-transform: rotateX(89deg);
-    -o-transform: rotateX(89deg);
-    transform: rotateX(89deg); /* Text bleed at 90º */
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg); /* Text bleed at 90º */
 }
 
 /* Responsive */
@@ -208,11 +208,37 @@ section.parallax > div {
 
     section.text .story.primary {padding-top:20%;}
     section.text .story.secondary {padding-top:25%;}
+    section.contact {padding-top:20vh;}
+    section.contact .story {padding-top:30%;}
+    section.contact .gif-copy-container {height:150px;margin-top:20px;}
 
     .story h1 {font-size:60px;}
     .story .copy { font-size: 22px; }
 
+    .twitter .front:hover{background: url('/_Global/images/icons/twitter-hover.png') no-repeat center;background-size:contain;}
+    .linkedin .front:hover{background: url('/_Global/images/icons/linkedin-hover.png') no-repeat center;background-size:contain;}
+    .behance .front:hover{background: url('/_Global/images/icons/behance-hover.png') no-repeat center;background-size:contain;}
+    .email .front:hover{background: url('/_Global/images/icons/email-hover.png') no-repeat center;background-size:contain;}
 
+    /* Position the faces */
+    .cube {cursor:pointer;height:110px;}
+    .front {
+        -webkit-transform: translateZ(0px);
+        -moz-transform: translateZ(0px);
+        -o-transform: translateZ(0px);
+        transform: translateZ(0px);
+        height:100%;
+    }
+
+    .back {display:none;}
+
+    /* Rotate the cube */
+    .cube:hover {
+        -webkit-transform: rotateX(0deg);
+        -moz-transform: rotateX(0deg);
+        -o-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+    }
    /* .inner-wrapper{ background: url('/_Global/images/bg/bg-mobile.png') right top no-repeat fixed; background-size:cover; background-color:black; color:white; z-index:1; padding-top:155px;}*/
 }
 
