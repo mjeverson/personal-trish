@@ -49,6 +49,7 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 section {display:block;}
 section.text {height:70vh;padding-top:15vh;padding-bottom:15vh;}
 section.text .story.primary {padding-top:5%;}
+section.text .story.secondary {padding-top:10%;}
 
 .story{ text-align:center;}
 .story h1 span { color: rgb(255, 255, 255); }
