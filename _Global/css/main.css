@@ -196,18 +196,16 @@ section.parallax > div {
 
 @media screen and (max-width: 768px){
 /* TODO:
-    Hide  main head nav
-    Show mobile icon
     JS click event to show subheaders
     background size (trish & parallax)
-    link icons min width
-
+    Line breaks, different divs on smaller media or maybe font size?
 */
     .header .mobile-menu {display:inline-block;}
     .header .nav-container {display:none;}
 
     section.text .story.primary {padding-top:20%;}
     section.text .story.secondary {padding-top:25%;}
+    section.bar .story {left:5vh;right:5vh;}
     section.contact {padding-top:20vh;}
     section.contact .story {padding-top:30%;}
     section.contact .gif-copy-container {height:150px;margin-top:20px;}
