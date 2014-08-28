@@ -107,7 +107,7 @@ section.contact .copy { padding-top:25px; }
 /* parallax */
 section.parallax > div {
     color: white;
-    height: 1300px;
+    height: 150vh;
     margin: 0 auto;
     padding: 160px 0 0 0;
     cursor: pointer;
@@ -140,6 +140,7 @@ section.parallax > div {
     margin: 0 auto;
     height: 150px;
     padding-right:10px;
+    cursor: pointer;
 
     -webkit-transition: -webkit-transform .33s;
     -moz-transition: -webkit-transform .33s;
@@ -188,10 +189,12 @@ section.parallax > div {
 
 @media screen and (min-width: 1024px) and (max-width: 1600px){
  /* This is sort of what everything else is targeted to */
+ /* TODO: Fix 3d transforms here */
 }
 
 @media screen and (min-width: 800px) and (max-width: 1024px){
  .nav-container span.slash {padding:0 10px 0 10px;}
+ /* TODO: Hide 3d transforms here? */
 }
 
 @media screen and (max-width: 768px){
@@ -205,7 +208,8 @@ section.parallax > div {
 
     section.text .story.primary {padding-top:20%;}
     section.text .story.secondary {padding-top:25%;}
-    section.bar .story {left:5vh;right:5vh;}
+    section.bar .story {left:5vh;right:5vh;padding-top:10vh;}
+    section.bar .story.short {padding-top:19vh;}
     section.contact {padding-top:20vh;}
     section.contact .story {padding-top:30%;}
     section.contact .gif-copy-container {height:150px;margin-top:20px;}
