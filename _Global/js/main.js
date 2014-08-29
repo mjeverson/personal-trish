@@ -7,7 +7,7 @@ $(document).ready(function(){
   };
 
   var isMobileSize = function(){
-      return $(window).width() <= 768;
+      return $(window).width() <= 480;
   };
 
   // Set up the nav
@@ -73,7 +73,7 @@ $(document).ready(function(){
     /* Hover events for gifs */
     $('.gif-trigger').hover(function(){
       var gif = $(this).closest('.story').find('.gif');
-      var copy = $(this).closest('.story').find('.copy');
+      var copy = isMobileSize() ? $(this).closest('.story').find('.copy:not(.desktop-copy)') : $(this).closest('.story').find('.copy:not(.mobile-copy)');
 
       copy.hide();
       gif.show();
@@ -84,7 +84,7 @@ $(document).ready(function(){
       }
 
       var gif = $(this).closest('.story').find('.gif');
-      var copy = $(this).closest('.story').find('.copy');
+      var copy = isMobileSize() ? $(this).closest('.story').find('.copy:not(.desktop-copy)') : $(this).closest('.story').find('.copy:not(.mobile-copy)');
 
       gif.hide();
       copy.show();
@@ -96,7 +96,7 @@ $(document).ready(function(){
 
       gifShown = true;
       var gif = $(this).closest('.story').find('.gif');
-      var copy = $(this).closest('.story').find('.copy');
+      var copy = isMobileSize() ? $(this).closest('.story').find('.copy:not(.desktop-copy)') : $(this).closest('.story').find('.copy:not(.mobile-copy)');
 
       copy.hide();
       gif.show();
@@ -106,7 +106,7 @@ $(document).ready(function(){
     $('body').bind('click', function(){
       gifShown = false;
       var gif = $('.gif');
-      var copy = $('.copy');
+      var copy = isMobileSize() ? $('.copy:not(.desktop-copy)') : $('.copy:not(.mobile-copy)');
 
       gif.hide();
       copy.show();
@@ -181,6 +181,20 @@ $(document).ready(function(){
 
     //if the user resizes the window...
     $(window).resize(function(){
+      // Reset the gifs and toggle copy to display
+      $('.gif').hide();
+
+      if (isMobileSize()){
+            $('.mobile-copy').show()
+            $('.desktop-copy').hide()
+      } else{
+            $('.desktop-copy').show()
+            $('.mobile-copy').hide()
+      }
+
+      gif.hide();
+      copy.show();
+
       move();
     });
 
