@@ -96,10 +96,8 @@ section.text .story.secondary {padding-top:10%;}
 .gif.poop { background:url('/_Global/images/gifs/poop.gif') no-repeat center; background-size: contain; }
 .gif.talk { background:url('/_Global/images/gifs/talk.gif') no-repeat center; background-size: contain; }
 
-h1.desktop-copy {display:inline-block;}
-h1.mobile-copy{display:none;}
-.story .copy.desktop-copy {display:inline-block;}
-.story .copy.mobile-copy {display:none;}
+.story .copy.desktop-copy, h1.desktop-copy, div.desktop-copy {display:inline-block;}
+.story .copy.mobile-copy, h1.mobile-copy, div.mobile-copy {display:none;}
 
 .story .copy span { color: rgb(255, 255, 255); font-style: italic; }
 .story .copy {
@@ -218,6 +216,12 @@ section.parallax > div {
  /* This is sort of what everything else is targeted to */
     section.contact {padding-bottom:35vh;}
 
+    .back {
+        -webkit-transform: rotateX(-90deg) translateZ(-90px);
+        -moz-transform: rotateX(-90deg) translateZ(-90px);
+        -o-transform: rotateX(-90deg) translateZ(-90px);
+        transform: rotateX(-90deg) translateZ(-90px);
+    }
 }
 
 @media screen and (min-width: 800px) and (max-width: 1024px){
@@ -237,7 +241,7 @@ section.parallax > div {
     section.text .story.primary {padding-top:0;}
     section.bar .story {padding-top:17vh;left:5vw;right:5vw;}
     section.bar .story.short {padding-top:19vh;}
-    section.contact {padding-top:20vh;}
+    section.contact {padding-top:20vh;padding-bottom:30vh;}
     section.contact .story {padding-top:30%;}
     section.contact .mobile-copy {height:74px;}
     section.contact .gif-copy-container {height:150px;margin-top:20px;}
@@ -245,10 +249,8 @@ section.parallax > div {
     .story .copy { font-size: 22px; }
     .story.secondary {padding-left:5vw;padding-right:5vw;}
 
-    h1.desktop-copy {display:none;}
-    h1.mobile-copy{display:inline-block;}
-    .story .copy.desktop-copy {display:none;}
-    .story .copy.mobile-copy {display:inline-block;}
+    .story .copy.desktop-copy, h1.desktop-copy, div.desktop-copy {display:inline-block;}
+    .story .copy.mobile-copy, h1.mobile-copy, div.mobile-copy {display:none;}
 
     .footer {display: none;}
 
