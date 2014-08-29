@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
   // Kicks off the event and styling initialization
   var initialize = function() {
     navInit();
@@ -7,14 +6,21 @@ $(document).ready(function(){
     parallaxInit();
   };
 
+  var isMobileSize = function(){
+      return $(window).width() <= 768;
+  };
+
   // Set up the nav
   var navInit = function(){
     // Click to scroll
-    $('.nav-container .nav').bind('click', function(){
-      $('.nav-container .nav').removeClass('hover');
+    $('.nav').bind('click', function(){
+      $('.nav').removeClass('hover');
       $(this).addClass('hover');
 
-      var pos = $($(this).attr('id')).offset().top;
+      $('.subheader').fadeOut();
+      $('.trish').removeClass('menu-open');
+
+      var pos = $('#' + $(this).attr('data-href')).offset().top;
       $('html, body').animate({ scrollTop: pos + 'px' });
     });
 
@@ -24,17 +30,27 @@ $(document).ready(function(){
 
     /* Update headers while scrolling */
     $('#about, #work, #contact').waypoint(function(d){
-      $('.nav-container .nav').removeClass('hover');
+      $('.nav').removeClass('hover');
       var id = $(this).attr('id');
       var order = parseInt($(this).attr('order')) > 1 ? parseInt($(this).attr('order')) - 1 : parseInt($(this).attr('order'));
 
       if(d == 'down') {
-        $('.nav-container .nav[id="#' + id + '"]').addClass('hover');
+        $('.nav[data-href="' + id + '"]').addClass('hover');
       }
       else if (d == 'up'){
-        $('.nav-container .nav[order="' + order + '"]').addClass('hover');
+        $('.nav[data-order="' + order + '"]').addClass('hover');
       }
     }, { offset: 55 });
+
+    $('.mobile-menu').bind('click', function(){
+       $('.subheader').slideToggle();
+       $('.trish').toggleClass('menu-open');
+    });
+
+    $('.outer-wrapper').bind('click', function(){
+       $('.subheader:visible').slideToggle();
+       $('.trish').removeClass('menu-open');
+    });
   };
 
   // Initialize hover events
@@ -142,26 +158,24 @@ $(document).ready(function(){
       // Adjust the contact us section's opacity
       $contact.css('opacity', newOpacity(0.5, windowHeight, pos, 5));
 
-      // Adjust the inner wrapper position for main "Trish" BG
-      //$innerWrapperBG.css('background-position', 'left ' + ((pos)) + 'px');
+      if (!isMobileSize()) {
+          //if the first section is in view...
+          if ($firstBG.hasClass("inview")) {
+              //call the newPos function and change the background position
+              $firstBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 900, 0.015)});
+          }
 
+          //if the second section is in view...
+          if ($secondBG.hasClass("inview")) {
+              //call the newPos function and change the background position
+              $secondBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 1900, 0.015)});
+          }
 
-      //if the first section is in view...
-      if($firstBG.hasClass("inview")){
-        //call the newPos function and change the background position
-        $firstBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 900, 0.015)});
-      }
-
-      //if the second section is in view...
-      if($secondBG.hasClass("inview")){
-        //call the newPos function and change the background position
-        $secondBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 1900, 0.015)});
-      }
-
-      //if the third section is in view...
-      if($thirdBG.hasClass("inview")){
-        //call the newPos function and change the background position
-        $thirdBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 2850, 0.015)});
+          //if the third section is in view...
+          if ($thirdBG.hasClass("inview")) {
+              //call the newPos function and change the background position
+              $thirdBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 2850, 0.015)});
+          }
       }
     };
 

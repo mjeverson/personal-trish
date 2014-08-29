@@ -21,10 +21,33 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
     letter-spacing:0px;
 }
 
-.header span {
+.header span, .subheader span {
     color: rgb( 0, 0, 0 );
     font-weight: bold;
     text-align: left;
+}
+
+.subheader {
+    background-color: rgb(247, 247, 247);
+    position:fixed;
+    top:55;
+    width:100%;
+    z-index:1000;
+    font-size:20px;
+    letter-spacing:0px;
+    display:none;
+}
+
+.subheader .item {
+    height: 35px;
+    padding-top:10px;
+    border-top:1px solid rgba(0,0,0,0.2);
+    text-align:center;
+    cursor:pointer;
+}
+
+.subheader .item .title-container {
+    padding-top:15px;
 }
 
 .header div { display:inline-block; }
@@ -42,6 +65,8 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 .nav { border-bottom:4px solid transparent;padding:10px 0 6px 0;}
 .nav:hover, .nav.hover{ border-bottom: 4px solid rgb( 111, 110, 110 ); cursor:pointer; }
 .nav:hover > span, .nav.hover > span { color: rgb( 111, 110, 110 ); }
+
+.trish.menu-open span{color: rgb( 111, 110, 110 );}
 
 /* Main content */
 .inner-wrapper{ background: url('/_Global/images/bg/bg.png') right top no-repeat fixed; background-color:black; background-size: cover; color:white; z-index:1; margin-top:55px;}
@@ -204,8 +229,14 @@ section.parallax > div {
     background size (trish & parallax)
     Line breaks, different divs on smaller media or maybe font size?
 */
+    .header { font-size: 20px; }
     .header .mobile-menu {display:inline-block;}
     .header .nav-container {display:none;}
+
+    .nav {border-bottom:none;}
+    .nav:hover, .nav.hover {border-bottom:none;}
+
+    .outer-wrapper {padding: 0;}
 
     section.text .story.primary {padding-top:20%;}
     section.text .story.secondary {padding-top:25%;}
@@ -217,6 +248,8 @@ section.parallax > div {
 
     .story h1 {font-size:60px;}
     .story .copy { font-size: 22px; }
+
+    .footer {display: none;}
 
     .twitter .front:hover{background: url('/_Global/images/icons/twitter-hover.png') no-repeat center;background-size:contain;}
     .linkedin .front:hover{background: url('/_Global/images/icons/linkedin-hover.png') no-repeat center;background-size:contain;}
