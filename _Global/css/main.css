@@ -109,9 +109,9 @@ section.text .story.secondary {padding-top:10%;}
     text-align: center;
 }
 
-section .bar-wrapper {width:100%;height:350px; background-color: rgba(247, 247, 247, 0.8); }
-section.bar .story {position:absolute;padding-top:100px;left:0;right:0}
-section.bar .story.short {position:absolute;padding-top:120px;left:0;right:0;}
+section .bar-wrapper {width:100%;display:block;background-color: rgba(247, 247, 247, 0.8); } /*height:350px; position:relative; */
+section.bar .story {/*position:absolute;*/padding:10vh 0 10vh 0;left:0;right:0}
+section.bar .story.short {/*position:absolute;*/padding:12vh 0 12vh 0;left:0;right:0;}
 section.bar .story .copy span { color: rgb(62, 62, 62); line-height: 1.542;}
 section.bar .story .copy span.highlight { color: rgb(255, 255, 255);font-style: normal; border:none; }
 section.bar .story .copy.inverse span { font-style:normal;}
@@ -148,7 +148,7 @@ section.parallax > div {
 
 /* flip */
 .contact-wrapper{height:150px;}
-.contact-wrapper > div { width:15%; min-width: 150px; display:inline-block; }
+.contact-wrapper > div { width:15%; display:inline-block; }
 .contact-wrapper a {display:block;height:100%;}
 
 .twitter .front{background: url('/_Global/images/icons/twitter-resting.png') no-repeat center;background-size:contain;}
@@ -239,11 +239,11 @@ section.parallax > div {
     .outer-wrapper {padding: 0;}
 
     section.text .story.primary {padding-top:0;}
-    section.bar .story {padding-top:17vh;left:5vw;right:5vw;}
-    section.bar .story.short {padding-top:19vh;}
+    section.bar .story {padding:17vh 0 17vh 0;left:5vw;right:5vw;}
+    section.bar .story.short {padding:19vh 0 19vh 0;}
     section.contact {padding-top:20vh;padding-bottom:30vh;}
     section.contact .story {padding-top:30%;}
-    section.contact .mobile-copy {height:74px;}
+    section.contact .mobile-copy {height:74px;display:block;}
     section.contact .gif-copy-container {height:150px;margin-top:20px;}
 
     .story .copy { font-size: 22px; }
@@ -285,9 +285,12 @@ section.parallax > div {
 
     section.text .story.primary {padding-top:5%;}
     section.text .story.secondary {padding-top:15%;}
-    section.bar .story{padding-top:15vh;}
-    section.bar .story.short {padding-top:19vh;}
+    section.bar .story{padding:15vh 0 15vh 0;}
+    section.bar .story.short {padding:19vh 0 19vh 0;}
     section.contact {padding-top:20vh;}
     section.contact .story {padding-top:10%;}
     section.contact .gif-copy-container {height:150px;margin-top:75px;}
+
+    .contact-wrapper > div {width:23vh;}
+
 }
