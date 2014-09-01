@@ -7,7 +7,7 @@ $(document).ready(function(){
   };
 
   var isMobileSize = function(){
-      return $(window).width() <= 480;
+      return $(window).width() <= 768;
   };
 
   // Set up the nav
