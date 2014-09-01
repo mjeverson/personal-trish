@@ -249,8 +249,8 @@ section.parallax > div {
     .story .copy { font-size: 22px; }
     .story.secondary {padding-left:5vw;padding-right:5vw;}
 
-    .story .copy.desktop-copy, h1.desktop-copy, div.desktop-copy {display:inline-block;}
-    .story .copy.mobile-copy, h1.mobile-copy, div.mobile-copy {display:none;}
+    .story .copy.desktop-copy, h1.desktop-copy, div.desktop-copy {display:none;}
+    .story .copy.mobile-copy, h1.mobile-copy, div.mobile-copy {display:inline-block;}
 
     .footer {display: none;}
 

@@ -192,9 +192,6 @@ $(document).ready(function(){
             $('.mobile-copy').hide()
       }
 
-      gif.hide();
-      copy.show();
-
       move();
     });
 
