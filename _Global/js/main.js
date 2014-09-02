@@ -79,6 +79,11 @@ $(document).ready(function(){
       var gif = $(this).closest('.story').find('.gif');
       var copy = isMobileSize() ? $(this).closest('.story').find('.copy:not(.desktop-copy)') : $(this).closest('.story').find('.copy:not(.mobile-copy)');
 
+      if(!isMobileSize()){
+          var contact = $(this).closest('.story').find('.contact-wrapper');
+          contact.hide();
+      }
+
       copy.hide();
       gif.show();
     },
@@ -89,6 +94,11 @@ $(document).ready(function(){
 
       var gif = $(this).closest('.story').find('.gif');
       var copy = isMobileSize() ? $(this).closest('.story').find('.copy:not(.desktop-copy)') : $(this).closest('.story').find('.copy:not(.mobile-copy)');
+
+        if(!isMobileSize()){
+            var contact = $(this).closest('.story').find('.contact-wrapper');
+            contact.show();
+        }
 
       gif.hide();
       copy.show();
@@ -102,6 +112,11 @@ $(document).ready(function(){
       var gif = $(this).closest('.story').find('.gif');
       var copy = isMobileSize() ? $(this).closest('.story').find('.copy:not(.desktop-copy)') : $(this).closest('.story').find('.copy:not(.mobile-copy)');
 
+      if(!isMobileSize()){
+        var contact = $(this).closest('.story').find('.contact-wrapper');
+        contact.hide();
+      }
+
       copy.hide();
       gif.show();
     });
@@ -111,6 +126,11 @@ $(document).ready(function(){
       gifShown = false;
       var gif = $('.gif');
       var copy = isMobileSize() ? $('.copy:not(.desktop-copy)') : $('.copy:not(.mobile-copy)');
+
+      if(!isMobileSize()){
+          var contact = $(this).closest('.story').find('.contact-wrapper');
+          contact.show();
+      }
 
       gif.hide();
       copy.show();
