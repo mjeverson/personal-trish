@@ -155,10 +155,10 @@ $(document).ready(function(){
     var move = function(){
       var pos = $(window).scrollTop(); //position of the scrollbar
 
-      // Adjust the contact us section's opacity
-      $contact.css('opacity', newOpacity(0.5, windowHeight, pos, 5));
+        if (!isMobileSize()) {
+          // Adjust the contact us section's opacity
+          $contact.css('opacity', newOpacity(0.5, windowHeight, pos, 5));
 
-      if (!isMobileSize()) {
           //if the first section is in view...
           if ($firstBG.hasClass("inview")) {
               //call the newPos function and change the background position
