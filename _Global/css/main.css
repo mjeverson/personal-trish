@@ -74,7 +74,8 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 .inner-wrapper{ background: url('/_Global/images/bg/bg.jpg') right top no-repeat fixed; background-color:black; background-size: cover; color:white; z-index:1; margin-top:55px;}
 
 section {display:block;}
-section.text {height:70vh;padding:15vh 0 10vh 0;}
+section.text {height:70vh;padding:15vh 0 15vh 0;}
+section.text.secondary {padding-bottom:30vh;}
 section.text .story.primary {padding-top:5%;}
 section.text .story.secondary {padding-top:10%;}
 
@@ -289,6 +290,7 @@ section.parallax > div {
     .story .gif-copy-container {height:250px;}
 
     section.text {height:auto;padding:22% 0 8% 0;}
+    section.text.secondary {padding-bottom:10%;}
     section.text .story.primary {padding:5% 5% 0 5%;}
     section.text .story.secondary {padding-top:15%;}
     section.bar .bar-wrapper {padding-left:5%;padding-right:5%;width:auto;}
