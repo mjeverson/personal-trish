@@ -278,7 +278,7 @@ section.parallax > div {
 
 @media screen and (max-width: 480px){
     .outer-wrapper {padding: 0;}
-    .inner-wrapper{ background: url('/_Global/images/bg/bg.jpg') left top no-repeat fixed; background-size:cover;overflow:hidden;-webkit-overflow-scrolling:touch;}
+    .inner-wrapper{ background: url('/_Global/images/bg/bg-mobile.jpg') no-repeat fixed; background-size:cover;overflow:hidden;-webkit-overflow-scrolling:touch;}
     .story h1 {font-size:40px;}
     .story .copy {font-size:18px;}
 
@@ -291,12 +291,14 @@ section.parallax > div {
     section.contact .copy {padding-top:0;}
     section.contact .story {padding-top:10%;}
     section.contact .gif-copy-container {height:75px;margin-top:25px;}
+    section.parallax > div {height:auto;}
+
+
+    #rushmore{ background: url('/_Global/images/bg/rushmore-mobile.jpg') no-repeat;background-size:contain;height:335px;}
+    #dodge{ background:url('/_Global/images/bg/dart-mobile.jpg') no-repeat; background-size:contain;height:335px;}
+    #ride-planner{ background: url('/_Global/images/bg/ride-planner-mobile.jpg') no-repeat; background-size:contain;height:335px;margin-top:-5px;}
 
     .contact-wrapper > div {width:40%;}
-
-    #rushmore{ background: url('/_Global/images/bg/RUSHMORE.jpg') 50% 0 no-repeat;background-size:cover; }
-    #dodge{ background:url('/_Global/images/bg/DODGE.jpg') 50% 0 no-repeat; background-size:cover;}
-    #ride-planner{ background: url('/_Global/images/bg/RIDE-PLANNER.jpg') 50% 0 no-repeat; background-size:cover;}
 
     .cube {height:80px;padding-right:0;}
 
