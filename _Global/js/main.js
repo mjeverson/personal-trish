@@ -13,7 +13,7 @@ $(document).ready(function(){
   // Set up the nav
   var navInit = function(){
     // Click to scroll
-    $('.nav').bind('click', function(){
+    $('.nav-container .nav, .subheader .nav').bind('click', function(){
       $('.nav').removeClass('hover');
       $(this).addClass('hover');
 
