@@ -51,6 +51,10 @@ $(document).ready(function(){
        $('.subheader:visible').slideToggle();
        $('.trish').removeClass('menu-open');
     });
+
+    $('.cube').bind('click', function(){
+       location.href = $(this).attr('data-href');
+    });
   };
 
   // Initialize hover events
