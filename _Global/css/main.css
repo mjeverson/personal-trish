@@ -142,7 +142,7 @@ section.parallax > div {
     cursor: pointer;
 }
 
-#rushmore{ background: url('/_Global/images/bg/RUSHMORE.jpg') 50% 0 no-repeat fixed; background-size:cover;}
+#rushmore{ background: url('/_Global/images/bg/RUSHMORE.jpg') 50% 0 no-repeat fixed;background-size:cover; }
 #dodge{ background:url('/_Global/images/bg/DODGE.jpg') 50% 0 no-repeat fixed; background-size:cover;}
 #ride-planner{ background: url('/_Global/images/bg/RIDE-PLANNER.jpg') 50% 0 no-repeat fixed; background-size:cover;}
 
@@ -280,9 +280,10 @@ section.parallax > div {
 
 @media screen and (max-width: 480px){
     .outer-wrapper {padding: 0;}
-
+    .inner-wrapper{ background: url('/_Global/images/bg/bg.jpg') right top no-repeat fixed; }
     .story h1 {font-size:60px;}
 
+    section.text {height:auto;padding:22% 0 22% 0;}
     section.text .story.primary {padding-top:5%;}
     section.text .story.secondary {padding-top:15%;}
     section.bar .story{padding:15vh 0 15vh 0;}
@@ -293,6 +294,10 @@ section.parallax > div {
     section.contact .gif-copy-container {height:150px;margin-top:75px;}
 
     .contact-wrapper > div {width:23vh;}
+
+    #rushmore{ background: url('/_Global/images/bg/RUSHMORE.jpg') 50% 0 no-repeat;background-size:cover; }
+    #dodge{ background:url('/_Global/images/bg/DODGE.jpg') 50% 0 no-repeat; background-size:cover;}
+    #ride-planner{ background: url('/_Global/images/bg/RIDE-PLANNER.jpg') 50% 0 no-repeat; background-size:cover;}
 
     .footer {display: none;}
 }
