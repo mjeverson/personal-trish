@@ -53,7 +53,7 @@ $(document).ready(function(){
     });
 
     $('.cube').bind('click', function(){
-       location.href = $(this).attr('data-href');
+       window.open($(this).attr('data-href'));
     });
   };
 
