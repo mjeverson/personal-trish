@@ -16,7 +16,7 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
     top:0;
     width:100%;
     z-index:1000;
-    height:55px;
+    height:70px;
     font-size:24px;
     letter-spacing:0px;
 }
@@ -30,17 +30,19 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 .subheader {
     background-color: rgb(247, 247, 247);
     position:fixed;
-    top:55;
+    top:70;
     width:100%;
     z-index:1000;
     font-size:20px;
     letter-spacing:0px;
     display:none;
+    padding-top:15px;
 }
 
 .subheader .item {
     height: 35px;
-    padding-top:10px;
+    padding-top:15px;
+    padding-bottom:10px;
     border-top:1px solid rgba(0,0,0,0.2);
     text-align:center;
     cursor:pointer;
@@ -51,7 +53,7 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 }
 
 .header div { display:inline-block; }
-.header > div {height:45px; }
+.header > div {height:60px; }
 .header > div.header-stripe { height:5px; display:block; background-color:rgb(0,0,0); }
 
 .title-container {margin-left:7%;}
@@ -60,9 +62,9 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 
 .nav-container{position:absolute;right:7%;}
 .nav-container span.slash {font-weight:normal;padding:0 40px 0 40px;font-size:18px;color:rgb( 111, 110, 110 );}
-.header .mobile-menu {background: url('/_Global/images/icons/icon-menu.svg') center center no-repeat; cursor:pointer;height:50px;width:50px;border:none;padding:0;position:absolute;right:3%;display:none;}
+.header .mobile-menu {background: url('/_Global/images/icons/icon-menu.svg') center center no-repeat; cursor:pointer;height:70px;width:50px;border:none;padding:0;position:absolute;right:3%;display:none;}
 
-.nav { border-bottom:5px solid transparent;padding:10px 0 6px 0;}
+.nav { border-bottom:5px solid transparent;padding:20px 0 16px 0;}
 .nav:hover, .nav.hover{ border-bottom: 5px solid rgb( 111, 110, 110 ); cursor:pointer; }
 .nav:hover > span, .nav.hover > span { color: rgb( 111, 110, 110 ); }
 
@@ -92,9 +94,9 @@ section.text .story.secondary {padding-top:10%;}
 
 .story .gif-copy-container {height:250px;margin-top:50px;}
 .story .gif { display:none; height:75%; }
-.gif.glasses { background:url('/_Global/images/gifs/glasses.gif') no-repeat center; background-size: contain; }
-.gif.poop { background:url('/_Global/images/gifs/poop.gif') no-repeat center; background-size: contain; }
-.gif.talk { background:url('/_Global/images/gifs/talk.gif') no-repeat center; background-size: contain; }
+.gif.glasses { background:url('/_Global/images/gifs/glasses.gif') no-repeat center; background-size: cover; }
+.gif.poop { background:url('/_Global/images/gifs/poop.gif') no-repeat center; background-size: cover; }
+.gif.talk { background:url('/_Global/images/gifs/talk.gif') no-repeat center; background-size: cover; }
 
 .story .copy.desktop-copy, h1.desktop-copy, div.desktop-copy {display:inline-block;}
 .story .copy.mobile-copy, h1.mobile-copy, div.mobile-copy {display:none;}
@@ -278,7 +280,7 @@ section.parallax > div {
 
 @media screen and (max-width: 480px){
     .outer-wrapper {padding: 0;background-color: rgb(0,0,0);}
-    .inner-wrapper{ background: url('/_Global/images/bg/bg-mobile.jpg') 50% 0 no-repeat fixed; background-size:contain;overflow:hidden;-webkit-overflow-scrolling:touch;}
+    .inner-wrapper{ background: url('/_Global/images/bg/bg-mobile.jpg') 50% 0 no-repeat fixed; background-size:cover;overflow:hidden;-webkit-overflow-scrolling:touch;}
     .story h1 {font-size:40px;}
     .story .copy {font-size:17px;}
 
@@ -295,9 +297,9 @@ section.parallax > div {
     section.parallax > div {height:auto;}
 
 
-    #rushmore{ background: url('/_Global/images/bg/rushmore-mobile.jpg') no-repeat;background-size:contain;height:335px;}
-    #dodge{ background:url('/_Global/images/bg/dart-mobile.jpg') no-repeat; background-size:contain;height:335px;}
-    #ride-planner{ background: url('/_Global/images/bg/ride-planner-mobile.jpg') no-repeat; background-size:contain;height:335px;margin-top:-5px;}
+    #rushmore{ background: url('/_Global/images/bg/rushmore-mobile.jpg') no-repeat;background-size:cover;height:335px;}
+    #dodge{ background:url('/_Global/images/bg/dart-mobile.jpg') no-repeat; background-size:cover;height:335px;}
+    #ride-planner{ background: url('/_Global/images/bg/ride-planner-mobile.jpg') no-repeat; background-size:cover;height:335px;margin-top:-5px;}
 
     .contact-wrapper > div {width:40%;}
 
