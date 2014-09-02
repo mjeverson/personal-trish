@@ -280,7 +280,7 @@ section.parallax > div {
 
 @media screen and (max-width: 480px){
     .outer-wrapper {padding: 0;background-color: rgb(0,0,0);}
-    .inner-wrapper{ background: url('/_Global/images/bg/bg-mobile.jpg') 50% 0 no-repeat fixed; background-size:cover;overflow:hidden;-webkit-overflow-scrolling:touch;}
+    .inner-wrapper{ background: url('/_Global/images/bg/bg-mobile.jpg') 50% 0 no-repeat fixed; background-size:contain;overflow:hidden;-webkit-overflow-scrolling:touch;}
     .story h1 {font-size:40px;}
     .story .copy {font-size:17px;}
 
