@@ -217,6 +217,7 @@ section.parallax > div {
 @media screen and (min-width: 1024px) and (max-width: 1600px){
  /* This is sort of what everything else is targeted to */
     section.contact {padding-bottom:15vh;}
+    .story .copy { font-size: 32px; }
 
     .back {
         -webkit-transform: rotateX(-90deg) translateZ(-90px);
@@ -228,6 +229,8 @@ section.parallax > div {
 
 @media screen and (min-width: 800px) and (max-width: 1024px){
     .nav-container span.slash {padding:0 10px 0 10px;}
+    .story .copy { font-size: 32px; }
+
     .contact-wrapper > div {width:20vw;}
 }
 
