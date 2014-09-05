@@ -130,8 +130,7 @@ $(document).ready(function(){
       var copy = isMobileSize() ? $('.copy:not(.desktop-copy)') : $('.copy:not(.mobile-copy)');
 
       if(!isMobileSize()){
-          var contact = $(this).closest('.story').find('.contact-wrapper');
-          contact.show();
+          $('.contact-wrapper').show();
       }
 
       gif.hide();
