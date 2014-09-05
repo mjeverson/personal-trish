@@ -248,6 +248,7 @@ path {-webkit-transform: scale(2.0);}
 }
 
 @media screen and (max-width: 768px){
+
     .header { font-size: 20px; }
     .header .mobile-menu {display:inline-block;}
     .header .nav-container {display:none;}
@@ -257,10 +258,12 @@ path {-webkit-transform: scale(2.0);}
     .nav {border-bottom:none;}
     .nav:hover, .nav.hover {border-bottom:none;}
 
+    .story h1 {font-size:60px;}
+
     section.text .story.primary {padding-top:0;}
     section.bar .story {padding:17vh 5vw 17vh 5vw;}
     section.bar .story.short {padding:19vh 0 19vh 0;}
-    section.contact {padding-top:20vh;padding-bottom:30vh;height:100vh;opacity:1;}
+    section.contact {padding-top:20vh;height:100vh;}
     section.contact .story {padding-top:30%;}
     section.contact .gif-copy-container {height:150px;margin-top:20px;}
 
