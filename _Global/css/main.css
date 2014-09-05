@@ -211,7 +211,12 @@ section.parallax > div {
     transform: rotateX(90deg); /* Text bleed at 90º */
 }
 
-path {-webkit-transform: scale(2.0);}
+path {
+    -webkit-transform: scale(2.0);
+    -moz-transform: scale(2.0);
+    -o-transform: scale(2.0);
+    transform: scale(2.0);
+}
 
 /* Responsive */
 
