@@ -150,27 +150,25 @@ section.parallax > div {
 
 /* flip */
 .contact-wrapper{height:150px;padding-top:5%;}
-.contact-wrapper > div { width:15%; display:inline-block; }
+.contact-wrapper > div { display:inline-block; }
 .contact-wrapper a {display:block;height:100%;}
 
-.cube {background-color: #4a4a4a;}
-.twitter .front{background: url('/_Global/images/svgs/twitter-logo.svg') no-repeat center;background-size:contain;}
-.twitter .back{background: url('/_Global/images/svgs/twitter-logo.svg') no-repeat center;background-size:contain;}
-.linkedin .front {background: url('/_Global/images/svgs/linkedin-logo.svg') no-repeat center;background-size:contain;}
-.linkedin .back {background: url('/_Global/images/svgs/linkedin-logo.svg') no-repeat center;background-size:contain;}
-.behance .front {background: url('/_Global/images/svgs/behance-logo.svg') no-repeat center;background-size:contain;}
-.behance .back {background: url('/_Global/images/svgs/behance-logo.svg') no-repeat center;background-size:contain;}
-.email .front {background: url('/_Global/images/svgs/email-logo.svg') no-repeat center;background-size:contain;}
-.email .back {background: url('/_Global/images/svgs/email-logo.svg') no-repeat center;background-size:contain;}
+.front {opacity:0.3;background-color:#FFF;background-size:cover;}
+.back {opacity:1;background-size:cover;}
+.cube:not(.email) .back svg path{fill:white;}
+
+.twitter .back{background-color:#4099FF;}
+.linkedin .back {background-color:#0976B4;}
+.behance .back {background-color:#1769FF;}
+.email .back {background-color:#FFF;}
 
 /* Rotate the cube */
-
 /* Container box to set the sides relative to */
 .cube {
-    width: 15%;
+    width: 150px;
     text-align: center;
     margin: 0 auto;
-    height: 150px;
+    height: 100px;
     padding-right:10px;
     cursor: pointer;
 
@@ -199,10 +197,10 @@ section.parallax > div {
 }
 
 .back {
-    -webkit-transform: rotateX(-90deg) translateZ(-85px);
-    -moz-transform: rotateX(-90deg) translateZ(-85px);
-    -o-transform: rotateX(-90deg) translateZ(-85px);
-    transform: rotateX(-90deg) translateZ(-85px);
+    -webkit-transform: rotateX(-90deg) translateZ(-50px);
+    -moz-transform: rotateX(-90deg) translateZ(-50px);
+    -o-transform: rotateX(-90deg) translateZ(-50px);
+    transform: rotateX(-90deg) translateZ(-50px);
 }
 
 /* Rotate the cube */
@@ -213,11 +211,20 @@ section.parallax > div {
     transform: rotateX(90deg); /* Text bleed at 90º */
 }
 
+path {-webkit-transform: scale(2.0);}
+
 /* Responsive */
 
 @media screen and (min-width: 1920px){
     section.text .story.primary {padding-top:10%;}
-    .cube {height:175px;}
+    .cube {height:175px;width:275px;}
+
+    .back {
+        -webkit-transform: rotateX(-90deg) translateZ(-90px);
+        -moz-transform: rotateX(-90deg) translateZ(-90px);
+        -o-transform: rotateX(-90deg) translateZ(-90px);
+        transform: rotateX(-90deg) translateZ(-90px);
+    }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1600px){
@@ -226,10 +233,10 @@ section.parallax > div {
     .story .copy { font-size: 32px; }
 
     .back {
-        -webkit-transform: rotateX(-90deg) translateZ(-90px);
-        -moz-transform: rotateX(-90deg) translateZ(-90px);
-        -o-transform: rotateX(-90deg) translateZ(-90px);
-        transform: rotateX(-90deg) translateZ(-90px);
+        -webkit-transform: rotateX(-90deg) translateZ(-50px);
+        -moz-transform: rotateX(-90deg) translateZ(-50px);
+        -o-transform: rotateX(-90deg) translateZ(-50px);
+        transform: rotateX(-90deg) translateZ(-50px);
     }
 }
 
