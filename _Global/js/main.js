@@ -1,4 +1,6 @@
 $(document).ready(function(){
+  var _windowHeight;
+
   // Kicks off the event and styling initialization
   var initialize = function() {
     navInit();
@@ -20,7 +22,7 @@ $(document).ready(function(){
       $('.subheader').fadeOut();
       $('.trish').removeClass('menu-open');
 
-      var pos = $('#' + $(this).attr('data-href')).offset().top;
+      var pos = $(this).attr('data-href') == 'about' ? 0 : $('#' + $(this).attr('data-href')).offset().top;
       $('html, body').animate({ scrollTop: pos + 'px' });
     });
 
@@ -146,7 +148,7 @@ $(document).ready(function(){
     var $thirdBG = $('#ride-planner');
     var $contact = $('.contact');
 
-    var windowHeight = $(window).height(); //get the height of the window
+    _windowHeight = $(window).height(); //get the height of the window
 
     //apply the class "inview" to a section that is in the viewport
     $('#dodge, #ride-planner, #rushmore, #contact').bind('inview', function (event, visible) {
@@ -181,24 +183,24 @@ $(document).ready(function(){
 
         if (!isMobileSize()) {
           // Adjust the contact us section's opacity
-          $contact.css('opacity', newOpacity(0.5, windowHeight, pos, 5));
+          $contact.css('opacity', newOpacity(0.5, _windowHeight, pos, 5));
 
           //if the first section is in view...
           if ($firstBG.hasClass("inview")) {
               //call the newPos function and change the background position
-              $firstBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 900, 0.015)});
+              $firstBG.css({'backgroundPosition': newPos(50, _windowHeight, pos, 900, 0.005)});
           }
 
           //if the second section is in view...
           if ($secondBG.hasClass("inview")) {
               //call the newPos function and change the background position
-              $secondBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 1900, 0.015)});
+              $secondBG.css({'backgroundPosition': newPos(50, _windowHeight, pos, 1900, 0.005)});
           }
 
           //if the third section is in view...
           if ($thirdBG.hasClass("inview")) {
               //call the newPos function and change the background position
-              $thirdBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 2850, 0.015)});
+              $thirdBG.css({'backgroundPosition': newPos(50, _windowHeight, pos, 2850, 0.005)});
           }
       }
     };
@@ -216,6 +218,7 @@ $(document).ready(function(){
             $('.mobile-copy').hide()
       }
 
+      _windowHeight = $(window).height(); //get the height of the window
       move();
     });
 

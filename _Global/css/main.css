@@ -104,7 +104,7 @@ section.text .story.secondary {padding-top:10%;}
 
 .story .copy span { color: rgb(255, 255, 255); font-style: italic; }
 .story .copy {
-    font-size: 30px;
+    font-size: 32px;
     font-family: "Georgia";
     color: rgb(135, 134, 134);
     line-height: 1.457;
@@ -153,14 +153,15 @@ section.parallax > div {
 .contact-wrapper > div { width:15%; display:inline-block; }
 .contact-wrapper a {display:block;height:100%;}
 
-.twitter .front{background: url('/_Global/images/icons/twitter-resting.png') no-repeat center;background-size:contain;}
-.twitter .back{background: url('/_Global/images/icons/twitter-hover.png') no-repeat center;background-size:contain;}
-.linkedin .front {background: url('/_Global/images/icons/linkedin-resting.png') no-repeat center;background-size:contain;}
-.linkedin .back {background: url('/_Global/images/icons/linkedin-hover.png') no-repeat center;background-size:contain;}
-.behance .front {background: url('/_Global/images/icons/behance-resting.png') no-repeat center;background-size:contain;}
-.behance .back {background: url('/_Global/images/icons/behance-hover.png') no-repeat center;background-size:contain;}
-.email .front {background: url('/_Global/images/icons/email-resting.png') no-repeat center;background-size:contain;}
-.email .back {background: url('/_Global/images/icons/email-hover.png') no-repeat center;background-size:contain;}
+.cube {background-color: #4a4a4a;}
+.twitter .front{background: url('/_Global/images/svgs/twitter-logo.svg') no-repeat center;background-size:contain;}
+.twitter .back{background: url('/_Global/images/svgs/twitter-logo.svg') no-repeat center;background-size:contain;}
+.linkedin .front {background: url('/_Global/images/svgs/linkedin-logo.svg') no-repeat center;background-size:contain;}
+.linkedin .back {background: url('/_Global/images/svgs/linkedin-logo.svg') no-repeat center;background-size:contain;}
+.behance .front {background: url('/_Global/images/svgs/behance-logo.svg') no-repeat center;background-size:contain;}
+.behance .back {background: url('/_Global/images/svgs/behance-logo.svg') no-repeat center;background-size:contain;}
+.email .front {background: url('/_Global/images/svgs/email-logo.svg') no-repeat center;background-size:contain;}
+.email .back {background: url('/_Global/images/svgs/email-logo.svg') no-repeat center;background-size:contain;}
 
 /* Rotate the cube */
 
@@ -214,9 +215,14 @@ section.parallax > div {
 
 /* Responsive */
 
+@media screen and (min-width: 1920px){
+    section.text .story.primary {padding-top:10%;}
+    .cube {height:175px;}
+}
+
 @media screen and (min-width: 1024px) and (max-width: 1600px){
  /* This is sort of what everything else is targeted to */
-    section.contact {padding-bottom:15vh;}
+    section.contact {padding-bottom:0;height:80vh;}
     .story .copy { font-size: 32px; }
 
     .back {
@@ -238,6 +244,8 @@ section.parallax > div {
     .header { font-size: 20px; }
     .header .mobile-menu {display:inline-block;}
     .header .nav-container {display:none;}
+
+    .title-container .trish {margin-left:-6px;}
 
     .nav {border-bottom:none;}
     .nav:hover, .nav.hover {border-bottom:none;}
