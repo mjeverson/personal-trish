@@ -260,7 +260,7 @@ path {-webkit-transform: scale(2.0);}
     section.text .story.primary {padding-top:0;}
     section.bar .story {padding:17vh 5vw 17vh 5vw;}
     section.bar .story.short {padding:19vh 0 19vh 0;}
-    section.contact {padding-top:20vh;padding-bottom:30vh;height:100vh;}
+    section.contact {padding-top:20vh;padding-bottom:30vh;height:100vh;opacity:1;}
     section.contact .story {padding-top:30%;}
     section.contact .gif-copy-container {height:150px;margin-top:20px;}
 
