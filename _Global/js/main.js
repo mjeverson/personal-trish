@@ -1,4 +1,6 @@
 $(document).ready(function(){
+  var _windowHeight;
+
   // Kicks off the event and styling initialization
   var initialize = function() {
     navInit();
@@ -7,7 +9,7 @@ $(document).ready(function(){
   };
 
   var isMobileSize = function(){
-      return $(window).width() <= 768;
+      return $(window).width() <= 480;
   };
 
   // Set up the nav
@@ -20,7 +22,7 @@ $(document).ready(function(){
       $('.subheader').fadeOut();
       $('.trish').removeClass('menu-open');
 
-      var pos = $('#' + $(this).attr('data-href')).offset().top;
+      var pos = $(this).attr('data-href') == 'about' ? 0 : $('#' + $(this).attr('data-href')).offset().top;
       $('html, body').animate({ scrollTop: pos + 'px' });
     });
 
@@ -51,6 +53,10 @@ $(document).ready(function(){
        $('.subheader:visible').slideToggle();
        $('.trish').removeClass('menu-open');
     });
+
+    $('.cube').bind('click', function(){
+       window.open($(this).attr('data-href'));
+    });
   };
 
   // Initialize hover events
@@ -75,6 +81,11 @@ $(document).ready(function(){
       var gif = $(this).closest('.story').find('.gif');
       var copy = isMobileSize() ? $(this).closest('.story').find('.copy:not(.desktop-copy)') : $(this).closest('.story').find('.copy:not(.mobile-copy)');
 
+      if(!isMobileSize()){
+          var contact = $(this).closest('.story').find('.contact-wrapper');
+          contact.hide();
+      }
+
       copy.hide();
       gif.show();
     },
@@ -85,6 +96,11 @@ $(document).ready(function(){
 
       var gif = $(this).closest('.story').find('.gif');
       var copy = isMobileSize() ? $(this).closest('.story').find('.copy:not(.desktop-copy)') : $(this).closest('.story').find('.copy:not(.mobile-copy)');
+
+        if(!isMobileSize()){
+            var contact = $(this).closest('.story').find('.contact-wrapper');
+            contact.show();
+        }
 
       gif.hide();
       copy.show();
@@ -98,6 +114,11 @@ $(document).ready(function(){
       var gif = $(this).closest('.story').find('.gif');
       var copy = isMobileSize() ? $(this).closest('.story').find('.copy:not(.desktop-copy)') : $(this).closest('.story').find('.copy:not(.mobile-copy)');
 
+      if(!isMobileSize()){
+        var contact = $(this).closest('.story').find('.contact-wrapper');
+        contact.hide();
+      }
+
       copy.hide();
       gif.show();
     });
@@ -107,6 +128,10 @@ $(document).ready(function(){
       gifShown = false;
       var gif = $('.gif');
       var copy = isMobileSize() ? $('.copy:not(.desktop-copy)') : $('.copy:not(.mobile-copy)');
+
+      if(!isMobileSize()){
+          $('.contact-wrapper').show();
+      }
 
       gif.hide();
       copy.show();
@@ -122,7 +147,7 @@ $(document).ready(function(){
     var $thirdBG = $('#ride-planner');
     var $contact = $('.contact');
 
-    var windowHeight = $(window).height(); //get the height of the window
+    _windowHeight = $(window).height(); //get the height of the window
 
     //apply the class "inview" to a section that is in the viewport
     $('#dodge, #ride-planner, #rushmore, #contact').bind('inview', function (event, visible) {
@@ -157,24 +182,24 @@ $(document).ready(function(){
 
         if (!isMobileSize()) {
           // Adjust the contact us section's opacity
-          $contact.css('opacity', newOpacity(0.5, windowHeight, pos, 5));
+          $contact.css('opacity', newOpacity(0.5, _windowHeight, pos, 5));
 
           //if the first section is in view...
           if ($firstBG.hasClass("inview")) {
               //call the newPos function and change the background position
-              $firstBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 900, 0.015)});
+              $firstBG.css({'backgroundPosition': newPos(50, _windowHeight, pos, 900, 0.005)});
           }
 
           //if the second section is in view...
           if ($secondBG.hasClass("inview")) {
               //call the newPos function and change the background position
-              $secondBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 1900, 0.015)});
+              $secondBG.css({'backgroundPosition': newPos(50, _windowHeight, pos, 1900, 0.005)});
           }
 
           //if the third section is in view...
           if ($thirdBG.hasClass("inview")) {
               //call the newPos function and change the background position
-              $thirdBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 2850, 0.015)});
+              $thirdBG.css({'backgroundPosition': newPos(50, _windowHeight, pos, 2850, 0.005)});
           }
       }
     };
@@ -192,6 +217,7 @@ $(document).ready(function(){
             $('.mobile-copy').hide()
       }
 
+      _windowHeight = $(window).height(); //get the height of the window
       move();
     });
 

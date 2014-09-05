@@ -16,7 +16,7 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
     top:0;
     width:100%;
     z-index:1000;
-    height:55px;
+    height:70px;
     font-size:24px;
     letter-spacing:0px;
 }
@@ -30,17 +30,19 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 .subheader {
     background-color: rgb(247, 247, 247);
     position:fixed;
-    top:55;
+    top:70;
     width:100%;
     z-index:1000;
     font-size:20px;
     letter-spacing:0px;
     display:none;
+    padding-top:15px;
 }
 
 .subheader .item {
     height: 35px;
-    padding-top:10px;
+    padding-top:15px;
+    padding-bottom:10px;
     border-top:1px solid rgba(0,0,0,0.2);
     text-align:center;
     cursor:pointer;
@@ -51,7 +53,7 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 }
 
 .header div { display:inline-block; }
-.header > div {height:45px; }
+.header > div {height:60px; }
 .header > div.header-stripe { height:5px; display:block; background-color:rgb(0,0,0); }
 
 .title-container {margin-left:7%;}
@@ -60,9 +62,9 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 
 .nav-container{position:absolute;right:7%;}
 .nav-container span.slash {font-weight:normal;padding:0 40px 0 40px;font-size:18px;color:rgb( 111, 110, 110 );}
-.header .mobile-menu {background: url('/_Global/images/icons/icon-menu.svg') center center no-repeat; cursor:pointer;height:50px;width:50px;border:none;padding:0;position:absolute;right:3%;display:none;}
+.header .mobile-menu {background: url('/_Global/images/icons/icon-menu.svg') center center no-repeat; cursor:pointer;height:70px;width:50px;border:none;padding:0;position:absolute;right:3%;display:none;}
 
-.nav { border-bottom:5px solid transparent;padding:10px 0 6px 0;}
+.nav { border-bottom:5px solid transparent;padding:15px 0 16px 0;}
 .nav:hover, .nav.hover{ border-bottom: 5px solid rgb( 111, 110, 110 ); cursor:pointer; }
 .nav:hover > span, .nav.hover > span { color: rgb( 111, 110, 110 ); }
 
@@ -73,6 +75,7 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 
 section {display:block;}
 section.text {height:70vh;padding:15vh 0 15vh 0;}
+section.text.secondary {padding-bottom:30vh;}
 section.text .story.primary {padding-top:5%;}
 section.text .story.secondary {padding-top:10%;}
 
@@ -90,18 +93,18 @@ section.text .story.secondary {padding-top:10%;}
     margin: 0;
 }
 
-.story .gif-copy-container {height:250px;margin-top:50px;}
+.story .gif-copy-container {height:350px;margin-top:50px;}
 .story .gif { display:none; height:75%; }
-.gif.glasses { background:url('/_Global/images/gifs/glasses.gif') no-repeat center; background-size: contain; }
-.gif.poop { background:url('/_Global/images/gifs/poop.gif') no-repeat center; background-size: contain; }
-.gif.talk { background:url('/_Global/images/gifs/talk.gif') no-repeat center; background-size: contain; }
+.gif.glasses { background:url('/_Global/images/gifs/glasses.gif') no-repeat center; background-size: cover; }
+.gif.poop { background:url('/_Global/images/gifs/poop.gif') no-repeat center; background-size: cover; }
+.gif.talk { background:url('/_Global/images/gifs/talk.gif') no-repeat center; background-size: cover; margin-top:7%;}
 
 .story .copy.desktop-copy, h1.desktop-copy, div.desktop-copy {display:inline-block;}
 .story .copy.mobile-copy, h1.mobile-copy, div.mobile-copy {display:none;}
 
 .story .copy span { color: rgb(255, 255, 255); font-style: italic; }
 .story .copy {
-    font-size: 30px;
+    font-size: 32px;
     font-family: "Georgia";
     color: rgb(135, 134, 134);
     line-height: 1.457;
@@ -117,9 +120,9 @@ section.bar .story .copy span.highlight { color: rgb(255, 255, 255);font-style: 
 section.bar .story .copy.inverse span { font-style:normal;}
 section.bar .story .copy.inverse span.highlight { font-style: italic; }
 
-section.contact {height:70vh;padding-top:30vh;padding-bottom:20vh;}
+section.contact {height:70vh;padding-top:30vh;padding-bottom:8vh;}
 section.contact {opacity:0;}
-section.contact .gif-copy-container {height: 200px;}
+section.contact .gif-copy-container {height: 350px;}
 section.contact .copy { padding-top:25px; }
 
 /* footer styles */
@@ -146,27 +149,26 @@ section.parallax > div {
 #ride-planner{ background: url('/_Global/images/bg/RIDE-PLANNER.jpg') 50% 0 no-repeat fixed; background-size:cover;}
 
 /* flip */
-.contact-wrapper{height:150px;}
-.contact-wrapper > div { width:15%; display:inline-block; }
+.contact-wrapper{height:150px;padding-top:5%;}
+.contact-wrapper > div { display:inline-block; }
 .contact-wrapper a {display:block;height:100%;}
 
-.twitter .front{background: url('/_Global/images/icons/twitter-resting.png') no-repeat center;background-size:contain;}
-.twitter .back{background: url('/_Global/images/icons/twitter-hover.png') no-repeat center;background-size:contain;}
-.linkedin .front {background: url('/_Global/images/icons/linkedin-resting.png') no-repeat center;background-size:contain;}
-.linkedin .back {background: url('/_Global/images/icons/linkedin-hover.png') no-repeat center;background-size:contain;}
-.behance .front {background: url('/_Global/images/icons/behance-resting.png') no-repeat center;background-size:contain;}
-.behance .back {background: url('/_Global/images/icons/behance-hover.png') no-repeat center;background-size:contain;}
-.email .front {background: url('/_Global/images/icons/email-resting.png') no-repeat center;background-size:contain;}
-.email .back {background: url('/_Global/images/icons/email-hover.png') no-repeat center;background-size:contain;}
+.front {opacity:0.3;background-color:#FFF;background-size:cover;}
+.back {opacity:1;background-size:cover;}
+.cube:not(.email) .back svg path{fill:white;}
+
+.twitter .back{background-color:#4099FF;}
+.linkedin .back {background-color:#0976B4;}
+.behance .back {background-color:#1769FF;}
+.email .back {background-color:#FFF;}
 
 /* Rotate the cube */
-
 /* Container box to set the sides relative to */
 .cube {
-    width: 15%;
+    width: 150px;
     text-align: center;
     margin: 0 auto;
-    height: 150px;
+    height: 100px;
     padding-right:10px;
     cursor: pointer;
 
@@ -195,10 +197,10 @@ section.parallax > div {
 }
 
 .back {
-    -webkit-transform: rotateX(-90deg) translateZ(-85px);
-    -moz-transform: rotateX(-90deg) translateZ(-85px);
-    -o-transform: rotateX(-90deg) translateZ(-85px);
-    transform: rotateX(-90deg) translateZ(-85px);
+    -webkit-transform: rotateX(-90deg) translateZ(-50px);
+    -moz-transform: rotateX(-90deg) translateZ(-50px);
+    -o-transform: rotateX(-90deg) translateZ(-50px);
+    transform: rotateX(-90deg) translateZ(-50px);
 }
 
 /* Rotate the cube */
@@ -209,11 +211,18 @@ section.parallax > div {
     transform: rotateX(90deg); /* Text bleed at 90º */
 }
 
+path {
+    -webkit-transform: scale(3.0);
+    -moz-transform: scale(3.0);
+    -o-transform: scale(3.0);
+    transform: scale(3.0);
+}
+
 /* Responsive */
 
-@media screen and (min-width: 1024px) and (max-width: 1600px){
- /* This is sort of what everything else is targeted to */
-    section.contact {padding-bottom:15vh;}
+@media screen and (min-width: 1920px){
+    section.text .story.primary {padding-top:10%;}
+    .cube {height:175px;width:275px;}
 
     .back {
         -webkit-transform: rotateX(-90deg) translateZ(-90px);
@@ -223,23 +232,43 @@ section.parallax > div {
     }
 }
 
+@media screen and (min-width: 1024px) and (max-width: 1600px){
+ /* This is sort of what everything else is targeted to */
+    section.contact {padding-bottom:0;height:80vh;}
+    .story .copy { font-size: 32px; }
+
+    .back {
+        -webkit-transform: rotateX(-90deg) translateZ(-50px);
+        -moz-transform: rotateX(-90deg) translateZ(-50px);
+        -o-transform: rotateX(-90deg) translateZ(-50px);
+        transform: rotateX(-90deg) translateZ(-50px);
+    }
+}
+
 @media screen and (min-width: 800px) and (max-width: 1024px){
     .nav-container span.slash {padding:0 10px 0 10px;}
+    .story .copy { font-size: 32px; }
+
     .contact-wrapper > div {width:20vw;}
 }
 
 @media screen and (max-width: 768px){
+
     .header { font-size: 20px; }
     .header .mobile-menu {display:inline-block;}
     .header .nav-container {display:none;}
 
+    .title-container .trish {margin-left:-6px;}
+
     .nav {border-bottom:none;}
     .nav:hover, .nav.hover {border-bottom:none;}
+
+    .story h1 {font-size:60px;}
 
     section.text .story.primary {padding-top:0;}
     section.bar .story {padding:17vh 5vw 17vh 5vw;}
     section.bar .story.short {padding:19vh 0 19vh 0;}
-    section.contact {padding-top:20vh;padding-bottom:30vh;height:100vh;}
+    section.contact {padding-top:20vh;height:100vh;}
     section.contact .story {padding-top:30%;}
     section.contact .gif-copy-container {height:150px;margin-top:20px;}
 
@@ -249,55 +278,41 @@ section.parallax > div {
     .story .copy.desktop-copy, h1.desktop-copy, div.desktop-copy {display:none;}
     .story .copy.mobile-copy, h1.mobile-copy, div.mobile-copy {display:block;}
 
-    .twitter .front:hover{background: url('/_Global/images/icons/twitter-hover.png') no-repeat center;background-size:contain;}
-    .linkedin .front:hover{background: url('/_Global/images/icons/linkedin-hover.png') no-repeat center;background-size:contain;}
-    .behance .front:hover{background: url('/_Global/images/icons/behance-hover.png') no-repeat center;background-size:contain;}
-    .email .front:hover{background: url('/_Global/images/icons/email-hover.png') no-repeat center;background-size:contain;}
+    .gif.glasses, .gif.poop, .gif.talk { background-size: contain; }
 
     /* Position the faces */
     .cube {cursor:pointer;height:110px;}
     .contact-wrapper > div {width:20vw;}
-    .front {
-        -webkit-transform: translateZ(0px);
-        -moz-transform: translateZ(0px);
-        -o-transform: translateZ(0px);
-        transform: translateZ(0px);
-        height:100%;
-    }
-
-    .back {display:none;}
-
-    /* Rotate the cube */
-    .cube:hover {
-        -webkit-transform: rotateX(0deg);
-        -moz-transform: rotateX(0deg);
-        -o-transform: rotateX(0deg);
-        transform: rotateX(0deg);
-    }
 }
 
 @media screen and (max-width: 480px){
     .outer-wrapper {padding: 0;background-color: rgb(0,0,0);}
     .inner-wrapper{ background: url('/_Global/images/bg/bg-mobile.jpg') 50% 0 no-repeat fixed; background-size:contain;overflow:hidden;-webkit-overflow-scrolling:touch;}
-    .story h1 {font-size:40px;}
-    .story .copy {font-size:17px;}
+    .story h1 {font-size:50px;letter-spacing:-1px;}
+    .story .copy {font-size:22px;}
 
-    section.text {height:auto;padding:22% 0 8% 0;}
-    section.text .story.primary {padding:5% 5% 0 5%;}
-    section.text .story.secondary {padding-top:15%;}
-    section.bar .bar-wrapper {padding-left:5%;padding-right:5%;width:auto;}
+    .story .gif-copy-container {height:250px;}
+
+    section.text {height:auto;padding:15% 0 8% 0;}
+    section.text.secondary {padding-bottom:10%;}
+    section.text .story.primary {padding:5% 20px 0 20px;}
+    section.text .story.secondary {padding-top:15%;padding-left:20px;padding-right:20px;}
+    section.bar .bar-wrapper {padding-left:15px;padding-right:15px;width:auto;}
     section.bar .story{padding:15% 0 15% 0;}
     section.bar .story.short {padding:19% 0 19% 0;}
-    section.contact {padding:20% 0 10% 0;opacity:1;height:auto;}
-    section.contact .copy {padding-top:0;}
+    section.contact {padding:20% 0 25% 0;opacity:1;height:auto; min-height:400px; background:url('/_Global/images/bg/bg-mobile.jpg') no-repeat;background-size:cover;}
+    section.contact .copy {padding-top:0;height:100px;}
+    section.contact .gif {height:100px;}
     section.contact .story {padding-top:10%;}
-    section.contact .gif-copy-container {height:75px;margin-top:25px;}
+    section.contact .gif-copy-container {height:100px;margin-top:25px;}
     section.parallax > div {height:auto;}
 
+    .gif.glasses{height:96px;}
+    .gif.poop{height:96px;}
 
-    #rushmore{ background: url('/_Global/images/bg/rushmore-mobile.jpg') no-repeat;background-size:contain;height:335px;}
-    #dodge{ background:url('/_Global/images/bg/dart-mobile.jpg') no-repeat; background-size:contain;height:335px;}
-    #ride-planner{ background: url('/_Global/images/bg/ride-planner-mobile.jpg') no-repeat; background-size:contain;height:335px;margin-top:-5px;}
+    #rushmore{ background: url('/_Global/images/bg/rushmore-mobile.jpg') no-repeat;background-size:cover;height:335px;}
+    #dodge{ background:url('/_Global/images/bg/dart-mobile.jpg') no-repeat; background-size:cover;height:335px;}
+    #ride-planner{ background: url('/_Global/images/bg/ride-planner-mobile.jpg') no-repeat; background-size:cover;height:335px;margin-top:-5px;}
 
     .contact-wrapper > div {width:40%;}
 
