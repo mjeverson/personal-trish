@@ -272,31 +272,9 @@ path {-webkit-transform: scale(2.0);}
 
     .gif.glasses, .gif.poop, .gif.talk { background-size: contain; }
 
-    .twitter .front:hover{background: url('/_Global/images/icons/twitter-hover.png') no-repeat center;background-size:contain;}
-    .linkedin .front:hover{background: url('/_Global/images/icons/linkedin-hover.png') no-repeat center;background-size:contain;}
-    .behance .front:hover{background: url('/_Global/images/icons/behance-hover.png') no-repeat center;background-size:contain;}
-    .email .front:hover{background: url('/_Global/images/icons/email-hover.png') no-repeat center;background-size:contain;}
-
     /* Position the faces */
     .cube {cursor:pointer;height:110px;}
     .contact-wrapper > div {width:20vw;}
-    .front {
-        -webkit-transform: translateZ(0px);
-        -moz-transform: translateZ(0px);
-        -o-transform: translateZ(0px);
-        transform: translateZ(0px);
-        height:100%;
-    }
-
-    .back {display:none;}
-
-    /* Rotate the cube */
-    .cube:hover {
-        -webkit-transform: rotateX(0deg);
-        -moz-transform: rotateX(0deg);
-        -o-transform: rotateX(0deg);
-        transform: rotateX(0deg);
-    }
 }
 
 @media screen and (max-width: 480px){
