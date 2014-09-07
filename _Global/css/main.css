@@ -165,10 +165,10 @@ section.parallax > div {
 /* Rotate the cube */
 /* Container box to set the sides relative to */
 .cube {
-    width: 150px;
+    width: 210px;
     text-align: center;
     margin: 0 auto;
-    height: 100px;
+    height: 130px;
     padding-right:10px;
     cursor: pointer;
 
@@ -197,10 +197,10 @@ section.parallax > div {
 }
 
 .back {
-    -webkit-transform: rotateX(-90deg) translateZ(-50px);
-    -moz-transform: rotateX(-90deg) translateZ(-50px);
-    -o-transform: rotateX(-90deg) translateZ(-50px);
-    transform: rotateX(-90deg) translateZ(-50px);
+    -webkit-transform: rotateX(-90deg) translateZ(-65px);
+    -moz-transform: rotateX(-90deg) translateZ(-65px);
+    -o-transform: rotateX(-90deg) translateZ(-65px);
+    transform: rotateX(-90deg) translateZ(-65px);
 }
 
 /* Rotate the cube */
@@ -212,10 +212,10 @@ section.parallax > div {
 }
 
 path {
-    -webkit-transform: scale(3.0);
-    -moz-transform: scale(3.0);
-    -o-transform: scale(3.0);
-    transform: scale(3.0);
+    -webkit-transform: scale(2.5);
+    -moz-transform: scale(2.5);
+    -o-transform: scale(2.5);
+    transform: scale(2.5);
 }
 
 /* Responsive */
@@ -238,10 +238,10 @@ path {
     .story .copy { font-size: 32px; }
 
     .back {
-        -webkit-transform: rotateX(-90deg) translateZ(-50px);
-        -moz-transform: rotateX(-90deg) translateZ(-50px);
-        -o-transform: rotateX(-90deg) translateZ(-50px);
-        transform: rotateX(-90deg) translateZ(-50px);
+        -webkit-transform: rotateX(-90deg) translateZ(-65px);
+        -moz-transform: rotateX(-90deg) translateZ(-65px);
+        -o-transform: rotateX(-90deg) translateZ(-65px);
+        transform: rotateX(-90deg) translateZ(-65px);
     }
 }
 
