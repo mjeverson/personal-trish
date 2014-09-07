@@ -60,7 +60,7 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 .title-container .nav { margin-left:-8px; }
 .title-container span {cursor:pointer;}
 
-.nav-container{position:absolute;right:7%;}
+.nav-container{float:right;margin-right:7%;}
 .nav-container span.slash {font-weight:normal;padding:0 40px 0 40px;font-size:18px;color:rgb( 111, 110, 110 );}
 .header .mobile-menu {background: url('/_Global/images/icons/icon-menu.svg') center center no-repeat; cursor:pointer;height:70px;width:50px;border:none;padding:0;position:absolute;right:3%;display:none;}
 
