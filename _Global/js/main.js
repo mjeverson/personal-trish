@@ -22,7 +22,17 @@ $(document).ready(function(){
       $('.subheader').fadeOut();
       $('.trish').removeClass('menu-open');
 
-      var pos = $(this).attr('data-href') == 'about' ? 0 : $('#' + $(this).attr('data-href')).offset().top;
+      var pos;
+      var navClicked = $(this).attr('data-href');
+
+      if (navClicked == 'about') {
+          pos = 0;
+      } else if (navClicked == 'contact') {
+          pos = $('#' + $(this).attr('data-href')).offset().top + 100;
+      } else{
+          pos = $('#' + $(this).attr('data-href')).offset().top;
+      }
+
       $('html, body').animate({ scrollTop: pos + 'px' });
     });
 
@@ -42,7 +52,7 @@ $(document).ready(function(){
       else if (d == 'up'){
         $('.nav[data-order="' + order + '"]').addClass('hover');
       }
-    }, { offset: 55 });
+    }, { offset: 70 });
 
     $('.mobile-menu').bind('click', function(){
        $('.subheader').slideToggle();
