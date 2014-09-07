@@ -75,7 +75,7 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 
 section {display:block;}
 section.text {height:70vh;padding:15vh 0 15vh 0;}
-section.text.secondary {padding-bottom:30vh;}
+section.text.secondary {padding-bottom:18vh;}
 section.text .story.primary {padding-top:5%;}
 section.text .story.secondary {padding-top:10%;}
 
@@ -234,6 +234,7 @@ path {
 
 @media screen and (min-width: 1024px) and (max-width: 1600px){
  /* This is sort of what everything else is targeted to */
+    section.text.secondary {padding-bottom:30vh;}
     section.contact {padding-bottom:0;height:80vh;}
     .story .copy { font-size: 32px; }
 
