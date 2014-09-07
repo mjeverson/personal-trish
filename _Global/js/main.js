@@ -65,12 +65,14 @@ $(document).ready(function(){
     });
 
     // Contacts should open in a new tab except for email
-    $('.twitter, .behance, .linkedin').bind('click', function(){
-       window.open($(this).attr('data-href'));
-    });
+    $('.link').bind('mousedown', function(){
+        var dest = $(this).attr('data-href');
 
-    $('.email').bind('click', function(){
-       location.href = $(this).attr('data-href');
+       if($(this).hasClass('email')){
+           location.href = dest;
+       } else{
+           window.open(dest);
+       }
     });
   };
 
