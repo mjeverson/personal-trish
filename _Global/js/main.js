@@ -64,8 +64,13 @@ $(document).ready(function(){
        $('.trish').removeClass('menu-open');
     });
 
-    $('.cube').bind('click', function(){
+    // Contacts should open in a new tab except for email
+    $('.twitter, .behance, .linkedin').bind('click', function(){
        window.open($(this).attr('data-href'));
+    });
+
+    $('.email').bind('click', function(){
+       location.href = $(this).attr('data-href');
     });
   };
 
