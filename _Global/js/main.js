@@ -225,15 +225,17 @@ $(document).ready(function(){
 
     //if the user resizes the window...
     $(window).resize(function(){
-      // Reset the gifs and toggle copy to display
+      // Reset the gifs and toggle copy to display for mobile/desktop, show/hide contact section outright
       $('.gif').hide();
 
       if (isMobileSize()){
-            $('.mobile-copy').show()
-            $('.desktop-copy').hide()
+            $contact.css('opacity', 1);
+            $('.mobile-copy').show();
+            $('.desktop-copy').hide();
+
       } else{
-            $('.desktop-copy').show()
-            $('.mobile-copy').hide()
+            $('.desktop-copy').show();
+            $('.mobile-copy').hide();
       }
 
       _windowHeight = $(window).height(); //get the height of the window
