@@ -29,7 +29,9 @@ $(document).ready(function(){
           pos = 0;
       } else if (navClicked == 'contact') {
           pos = $('#' + $(this).attr('data-href')).offset().top + 100;
-      } else{
+      } else if (navClicked == 'work' && isMobileSize()){
+        pos = $('#' + $(this).attr('data-href')).offset().top - 70;
+      } else {
           pos = $('#' + $(this).attr('data-href')).offset().top;
       }
 
