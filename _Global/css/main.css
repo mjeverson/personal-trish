@@ -1,5 +1,45 @@
 @charset "utf-8";
 
+/* IcoMoon ============================================================================  */
+@font-face {
+    font-family: 'icomoon';
+    src:url('/_Global/fonts/SVG/icomoon.eot?-8d277p');
+    src:url('/_Global/fonts/SVG/icomoon.eot?#iefix-8d277p') format('embedded-opentype'),
+    url('/_Global/fonts/SVG/icomoon.woff?-8d277p') format('woff'),
+    url('/_Global/fonts/SVG/icomoon.ttf?-8d277p') format('truetype'),
+    url('/_Global/fonts/SVG/icomoon.svg?-8d277p#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 150px;
+    font-size: 5em;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-behance-logo:before {
+    content: "\e600";
+}
+.icon-email-logo:before {
+    content: "\e601";
+}
+.icon-linkedin-logo:before {
+    content: "\e602";
+}
+.icon-twitter-logo:before {
+    content: "\e603";
+}
+
 /* Global styles */
 
 html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; box-sizing: border-box; }
@@ -176,11 +216,13 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 
     -webkit-transition: -webkit-transform .33s;
     -moz-transition: -webkit-transform .33s;
+    -ms-transition: -webkit-transform .33s;
     -o-transition: -webkit-transform .33s;
     transition: transform .33s; /* Animate the transform properties */
 
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
     -o-transform-style: preserve-3d;
     transform-style: preserve-3d; /* <-NB */
 }
@@ -194,30 +236,28 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 .front {
     -webkit-transform: translateZ(50px);
     -moz-transform: translateZ(50px);
+    -ms-transform: translateZ(50px);
     -o-transform: translateZ(50px);
     transform: translateZ(50px);
+    color:#000;
 }
 
 .back {
     -webkit-transform: rotateX(-90deg) translateZ(-65px);
     -moz-transform: rotateX(-90deg) translateZ(-65px);
+    -ms-transform: rotateX(-90deg) translateZ(-65px);
     -o-transform: rotateX(-90deg) translateZ(-65px);
     transform: rotateX(-90deg) translateZ(-65px);
+    color:#FFF;
 }
 
 /* Rotate the cube */
 .cube:hover {
     -webkit-transform: rotateX(90deg);
     -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
     -o-transform: rotateX(90deg);
     transform: rotateX(90deg); /* Text bleed at 90º */
-}
-
-path {
-    -webkit-transform: scale(2.5);
-    -moz-transform: scale(2.5);
-    -o-transform: scale(2.5);
-    transform: scale(2.5);
 }
 
 /* Responsive */
@@ -225,27 +265,21 @@ path {
 @media screen and (min-width: 1920px){
     .section.text .story.primary {padding-top:10%;}
     .cube {height:175px;width:275px;}
+    [class^="icon-"], [class*=" icon-"] {line-height:175px;}
 
     .back {
         -webkit-transform: rotateX(-90deg) translateZ(-90px);
         -moz-transform: rotateX(-90deg) translateZ(-90px);
+        -ms-transform: rotateX(-90deg) translateZ(-90px);
         -o-transform: rotateX(-90deg) translateZ(-90px);
         transform: rotateX(-90deg) translateZ(-90px);
     }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1600px){
- /* This is sort of what everything else is targeted to */
     .section.text.secondary {padding-bottom:30vh;}
     .section.contact {padding-bottom:0;height:80vh;}
     .story .copy { font-size: 32px; }
-
-    .back {
-        -webkit-transform: rotateX(-90deg) translateZ(-65px);
-        -moz-transform: rotateX(-90deg) translateZ(-65px);
-        -o-transform: rotateX(-90deg) translateZ(-65px);
-        transform: rotateX(-90deg) translateZ(-65px);
-    }
 }
 
 @media screen and (min-width: 800px) and (max-width: 1024px){
@@ -287,6 +321,7 @@ path {
 
     /* Position the faces */
     .cube {cursor:pointer;height:110px;}
+    [class^="icon-"], [class*=" icon-"] {line-height:110px;}
     .contact-wrapper > div {width:20vw;}
 }
 
@@ -328,6 +363,7 @@ path {
     .contact-wrapper > div {width:40%;display:inline-flex;}
 
     .cube {height:80px;padding-right:0;width:100%;}
+    [class^="icon-"], [class*=" icon-"] {line-height:80px;}
 
     .footer {display: none;}
 }
