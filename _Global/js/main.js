@@ -46,7 +46,7 @@ $(document).ready(function(){
     $('#about, #work, #contact').waypoint(function(d){
       $('.nav').removeClass('hover');
       var id = $(this).attr('id');
-      var order = parseInt($(this).attr('order')) > 1 ? parseInt($(this).attr('order')) - 1 : parseInt($(this).attr('order'));
+      var order = parseInt($(this).attr('data-order')) > 1 ? parseInt($(this).attr('data-order')) - 1 : parseInt($(this).attr('data-order'));
 
       if(d == 'down') {
         $('.nav[data-href="' + id + '"]').addClass('hover');
