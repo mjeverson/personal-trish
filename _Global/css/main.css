@@ -19,8 +19,8 @@
     font-weight: normal;
     font-variant: normal;
     text-transform: none;
-    line-height: 150px;
-    font-size: 5em;
+    line-height: 130px;
+    font-size: 4em;
 
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
@@ -250,6 +250,8 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
     transform: rotateX(-90deg) translateZ(-65px);
     color:#FFF;
 }
+
+.email .back {color:#000;}
 
 /* Rotate the cube */
 .cube:hover {
