@@ -75,11 +75,11 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 /* Main content */
 .inner-wrapper{ background: url('/_Global/images/bg/bg.jpg') right top no-repeat fixed; background-color:black; background-size: cover; color:white; z-index:1; margin-top:55px;}
 
-section {display:block;}
-section.text {height:70vh;padding:15vh 0 15vh 0;}
-section.text.secondary {padding-bottom:18vh;}
-section.text .story.primary {padding-top:5%;}
-section.text .story.secondary {padding-top:10%;}
+.section {display:block;}
+.section.text {height:70vh;padding:15vh 0 15vh 0;}
+.section.text.secondary {padding-bottom:18vh;}
+.section.text .story.primary {padding-top:5%;}
+.section.text .story.secondary {padding-top:10%;}
 
 .story{ text-align:center;}
 .story h1 span { color: rgb(255, 255, 255); }
@@ -114,18 +114,18 @@ section.text .story.secondary {padding-top:10%;}
     text-align: center;
 }
 
-section .bar-wrapper {width:100%;display:block;background-color: rgba(247, 247, 247, 0.8); }
-section.bar .story {padding:10vh 0 10vh 0;left:0;right:0}
-section.bar .story.short {padding:12vh 0 12vh 0;left:0;right:0;}
-section.bar .story .copy span { color: rgb(62, 62, 62); line-height: 1.542;}
-section.bar .story .copy span.highlight { color: rgb(255, 255, 255);font-style: normal; border:none; }
-section.bar .story .copy.inverse span { font-style:normal;}
-section.bar .story .copy.inverse span.highlight { font-style: italic; }
+.section .bar-wrapper {width:100%;display:block;background-color: rgba(247, 247, 247, 0.8); }
+.section.bar .story {padding:10vh 0 10vh 0;left:0;right:0}
+.section.bar .story.short {padding:12vh 0 12vh 0;left:0;right:0;}
+.section.bar .story .copy span { color: rgb(62, 62, 62); line-height: 1.542;}
+.section.bar .story .copy span.highlight { color: rgb(255, 255, 255);font-style: normal; border:none; }
+.section.bar .story .copy.inverse span { font-style:normal;}
+.section.bar .story .copy.inverse span.highlight { font-style: italic; }
 
-section.contact {height:70vh;padding-top:30vh;padding-bottom:8vh;}
-section.contact {opacity:0;}
-section.contact .gif-copy-container {height: 350px;}
-section.contact .copy { padding-top:25px; }
+.section.contact {height:70vh;padding-top:30vh;padding-bottom:8vh;}
+.section.contact {opacity:0;}
+.section.contact .gif-copy-container {height: 350px;}
+.section.contact .copy { padding-top:25px; }
 
 /* footer styles */
 .footer {
@@ -138,7 +138,7 @@ section.contact .copy { padding-top:25px; }
 }
 
 /* parallax */
-section.parallax > div {
+.section.parallax > div {
     color: white;
     height: 150vh;
     margin: 0 auto;
@@ -223,7 +223,7 @@ path {
 /* Responsive */
 
 @media screen and (min-width: 1920px){
-    section.text .story.primary {padding-top:10%;}
+    .section.text .story.primary {padding-top:10%;}
     .cube {height:175px;width:275px;}
 
     .back {
@@ -236,8 +236,8 @@ path {
 
 @media screen and (min-width: 1024px) and (max-width: 1600px){
  /* This is sort of what everything else is targeted to */
-    section.text.secondary {padding-bottom:30vh;}
-    section.contact {padding-bottom:0;height:80vh;}
+    .section.text.secondary {padding-bottom:30vh;}
+    .section.contact {padding-bottom:0;height:80vh;}
     .story .copy { font-size: 32px; }
 
     .back {
@@ -270,12 +270,12 @@ path {
 
     .story h1 {font-size:60px;}
 
-    section.text .story.primary {padding-top:0;}
-    section.bar .story {padding:17vh 5vw 17vh 5vw;}
-    section.bar .story.short {padding:19vh 0 19vh 0;}
-    section.contact {padding-top:20vh;height:100vh;}
-    section.contact .story {padding-top:30%;}
-    section.contact .gif-copy-container {height:150px;margin-top:20px;}
+    .section.text .story.primary {padding-top:0;}
+    .section.bar .story {padding:17vh 5vw 17vh 5vw;}
+    .section.bar .story.short {padding:19vh 0 19vh 0;}
+    .section.contact {padding-top:20vh;height:100vh;}
+    .section.contact .story {padding-top:30%;}
+    .section.contact .gif-copy-container {height:150px;margin-top:20px;}
 
     .story .copy { font-size: 22px; }
     .story.secondary {padding-left:5vw;padding-right:5vw;}
@@ -304,19 +304,19 @@ path {
 
     .story .gif-copy-container {height:250px;}
 
-    section.text {height:auto;padding:15% 0 8% 0;}
-    section.text.secondary {padding-bottom:10%;}
-    section.text .story.primary {padding:5% 20px 0 20px;}
-    section.text .story.secondary {padding-top:15%;padding-left:20px;padding-right:20px;}
-    section.bar .bar-wrapper {padding-left:15px;padding-right:15px;width:auto;}
-    section.bar .story{padding:15% 0 15% 0;}
-    section.bar .story.short {padding:19% 0 19% 0;}
-    section.contact {padding:20% 0 25% 0;opacity:1;height:auto; min-height:400px; background:url('/_Global/images/bg/bg-mobile.jpg') no-repeat;background-size:cover;}
-    section.contact .copy {padding-top:0;height:100px;}
-    section.contact .gif {height:100px;}
-    section.contact .story {padding-top:10%;}
-    section.contact .gif-copy-container {height:100px;margin-top:25px;}
-    section.parallax > div {height:auto;}
+    .section.text {height:auto;padding:15% 0 8% 0;}
+    .section.text.secondary {padding-bottom:10%;}
+    .section.text .story.primary {padding:5% 20px 0 20px;}
+    .section.text .story.secondary {padding-top:15%;padding-left:20px;padding-right:20px;}
+    .section.bar .bar-wrapper {padding-left:15px;padding-right:15px;width:auto;}
+    .section.bar .story{padding:15% 0 15% 0;}
+    .section.bar .story.short {padding:19% 0 19% 0;}
+    .section.contact {padding:20% 0 25% 0;opacity:1;height:auto; min-height:400px; background:url('/_Global/images/bg/bg-mobile.jpg') no-repeat;background-size:cover;}
+    .section.contact .copy {padding-top:0;height:100px;}
+    .section.contact .gif {height:100px;}
+    .section.contact .story {padding-top:10%;}
+    .section.contact .gif-copy-container {height:100px;margin-top:25px;}
+    .section.parallax > div {height:auto;}
 
     .gif.glasses{height:96px;}
     .gif.poop{height:96px;}
