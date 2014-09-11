@@ -106,7 +106,7 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 .nav-container span.slash {font-weight:normal;padding:0 40px 0 40px;font-size:18px;color:rgb( 111, 110, 110 );}
 .header .mobile-menu {background: url('/_Global/images/icons/icon-menu.svg') center center no-repeat; cursor:pointer;height:70px;width:50px;border:none;padding:0;position:absolute;right:3%;display:none;}
 
-.nav { border-bottom:5px solid transparent;padding:15px 0 16px 0;}
+.nav { border-bottom:5px solid transparent;padding:15px 0 17px 0;}
 .nav:hover, .nav.hover{ border-bottom: 5px solid rgb( 111, 110, 110 ); cursor:pointer; }
 .nav:hover > span, .nav.hover > span { color: rgb( 111, 110, 110 ); }
 
@@ -288,7 +288,9 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
     .nav-container span.slash {padding:0 10px 0 10px;}
     .story .copy { font-size: 32px; }
 
+    .section.contact {height:auto;}
     .contact-wrapper > div {width:20vw;}
+    .cube{width:100%;}
 }
 
 @media screen and (max-width: 768px){
@@ -309,7 +311,7 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
     .section.text .story.primary {padding-top:0;}
     .section.bar .story {padding:17vh 5vw 17vh 5vw;}
     .section.bar .story.short {padding:19vh 0 19vh 0;}
-    .section.contact {padding-top:20vh;height:100vh;}
+    .section.contact {padding-top:20vh;height:auto;}
     .section.contact .story {padding-top:30%;}
     .section.contact .gif-copy-container {height:150px;margin-top:20px;}
 
@@ -365,7 +367,7 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
     .contact-wrapper > div {width:40%;display:inline-flex;}
 
     .cube {height:80px;padding-right:0;width:100%;}
-    [class^="icon-"], [class*=" icon-"] {line-height:80px;}
+    [class^="icon-"], [class*=" icon-"] {line-height:80px;font-size:3em;}
 
     .footer {display: none;}
 }
