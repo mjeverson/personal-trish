@@ -67,7 +67,7 @@ $(document).ready(function(){
     });
 
     // Contacts should open in a new tab except for email
-    $('.link').bind('mousedown', function(){
+    $('.link').bind('click', function(){
         var dest = $(this).attr('data-href');
 
        if($(this).hasClass('email')){
