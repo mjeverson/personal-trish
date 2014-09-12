@@ -368,7 +368,7 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 
     .cube {height:80px;padding-right:0;width:100%;}
     [class^="icon-"], [class*=" icon-"] {line-height:80px;font-size:3em;}
-    
+
     /* Don't rotate the cube */
     .cube:hover {
         -webkit-transform: rotateX(0deg);
@@ -395,11 +395,20 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
     .nav-container span.slash {padding: 0 20px 0;}
 
     .section.text {height:65vh; padding:30vh 0 0 0;}
-    .section.text.secondary {padding-bottom:5vh;}
+    .section.text.secondary {padding-top:20vh;padding-bottom:10vh;}
     .section.contact {padding:5vh 0 25vh 0;height:65vh;}
 
-    .story .copy.desktop-copy, h1.desktop-copy, div.desktop-copy {display:block;}
-    .story .copy.mobile-copy, h1.mobile-copy, div.mobile-copy {display:none;}
+    .story h1 {font-size: 80px;}
+    .story .copy {font-size:32px;}
+
+    h1.desktop-copy, div.desktop-copy {display:block;}
+    h1.mobile-copy, div.mobile-copy {display:none;}
+
+    .story.primary .desktop-copy {display:block;}
+    .story.primary .mobile-copy {display:none;}
+
+/*    .story .copy.desktop-copy, h1.desktop-copy, div.desktop-copy {display:block;}
+    .story .copy.mobile-copy, h1.mobile-copy, div.mobile-copy {display:none;}*/
 
     .section.contact .gif-copy-container {height: 350px;}
 
