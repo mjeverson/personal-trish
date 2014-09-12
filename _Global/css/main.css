@@ -375,6 +375,16 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 @media screen and (max-width: 768px) and (min-height: 1024px) {
     body {max-width:768px;}
 
+    .header { font-size: 20px; }
+    .header .mobile-menu {display:none;}
+    .header .title-container, .header .nav-container {display:inline-block;}
+    .header-inner-wrapper > div {width:43%;}
+
+    .nav { border-bottom:5px solid transparent;}
+    .nav:hover, .nav.hover{ border-bottom: 5px solid rgb( 111, 110, 110 ); }
+
+    .nav-container span.slash {padding: 0 20px 0;}
+
     .section.text {height:65vh; padding:30vh 0 0 0;}
     .section.text.secondary {padding-bottom:5vh;}
     .section.contact {padding:5vh 0 25vh 0;height:65vh;}
