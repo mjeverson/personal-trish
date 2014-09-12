@@ -38,9 +38,9 @@ $(document).ready(function(){
       $('html, body').animate({ scrollTop: pos + 'px' });
     });
 
-      $('.title-container').bind('click', function(){
-          $('html, body').animate({ scrollTop: '0px' });
-      });
+    $('.title-container').bind('click', function(){
+        $('html, body').animate({ scrollTop: '0px' });
+    });
 
     /* Update headers while scrolling */
     $('#about, #work, #contact').waypoint(function(d){

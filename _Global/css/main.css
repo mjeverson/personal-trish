@@ -20,7 +20,7 @@
     font-variant: normal;
     text-transform: none;
     line-height: 130px;
-    font-size: 3em;
+    font-size: 4em;
 
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
@@ -87,6 +87,8 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
     text-align:center;
     cursor:pointer;
 }
+
+.subheader .item.last {border-bottom:1px solid rgba(0,0,0,0.2);}
 
 .subheader .item .title-container {padding-top:15px;}
 
@@ -294,7 +296,7 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
     [class^="icon-"], [class*=" icon-"] {font-size:3em;}
 }
 
-@media screen and (max-width: 768px) and (max-height:1000px){
+@media screen and (max-width: 768px) {
 
     .header { font-size: 20px; }
     .header .mobile-menu {display:inline-block;}
@@ -330,7 +332,7 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
     .contact-wrapper > div {width:20vw;}
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 480px){
 
     .header-inner-wrapper > div.title-container {width:50%;}
     .header .mobile-menu {height:60px;}
@@ -373,6 +375,20 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
     .footer {display: none;}
 }
 
-@media screen and (max-width: 768px) and (min-height: 1000px) {
+@media screen and (max-width: 768px) and (min-height: 1024px) {
+    body {max-width:768px;}
 
+    .section.text {height:65vh; padding:30vh 0 0 0;}
+    .section.text.secondary {padding-bottom:5vh;}
+    .section.contact {padding:5vh 0 25vh 0;height:65vh;}
+
+    .story .copy.desktop-copy, h1.desktop-copy, div.desktop-copy {display:block;}
+    .story .copy.mobile-copy, h1.mobile-copy, div.mobile-copy {display:none;}
+
+    .section.contact .gif-copy-container {height: 350px;}
+
+    .gif.glasses, .gif.poop, .gif.talk { background-size: cover; }
+
+    .cube {width:100%;}
+    [class^="icon-"], [class*=" icon-"] {font-size:3em;}
 }
