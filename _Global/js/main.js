@@ -57,7 +57,9 @@ $(document).ready(function(){
     }, { offset: 70 });
 
     $('.mobile-menu').bind('click', function(){
-       $('.subheader').slideToggle();
+       $('.subheader').slideToggle(function(){
+
+       });
        $('.trish').toggleClass('menu-open');
     });
 

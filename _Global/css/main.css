@@ -70,13 +70,12 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 .subheader {
     background-color: rgb(247, 247, 247);
     position:fixed;
-    top:70;
+    top:69px;
     width:100%;
     z-index:1000;
     font-size:20px;
     letter-spacing:0px;
     display:none;
-    padding-top:15px;
 }
 
 .subheader .item {
@@ -87,8 +86,6 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
     text-align:center;
     cursor:pointer;
 }
-
-.subheader .item.last {border-bottom:1px solid rgba(0,0,0,0.2);}
 
 .subheader .item .title-container {padding-top:15px;}
 
