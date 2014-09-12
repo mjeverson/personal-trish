@@ -105,7 +105,7 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 .nav-container span.slash {font-weight:normal;padding:0 40px 0 40px;font-size:18px;color:rgb( 111, 110, 110 );}
 .header .mobile-menu {background: url('/_Global/images/icons/icon-menu.svg') center center no-repeat; cursor:pointer;height:70px;width:50px;border:none;padding:0;position:absolute;right:3%;display:none;}
 
-.nav { border-bottom:5px solid transparent;padding:15px 0 16px 0;}
+.nav { border-bottom:5px solid transparent;padding:15px 0 17px 0;}
 .nav:hover, .nav.hover{ border-bottom: 5px solid rgb( 111, 110, 110 ); cursor:pointer; }
 .nav:hover > span, .nav.hover > span { color: rgb( 111, 110, 110 ); }
 
@@ -389,7 +389,7 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
     .header .title-container, .header .nav-container {display:inline-block;}
     .header-inner-wrapper > div {width:43%;}
 
-    .nav { border-bottom:5px solid transparent;}
+    .nav { border-bottom:5px solid transparent;padding:15px 0 16px 0;}
     .nav:hover, .nav.hover{ border-bottom: 5px solid rgb( 111, 110, 110 ); }
 
     .nav-container span.slash {padding: 0 20px 0;}
