@@ -375,7 +375,7 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
         -moz-transform: rotateX(0deg);
         -ms-transform: rotateX(0deg);
         -o-transform: rotateX(0deg);
-        transform: rotateX(0deg); /* Text bleed at 90º */
+        transform: rotateX(0deg);
     }
 
     .footer {display: none;}
@@ -407,9 +407,6 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
     .story.primary .desktop-copy {display:block;}
     .story.primary .mobile-copy {display:none;}
 
-/*    .story .copy.desktop-copy, h1.desktop-copy, div.desktop-copy {display:block;}
-    .story .copy.mobile-copy, h1.mobile-copy, div.mobile-copy {display:none;}*/
-
     .section.contact .gif-copy-container {height: 350px;}
 
     .gif.glasses, .gif.poop, .gif.talk { background-size: cover; }
@@ -423,6 +420,6 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
         -moz-transform: rotateX(0deg);
         -ms-transform: rotateX(0deg);
         -o-transform: rotateX(0deg);
-        transform: rotateX(0deg); /* Text bleed at 90º */
+        transform: rotateX(0deg);
     }
 }
