@@ -1,5 +1,45 @@
 @charset "utf-8";
 
+/* IcoMoon ============================================================================  */
+@font-face {
+    font-family: 'icomoon';
+    src:url('/_Global/fonts/SVG/icomoon.eot?-8d277p');
+    src:url('/_Global/fonts/SVG/icomoon.eot?#iefix-8d277p') format('embedded-opentype'),
+    url('/_Global/fonts/SVG/icomoon.woff?-8d277p') format('woff'),
+    url('/_Global/fonts/SVG/icomoon.ttf?-8d277p') format('truetype'),
+    url('/_Global/fonts/SVG/icomoon.svg?-8d277p#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 130px;
+    font-size: 4em;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-behance-logo:before {
+    content: "\e600";
+}
+.icon-email-logo:before {
+    content: "\e601";
+}
+.icon-linkedin-logo:before {
+    content: "\e602";
+}
+.icon-twitter-logo:before {
+    content: "\e603";
+}
+
 /* Global styles */
 
 html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; box-sizing: border-box; }
@@ -18,7 +58,7 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
     z-index:1000;
     height:70px;
     font-size:24px;
-    letter-spacing:0px;
+    letter-spacing:0;
 }
 
 .header span, .subheader span {
@@ -30,13 +70,12 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 .subheader {
     background-color: rgb(247, 247, 247);
     position:fixed;
-    top:70;
+    top:69px;
     width:100%;
     z-index:1000;
     font-size:20px;
-    letter-spacing:0px;
+    letter-spacing:0;
     display:none;
-    padding-top:15px;
 }
 
 .subheader .item {
@@ -48,23 +87,25 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
     cursor:pointer;
 }
 
-.subheader .item .title-container {
-    padding-top:15px;
-}
+.subheader .item .title-container {padding-top:15px;}
 
 .header div { display:inline-block; }
 .header > div {height:60px; }
 .header > div.header-stripe { height:5px; display:block; background-color:rgb(0,0,0); }
 
-.title-container {margin-left:7%;}
+.header-inner-wrapper {width:100%;}
+.header-inner-wrapper > div {width:43%;}
+
+.title-container {padding-left:6%;}
 .title-container .nav { margin-left:-8px; }
 .title-container span {cursor:pointer;}
 
-.nav-container{position:absolute;right:7%;}
+.nav-container{padding-right:6%;}
+.nav-container {text-align:right;}
 .nav-container span.slash {font-weight:normal;padding:0 40px 0 40px;font-size:18px;color:rgb( 111, 110, 110 );}
 .header .mobile-menu {background: url('/_Global/images/icons/icon-menu.svg') center center no-repeat; cursor:pointer;height:70px;width:50px;border:none;padding:0;position:absolute;right:3%;display:none;}
 
-.nav { border-bottom:5px solid transparent;padding:15px 0 16px 0;}
+.nav { border-bottom:5px solid transparent;padding:15px 0 17px 0;}
 .nav:hover, .nav.hover{ border-bottom: 5px solid rgb( 111, 110, 110 ); cursor:pointer; }
 .nav:hover > span, .nav.hover > span { color: rgb( 111, 110, 110 ); }
 
@@ -73,11 +114,11 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 /* Main content */
 .inner-wrapper{ background: url('/_Global/images/bg/bg.jpg') right top no-repeat fixed; background-color:black; background-size: cover; color:white; z-index:1; margin-top:55px;}
 
-section {display:block;}
-section.text {height:70vh;padding:15vh 0 15vh 0;}
-section.text.secondary {padding-bottom:30vh;}
-section.text .story.primary {padding-top:5%;}
-section.text .story.secondary {padding-top:10%;}
+.section {display:block;}
+.section.text {height:70vh;padding:15vh 0 15vh 0;}
+.section.text.secondary {padding-bottom:18vh;}
+.section.text .story.primary {padding-top:5%;}
+.section.text .story.secondary {padding-top:10%;}
 
 .story{ text-align:center;}
 .story h1 span { color: rgb(255, 255, 255); }
@@ -112,18 +153,18 @@ section.text .story.secondary {padding-top:10%;}
     text-align: center;
 }
 
-section .bar-wrapper {width:100%;display:block;background-color: rgba(247, 247, 247, 0.8); }
-section.bar .story {padding:10vh 0 10vh 0;left:0;right:0}
-section.bar .story.short {padding:12vh 0 12vh 0;left:0;right:0;}
-section.bar .story .copy span { color: rgb(62, 62, 62); line-height: 1.542;}
-section.bar .story .copy span.highlight { color: rgb(255, 255, 255);font-style: normal; border:none; }
-section.bar .story .copy.inverse span { font-style:normal;}
-section.bar .story .copy.inverse span.highlight { font-style: italic; }
+.section .bar-wrapper {width:100%;display:block;background-color: rgba(247, 247, 247, 0.8); }
+.section.bar .story {padding:10vh 0 10vh 0;left:0;right:0}
+.section.bar .story.short {padding:12vh 0 12vh 0;left:0;right:0;}
+.section.bar .story .copy span { color: rgb(62, 62, 62); line-height: 1.542;}
+.section.bar .story .copy span.highlight { color: rgb(255, 255, 255);font-style: normal; border:none; }
+.section.bar .story .copy.inverse span { font-style:normal;}
+.section.bar .story .copy.inverse span.highlight { font-style: italic; }
 
-section.contact {height:70vh;padding-top:30vh;padding-bottom:8vh;}
-section.contact {opacity:0;}
-section.contact .gif-copy-container {height: 350px;}
-section.contact .copy { padding-top:25px; }
+.section.contact {height:70vh;padding-top:30vh;padding-bottom:8vh;}
+.section.contact {opacity:0;}
+.section.contact .gif-copy-container {height: 350px;}
+.section.contact .copy { padding-top:25px; }
 
 /* footer styles */
 .footer {
@@ -136,7 +177,7 @@ section.contact .copy { padding-top:25px; }
 }
 
 /* parallax */
-section.parallax > div {
+.section.parallax > div {
     color: white;
     height: 150vh;
     margin: 0 auto;
@@ -165,20 +206,22 @@ section.parallax > div {
 /* Rotate the cube */
 /* Container box to set the sides relative to */
 .cube {
-    width: 150px;
+    width: 210px;
     text-align: center;
     margin: 0 auto;
-    height: 100px;
+    height: 130px;
     padding-right:10px;
     cursor: pointer;
 
     -webkit-transition: -webkit-transform .33s;
     -moz-transition: -webkit-transform .33s;
+    -ms-transition: -webkit-transform .33s;
     -o-transition: -webkit-transform .33s;
     transition: transform .33s; /* Animate the transform properties */
 
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
     -o-transform-style: preserve-3d;
     transform-style: preserve-3d; /* <-NB */
 }
@@ -192,85 +235,85 @@ section.parallax > div {
 .front {
     -webkit-transform: translateZ(50px);
     -moz-transform: translateZ(50px);
+    -ms-transform: translateZ(50px);
     -o-transform: translateZ(50px);
     transform: translateZ(50px);
+    color:#000;
 }
 
 .back {
-    -webkit-transform: rotateX(-90deg) translateZ(-50px);
-    -moz-transform: rotateX(-90deg) translateZ(-50px);
-    -o-transform: rotateX(-90deg) translateZ(-50px);
-    transform: rotateX(-90deg) translateZ(-50px);
+    -webkit-transform: rotateX(-90deg) translateZ(-65px);
+    -moz-transform: rotateX(-90deg) translateZ(-65px);
+    -ms-transform: rotateX(-90deg) translateZ(-65px);
+    -o-transform: rotateX(-90deg) translateZ(-65px);
+    transform: rotateX(-90deg) translateZ(-65px);
+    color:#FFF;
 }
+
+.email .back {color:#000;}
 
 /* Rotate the cube */
 .cube:hover {
     -webkit-transform: rotateX(90deg);
     -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
     -o-transform: rotateX(90deg);
     transform: rotateX(90deg); /* Text bleed at 90º */
-}
-
-path {
-    -webkit-transform: scale(3.0);
-    -moz-transform: scale(3.0);
-    -o-transform: scale(3.0);
-    transform: scale(3.0);
 }
 
 /* Responsive */
 
 @media screen and (min-width: 1920px){
-    section.text .story.primary {padding-top:10%;}
+    .section.text .story.primary {padding-top:10%;}
     .cube {height:175px;width:275px;}
+    [class^="icon-"], [class*=" icon-"] {line-height:175px;}
 
     .back {
         -webkit-transform: rotateX(-90deg) translateZ(-90px);
         -moz-transform: rotateX(-90deg) translateZ(-90px);
+        -ms-transform: rotateX(-90deg) translateZ(-90px);
         -o-transform: rotateX(-90deg) translateZ(-90px);
         transform: rotateX(-90deg) translateZ(-90px);
     }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1600px){
- /* This is sort of what everything else is targeted to */
-    section.contact {padding-bottom:0;height:80vh;}
+    .section.text.secondary {padding-bottom:30vh;}
+    .section.contact {padding-bottom:0;height:80vh;}
     .story .copy { font-size: 32px; }
-
-    .back {
-        -webkit-transform: rotateX(-90deg) translateZ(-50px);
-        -moz-transform: rotateX(-90deg) translateZ(-50px);
-        -o-transform: rotateX(-90deg) translateZ(-50px);
-        transform: rotateX(-90deg) translateZ(-50px);
-    }
 }
 
-@media screen and (min-width: 800px) and (max-width: 1024px){
+@media screen and (min-width: 768px) and (max-width: 1024px){
     .nav-container span.slash {padding:0 10px 0 10px;}
     .story .copy { font-size: 32px; }
 
+    /*.section.contact {height:auto;}*/
     .contact-wrapper > div {width:20vw;}
+    .cube{width:100%;}
+    [class^="icon-"], [class*=" icon-"] {font-size:3em;}
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
 
     .header { font-size: 20px; }
     .header .mobile-menu {display:inline-block;}
     .header .nav-container {display:none;}
 
-    .title-container .trish {margin-left:-6px;}
+    .title-container .nav.trish {margin-left:-6px;padding-top:20px;}
 
     .nav {border-bottom:none;}
     .nav:hover, .nav.hover {border-bottom:none;}
 
+    .inner-wrapper{ background: url('/_Global/images/bg/bg-mobile.jpg') 50% 0 no-repeat fixed; background-size:cover;overflow:hidden;-webkit-overflow-scrolling:touch;}
+
     .story h1 {font-size:60px;}
 
-    section.text .story.primary {padding-top:0;}
-    section.bar .story {padding:17vh 5vw 17vh 5vw;}
-    section.bar .story.short {padding:19vh 0 19vh 0;}
-    section.contact {padding-top:20vh;height:100vh;}
-    section.contact .story {padding-top:30%;}
-    section.contact .gif-copy-container {height:150px;margin-top:20px;}
+    .section.text .story.primary {padding-top:0;}
+    .section.bar .story {padding:17vh 5vw 17vh 5vw;}
+    .section.bar .story.short {padding:19vh 0 19vh 0;}
+    .section.contact {padding-top:20vh;height:auto;}
+    .section.contact .story {padding-top:30%;}
+    .section.contact .gif-copy-container {height:150px;margin-top:20px;}
 
     .story .copy { font-size: 22px; }
     .story.secondary {padding-left:5vw;padding-right:5vw;}
@@ -282,10 +325,17 @@ path {
 
     /* Position the faces */
     .cube {cursor:pointer;height:110px;}
+    [class^="icon-"], [class*=" icon-"] {line-height:110px;}
     .contact-wrapper > div {width:20vw;}
 }
 
 @media screen and (max-width: 480px){
+
+    .header-inner-wrapper > div.title-container {width:50%;}
+    .header .mobile-menu {height:60px;}
+
+    .nav {padding-top:20px;}
+
     .outer-wrapper {padding: 0;background-color: rgb(0,0,0);}
     .inner-wrapper{ background: url('/_Global/images/bg/bg-mobile.jpg') 50% 0 no-repeat fixed; background-size:contain;overflow:hidden;-webkit-overflow-scrolling:touch;}
     .story h1 {font-size:50px;letter-spacing:-1px;}
@@ -293,19 +343,19 @@ path {
 
     .story .gif-copy-container {height:250px;}
 
-    section.text {height:auto;padding:15% 0 8% 0;}
-    section.text.secondary {padding-bottom:10%;}
-    section.text .story.primary {padding:5% 20px 0 20px;}
-    section.text .story.secondary {padding-top:15%;padding-left:20px;padding-right:20px;}
-    section.bar .bar-wrapper {padding-left:15px;padding-right:15px;width:auto;}
-    section.bar .story{padding:15% 0 15% 0;}
-    section.bar .story.short {padding:19% 0 19% 0;}
-    section.contact {padding:20% 0 25% 0;opacity:1;height:auto; min-height:400px; background:url('/_Global/images/bg/bg-mobile.jpg') no-repeat;background-size:cover;}
-    section.contact .copy {padding-top:0;height:100px;}
-    section.contact .gif {height:100px;}
-    section.contact .story {padding-top:10%;}
-    section.contact .gif-copy-container {height:100px;margin-top:25px;}
-    section.parallax > div {height:auto;}
+    .section.text {height:auto;padding:15% 0 8% 0;}
+    .section.text.secondary {padding-bottom:10%;}
+    .section.text .story.primary {padding:5% 20px 0 20px;}
+    .section.text .story.secondary {padding-top:15%;padding-left:20px;padding-right:20px;}
+    .section.bar .bar-wrapper {padding-left:15px;padding-right:15px;width:auto;}
+    .section.bar .story{padding:15% 0 15% 0;}
+    .section.bar .story.short {padding:19% 0 19% 0;}
+    .section.contact {padding:20% 0 25% 0;opacity:1;height:auto; min-height:400px; background:url('/_Global/images/bg/bg-mobile.jpg') no-repeat;background-size:cover;}
+    .section.contact .copy {padding-top:0;height:100px;}
+    .section.contact .gif {height:100px;}
+    .section.contact .story {padding-top:10%;}
+    .section.contact .gif-copy-container {height:100px;margin-top:25px;}
+    .section.parallax > div {height:auto;}
 
     .gif.glasses{height:96px;}
     .gif.poop{height:96px;}
@@ -314,9 +364,62 @@ path {
     #dodge{ background:url('/_Global/images/bg/dart-mobile.jpg') no-repeat; background-size:cover;height:335px;}
     #ride-planner{ background: url('/_Global/images/bg/ride-planner-mobile.jpg') no-repeat; background-size:cover;height:335px;margin-top:-5px;}
 
-    .contact-wrapper > div {width:40%;}
+    .contact-wrapper > div {width:40%;display:inline-flex;}
 
-    .cube {height:80px;padding-right:0;}
+    .cube {height:80px;padding-right:0;width:100%;}
+    [class^="icon-"], [class*=" icon-"] {line-height:80px;font-size:3em;}
+
+    /* Don't rotate the cube */
+    .cube:hover {
+        -webkit-transform: rotateX(0deg);
+        -moz-transform: rotateX(0deg);
+        -ms-transform: rotateX(0deg);
+        -o-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+    }
 
     .footer {display: none;}
+}
+
+@media screen and (max-width: 768px) and (min-height: 1024px) {
+    body {max-width:768px;}
+
+    .header { font-size: 20px; }
+    .header .mobile-menu {display:none;}
+    .header .title-container, .header .nav-container {display:inline-block;}
+    .header-inner-wrapper > div {width:43%;}
+
+    .nav { border-bottom:5px solid transparent;padding:15px 0 16px 0;}
+    .nav:hover, .nav.hover{ border-bottom: 5px solid rgb( 111, 110, 110 ); }
+
+    .nav-container span.slash {padding: 0 20px 0;}
+
+    .section.text {height:65vh; padding:30vh 0 0 0;}
+    .section.text.secondary {padding-top:20vh;padding-bottom:10vh;}
+    .section.contact {padding:5vh 0 25vh 0;height:65vh;}
+
+    .story h1 {font-size: 80px;}
+    .story .copy {font-size:32px;}
+
+    h1.desktop-copy, div.desktop-copy {display:block;}
+    h1.mobile-copy, div.mobile-copy {display:none;}
+
+    .story.primary .desktop-copy {display:block;}
+    .story.primary .mobile-copy {display:none;}
+
+    .section.contact .gif-copy-container {height: 350px;}
+
+    .gif.glasses, .gif.poop, .gif.talk { background-size: cover; }
+
+    .cube {width:100%;}
+    [class^="icon-"], [class*=" icon-"] {font-size:3em;}
+
+    /* Don't rotate the cube */
+    .cube:hover {
+        -webkit-transform: rotateX(0deg);
+        -moz-transform: rotateX(0deg);
+        -ms-transform: rotateX(0deg);
+        -o-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+    }
 }

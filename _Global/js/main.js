@@ -12,6 +12,10 @@ $(document).ready(function(){
       return $(window).width() <= 480;
   };
 
+  var isPortraitTablet = function(){
+      return $(window).width() <= 768 && $(window).height() >= 1024;
+  };
+
   // Set up the nav
   var navInit = function(){
     // Click to scroll
@@ -22,19 +26,31 @@ $(document).ready(function(){
       $('.subheader').fadeOut();
       $('.trish').removeClass('menu-open');
 
-      var pos = $(this).attr('data-href') == 'about' ? 0 : $('#' + $(this).attr('data-href')).offset().top;
+      var pos;
+      var navClicked = $(this).attr('data-href');
+
+      if (navClicked == 'about') {
+          pos = 0;
+      } else if (navClicked == 'contact') {
+          pos = $('#' + $(this).attr('data-href')).offset().top + 100;
+      } else if (navClicked == 'work' && isMobileSize()){
+        pos = $('#' + $(this).attr('data-href')).offset().top - 70;
+      } else {
+          pos = $('#' + $(this).attr('data-href')).offset().top;
+      }
+
       $('html, body').animate({ scrollTop: pos + 'px' });
     });
 
-      $('.title-container').bind('click', function(){
-          $('html, body').animate({ scrollTop: '0px' });
-      });
+    $('.title-container').bind('click', function(){
+        $('html, body').animate({ scrollTop: '0px' });
+    });
 
     /* Update headers while scrolling */
     $('#about, #work, #contact').waypoint(function(d){
       $('.nav').removeClass('hover');
       var id = $(this).attr('id');
-      var order = parseInt($(this).attr('order')) > 1 ? parseInt($(this).attr('order')) - 1 : parseInt($(this).attr('order'));
+      var order = parseInt($(this).attr('data-order')) > 1 ? parseInt($(this).attr('data-order')) - 1 : parseInt($(this).attr('data-order'));
 
       if(d == 'down') {
         $('.nav[data-href="' + id + '"]').addClass('hover');
@@ -42,10 +58,12 @@ $(document).ready(function(){
       else if (d == 'up'){
         $('.nav[data-order="' + order + '"]').addClass('hover');
       }
-    }, { offset: 55 });
+    }, { offset: 70 });
 
     $('.mobile-menu').bind('click', function(){
-       $('.subheader').slideToggle();
+       $('.subheader').slideToggle(function(){
+
+       });
        $('.trish').toggleClass('menu-open');
     });
 
@@ -54,8 +72,15 @@ $(document).ready(function(){
        $('.trish').removeClass('menu-open');
     });
 
-    $('.cube').bind('click', function(){
-       window.open($(this).attr('data-href'));
+    // Contacts should open in a new tab except for email
+    $('.link').bind('click', function(){
+        var dest = $(this).attr('data-href');
+
+       if($(this).hasClass('email')){
+           location.href = dest;
+       } else{
+           window.open(dest);
+       }
     });
   };
 
@@ -126,22 +151,28 @@ $(document).ready(function(){
     // Clicking anywhere on the body should hide the gifs
     $('body').bind('click', function(){
       gifShown = false;
-      var gif = $('.gif');
-      var copy = isMobileSize() ? $('.copy:not(.desktop-copy)') : $('.copy:not(.mobile-copy)');
 
-      if(!isMobileSize()){
-          $('.contact-wrapper').show();
+      if (isMobileSize()){
+        $('.copy:not(.desktop-copy)').show();
+      } else if (isPortraitTablet()){
+        $('.contact-wrapper').show();
+        $('.copy:not(.desktop-copy)').show();
+
+        $('h1.desktop-copy').show();
+        $('h1.mobile-copy').hide();
+
+        $('.story.primary .desktop-copy').show();
+        $('.story.primary .mobile-copy').hide();
+      } else{
+        $('.contact-wrapper').show();
+        $('.copy:not(.mobile-copy)').show();
       }
-
-      gif.hide();
-      copy.show();
     });
   };
 
   // Initialize the parallax styles and events
   var parallaxInit = function(){
     //save selectors as variables to increase performance
-    var $innerWrapperBG = $('.inner-wrapper');
     var $firstBG = $('#rushmore');
     var $secondBG = $('#dodge');
     var $thirdBG = $('#ride-planner');
@@ -206,15 +237,17 @@ $(document).ready(function(){
 
     //if the user resizes the window...
     $(window).resize(function(){
-      // Reset the gifs and toggle copy to display
+      // Reset the gifs and toggle copy to display for mobile/desktop, show/hide contact section outright
       $('.gif').hide();
 
       if (isMobileSize()){
-            $('.mobile-copy').show()
-            $('.desktop-copy').hide()
+            $contact.css('opacity', 1);
+            $('.mobile-copy').show();
+            $('.desktop-copy').hide();
+
       } else{
-            $('.desktop-copy').show()
-            $('.mobile-copy').hide()
+            $('.desktop-copy').show();
+            $('.mobile-copy').hide();
       }
 
       _windowHeight = $(window).height(); //get the height of the window
