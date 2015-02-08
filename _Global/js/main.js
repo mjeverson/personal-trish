@@ -167,6 +167,8 @@ $(document).ready(function(){
         $('.contact-wrapper').show();
         $('.copy:not(.mobile-copy)').show();
       }
+
+        $('.gif').hide();
     });
   };
 
