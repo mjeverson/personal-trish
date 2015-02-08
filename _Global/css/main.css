@@ -33,6 +33,7 @@
 .icon-email-logo:before {
     content: "\e601";
 }
+
 .icon-linkedin-logo:before {
     content: "\e602";
 }
@@ -59,6 +60,10 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
     height:70px;
     font-size:24px;
     letter-spacing:0;
+}
+
+.header.bottom-border{
+    border-bottom:1px solid rgba(0,0,0,0.25);
 }
 
 .header span, .subheader span {
@@ -94,7 +99,7 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 .header > div.header-stripe { height:5px; display:block; background-color:rgb(0,0,0); }
 
 .header-inner-wrapper {width:100%;}
-.header-inner-wrapper > div {width:43%;}
+.header-inner-wrapper > div:not(.nav-arrows) {width:43%;}
 
 .title-container {padding-left:6%;}
 .title-container .nav { margin-left:-8px; }
@@ -107,7 +112,9 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 
 .nav { border-bottom:5px solid transparent;padding:15px 0 17px 0;}
 .nav:hover, .nav.hover{ border-bottom: 5px solid rgb( 111, 110, 110 ); cursor:pointer; }
+.nav.no-border:hover, .nav.no-border.hover{ border-bottom: none; }
 .nav:hover > span, .nav.hover > span { color: rgb( 111, 110, 110 ); }
+.nav:hover > a span, .nav.hover > a span { color: rgb( 111, 110, 110 ); }
 
 .trish.menu-open span{color: rgb( 111, 110, 110 );}
 
@@ -188,6 +195,7 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 #rushmore{ background: url('/_Global/images/bg/RUSHMORE.jpg') 50% 0 no-repeat fixed;background-size:cover; }
 #dodge{ background:url('/_Global/images/bg/DODGE.jpg') 50% 0 no-repeat fixed; background-size:cover;}
 #ride-planner{ background: url('/_Global/images/bg/RIDE-PLANNER.jpg') 50% 0 no-repeat fixed; background-size:cover;}
+#chrysler{ background: url('/_Global/images/bg/CHRYSLER.jpg') 50% 0 no-repeat fixed; background-size:cover;}
 
 /* flip */
 .contact-wrapper{height:150px;padding-top:5%;}
@@ -382,37 +390,93 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
 }
 
 @media screen and (max-width: 768px) and (min-height: 1024px) {
-    body {max-width:768px;}
+    body {
+        max-width: 768px;
+    }
 
-    .header { font-size: 20px; }
-    .header .mobile-menu {display:none;}
-    .header .title-container, .header .nav-container {display:inline-block;}
-    .header-inner-wrapper > div {width:43%;}
+    .header {
+        font-size: 20px;
+    }
 
-    .nav { border-bottom:5px solid transparent;padding:15px 0 16px 0;}
-    .nav:hover, .nav.hover{ border-bottom: 5px solid rgb( 111, 110, 110 ); }
+    .header .mobile-menu {
+        display: none;
+    }
 
-    .nav-container span.slash {padding: 0 20px 0;}
+    .header .title-container, .header .nav-container {
+        display: inline-block;
+    }
 
-    .section.text {height:65vh; padding:30vh 0 0 0;}
-    .section.text.secondary {padding-top:20vh;padding-bottom:10vh;}
-    .section.contact {padding:5vh 0 25vh 0;height:65vh;}
+    .header-inner-wrapper > div {
+        width: 43%;
+    }
 
-    .story h1 {font-size: 80px;}
-    .story .copy {font-size:32px;}
+    .nav {
+        border-bottom: 5px solid transparent;
+        padding: 15px 0 16px 0;
+    }
 
-    h1.desktop-copy, div.desktop-copy {display:block;}
-    h1.mobile-copy, div.mobile-copy {display:none;}
+    .nav:hover, .nav.hover {
+        border-bottom: 5px solid rgb(111, 110, 110);
+    }
 
-    .story.primary .desktop-copy {display:block;}
-    .story.primary .mobile-copy {display:none;}
+    .nav-container span.slash {
+        padding: 0 20px 0;
+    }
 
-    .section.contact .gif-copy-container {height: 350px;}
+    .section.text {
+        height: 65vh;
+        padding: 30vh 0 0 0;
+    }
 
-    .gif.glasses, .gif.poop, .gif.talk { background-size: cover; }
+    .section.text.secondary {
+        padding-top: 20vh;
+        padding-bottom: 10vh;
+    }
 
-    .cube {width:100%;}
-    [class^="icon-"], [class*=" icon-"] {font-size:3em;}
+    .section.contact {
+        padding: 5vh 0 25vh 0;
+        height: 65vh;
+    }
+
+    .story h1 {
+        font-size: 80px;
+    }
+
+    .story .copy {
+        font-size: 32px;
+    }
+
+    h1.desktop-copy, div.desktop-copy {
+        display: block;
+    }
+
+    h1.mobile-copy, div.mobile-copy {
+        display: none;
+    }
+
+    .story.primary .desktop-copy {
+        display: block;
+    }
+
+    .story.primary .mobile-copy {
+        display: none;
+    }
+
+    .section.contact .gif-copy-container {
+        height: 350px;
+    }
+
+    .gif.glasses, .gif.poop, .gif.talk {
+        background-size: cover;
+    }
+
+    .cube {
+        width: 100%;
+    }
+
+    [class^="icon-"], [class*=" icon-"] {
+        font-size: 3em;
+    }
 
     /* Don't rotate the cube */
     .cube:hover {
@@ -423,3 +487,364 @@ html, body { background-color: rgb(0,0,0); font-family: "Helvetica Neue", Helvet
         transform: rotateX(0deg);
     }
 }
+
+/* Project Pages */
+.header-inner-wrapper > div.narrow {width:30%;}
+
+.nav a {
+    text-decoration:none;
+}
+
+.nav-arrows {width:10%;cursor:pointer;}
+.nav-arrows > div {width:40%;}
+.nav-arrows > div.disabled{cursor:default;}
+
+.nav-arrows .left {background:url("/_Global/images/projects/svgs/arrow-left-on.svg") no-repeat center;}
+.nav-arrows .left.disabled, .nav-arrows .left:hover {background:url("/_Global/images/projects/svgs/arrow-left-off.svg") no-repeat center;}
+.nav-arrows .right {background:url("/_Global/images/projects/svgs/arrow-right-on.svg") no-repeat center;}
+.nav-arrows .right.disabled, .nav-arrows .right:hover {background:url("/_Global/images/projects/svgs/arrow-right-off.svg") no-repeat center;}
+
+.container {
+    width: 100%;
+    display:block;
+    background-color: rgb(247, 247, 247);
+}
+
+.container.rushmore .hero { background: url('/_Global/images/projects/header/rushmore-header.jpg') no-repeat fixed; background-size:cover; background-position:50%}
+.container.rideplanner .hero { background: url('/_Global/images/projects/header/rideplanner-header.jpg') no-repeat fixed; background-size:cover; background-position:50%}
+.container.dodge .hero { background: url('/_Global/images/projects/header/dodge-header.jpg') no-repeat fixed; background-size:cover; background-position:50%}
+.container.chrysler .hero { background: url('/_Global/images/projects/header/chrysler-header.jpg') no-repeat fixed; background-size:cover; background-position:50%}
+
+.container .hero {
+    width: 100%;
+    height:100vh;
+}
+
+.container .project-wrapper{
+    padding: 10% 10% 0;
+}
+
+.container .top-copy {
+    width:100%;
+    height:80vh;
+}
+
+.container.rideplanner .top-copy{
+    height:65vh;
+}
+
+.top-copy .top {
+    height:40%;
+    margin: auto 5% 5%;
+}
+
+.top-copy .left, .top-copy .right {
+    width:49%;
+    display:inline-block;
+    vertical-align:top;
+}
+
+.top-copy .left {
+    font-size:80px;
+}
+
+.top-copy .right {
+    font-size: 28px;
+}
+
+.top-copy .bottom {
+    padding: 2.5% 0 2.5%;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.credits {
+    display:inline-block;
+    width:24%;
+    text-align:center;
+    vertical-align:middle;
+}
+
+.credits .role {
+    font-weight: bold;
+    font-size:28px;
+    padding-bottom:5%;
+}
+
+.credits .names {
+    font-style:italic;
+    font-size:28px;
+}
+
+.accent {
+    background-color: rgb(0,0,0);
+    width: 10%;
+    height: 5px;
+    display:block;
+    margin-bottom:2.5%;
+}
+
+.container .scroll-container {
+    width:100%;
+    height:85vh;
+    text-align:center;
+    position:relative;
+    cursor:pointer;
+    overflow:hidden;
+}
+
+.container .scroll-container .mask{
+    content:'';
+    background: rgba(0,0,0,0.75);
+    position:absolute;
+    left: 0;
+    top: 0;
+    bottom:0;
+    right:0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    text-align:center;
+}
+
+.scroll-container .mask .keyboard{
+    background:url("/_Global/images/projects/svgs/keyboard.svg") no-repeat center;
+    height:20%;
+    background-size:35%;
+    margin-top:25%;
+}
+
+.scroll-container.bottom .mask .keyboard{
+    height:25%;
+    margin-top:20%;
+}
+
+.scroll-container .mask .subtext{
+    color:rgb(247,247,247);
+    font-size:28px;
+    font-style:italic;
+}
+
+.scroll-container .scroll-images{
+    height:100%;
+    width:400%;
+}
+
+.scroll-images > div {
+    height:100%;
+    width:25%;
+    float:left;
+}
+
+.dodge .scroll-container .scroll-images{
+    width:900%;
+}
+
+.dodge .scroll-images > div {
+    width:11.1%;
+}
+
+.chrysler .scroll-container .scroll-images{
+    width:500%;
+}
+
+.chrysler .scroll-images > div {
+    width:20%;
+}
+
+.scroll-images .rush.first{background: url('/_Global/images/projects/rushmore/rush-1.jpg') no-repeat center; background-size:cover;}
+.scroll-images .rush.second{background: url('/_Global/images/projects/rushmore/rush-3.jpg') no-repeat center; background-size:cover; }
+.scroll-images .rush.third{background: url('/_Global/images/projects/rushmore/rush-4.jpg') no-repeat center; background-size:cover; }
+.scroll-images .rush.fourth{background: url('/_Global/images/projects/rushmore/rush-5.jpg') no-repeat center; background-size:cover; }
+
+.scroll-images .dodge.first{background: url('/_Global/images/projects/dodge/1.jpg') no-repeat center; background-size:cover;}
+.scroll-images .dodge.second{background: url('/_Global/images/projects/dodge/2.jpg') no-repeat center; background-size:cover;}
+.scroll-images .dodge.third{background: url('/_Global/images/projects/dodge/3.jpg') no-repeat center; background-size:cover;}
+.scroll-images .dodge.fourth{background: url('/_Global/images/projects/dodge/4.jpg') no-repeat center; background-size:cover;}
+.scroll-images .dodge.fifth{background: url('/_Global/images/projects/dodge/5.jpg') no-repeat center; background-size:cover;}
+.scroll-images .dodge.sixth{background: url('/_Global/images/projects/dodge/6.jpg') no-repeat center; background-size:cover;}
+.scroll-images .dodge.seventh{background: url('/_Global/images/projects/dodge/7.jpg') no-repeat center; background-size:cover;}
+.scroll-images .dodge.eighth{background: url('/_Global/images/projects/dodge/8.jpg') no-repeat center; background-size:cover;}
+.scroll-images .dodge.ninth{background: url('/_Global/images/projects/dodge/9.jpg') no-repeat center; background-size:cover;}
+
+.top .scroll-images .chrysler.first{background: url('/_Global/images/projects/chrysler/topscroll/1.jpg') no-repeat center; background-size:cover;}
+.top .scroll-images .chrysler.second{background: url('/_Global/images/projects/chrysler/topscroll/2.jpg') no-repeat center; background-size:cover;}
+.top .scroll-images .chrysler.third{background: url('/_Global/images/projects/chrysler/topscroll/3.jpg') no-repeat center; background-size:cover;}
+.top .scroll-images .chrysler.fourth{background: url('/_Global/images/projects/chrysler/topscroll/4.jpg') no-repeat center; background-size:cover;}
+.top .scroll-images .chrysler.fifth{background: url('/_Global/images/projects/chrysler/topscroll/5.jpg') no-repeat center; background-size:cover;}
+
+.bottom .scroll-images .chrysler.first{background: url('/_Global/images/projects/chrysler/bottomscroll/1.jpg') no-repeat center; background-size:cover;}
+.bottom .scroll-images .chrysler.second{background: url('/_Global/images/projects/chrysler/bottomscroll/2.jpg') no-repeat center; background-size:cover;}
+.bottom .scroll-images .chrysler.third{background: url('/_Global/images/projects/chrysler/bottomscroll/3.jpg') no-repeat center; background-size:cover;}
+.bottom .scroll-images .chrysler.fourth{background: url('/_Global/images/projects/chrysler/bottomscroll/4.jpg') no-repeat center; background-size:cover;}
+.bottom .scroll-images .chrysler.fifth{background: url('/_Global/images/projects/chrysler/bottomscroll/5.jpg') no-repeat center; background-size:cover;}
+
+.container .middle-copy {
+    width:100%;
+    height:65vh;
+    text-align:center;
+    padding-top:10%;
+}
+
+.container .middle-copy .accent {
+    width:auto;
+    margin-left:47.5%;
+    margin-right:47.5%;
+}
+
+.container .middle-copy .title {
+    font-size: 96px;
+}
+
+.container .middle-copy .description {
+    font-size: 28px;
+    padding-top:2.5%;
+    margin-left:15%;
+    margin-right:15%;
+}
+
+.container .top-laptop{
+    height:85vh;
+    background: url('/_Global/images/projects/rideplanner/laptop1.png') no-repeat left; background-size:contain;
+    text-align:right;
+    position:relative;
+}
+
+.container .top-laptop .content{
+    position:absolute;
+    right:5%;
+    top:5%;
+    max-width:40%;
+    text-align:left;
+}
+
+.container .top-laptop .title{
+    font-size:82px;
+}
+
+.container .top-laptop .description{
+    font-size:28px;
+    padding-top:5%;
+}
+
+.container .middle-laptop{
+    height:85vh;
+    background: url('/_Global/images/projects/rideplanner/laptop2.png') no-repeat right; background-size:contain;
+}
+
+.container .middle-laptop .description{
+    font-size:28px;
+    padding-top:15%;
+    max-width:40%;
+    text-align:right;
+}
+
+.container .vimeo {
+    width:100%;
+    height:85vh;
+    text-align:center;
+}
+
+.container .vimeo iframe {
+    width:100%;
+    height:100%;
+}
+
+.container .tout{
+    height:85vh;
+    width:100%;
+}
+
+.container.rideplanner .tout{
+    background: url('/_Global/images/projects/rideplanner/iphone.png') no-repeat center; background-size:contain;
+}
+
+.container.dodge .tout{
+    background: url('/_Global/images/projects/dodge/wide-graphic.png') no-repeat center; background-size:cover;
+}
+
+.container .contact-bar {
+    width:100%;
+    margin: 10% 0 10%;
+    padding-top:5%;
+    text-align:center;
+    font-size: 28px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    color: grey;
+}
+
+.container.rideplanner .contact-bar{
+    margin-top:0;
+}
+
+.container.dodge .contact-bar, .container.chrysler .contact-bar{
+    margin:5% 0 5%;
+}
+
+.container .contact-bar > div:first-child {
+    margin-bottom:1%;
+}
+
+.container .contact-bar a {
+    font-style:italic;
+    color: rgb(0,0,0);
+    text-decoration:none;
+}
+
+.container .contact-bar a:hover {
+    text-decoration:underline;
+}
+
+.container .next-project {
+    width: 100%;
+    height:95vh;
+    background-size:cover;
+    text-align:center;
+}
+
+.button-wrapper {
+    color: rgb(247,247,247);
+    vertical-align:middle;
+    text-align:center;
+    padding-top:17.5%;
+}
+
+.button-wrapper .button{
+    border: 1px solid rgb(247,247,247);
+    border-radius: 5px;
+    background-color:transparent;
+    font-size:20px;
+    font-weight:bold;
+    margin:0 42.5% 2.5%;
+    color:rgb(247,247,247);
+    padding:0.5% 2.5% 0.5%;
+    cursor:pointer;
+}
+
+.button-wrapper .button a {
+    color:white;
+    text-decoration:none;
+}
+
+.button-wrapper .button:hover{
+    background-color:rgb(247,247,247);
+}
+.button-wrapper .button:hover a{
+    color:rgb(0,0,0);
+    text-decoration:none;
+}
+
+.button-wrapper .subtext {
+    font-size:32px;
+}
+
+.container.rushmore .next-project { background: url('/_Global/images/projects/footer/rideplanner-footer-off.jpg') no-repeat fixed; background-size:cover;}
+.container.rideplanner .next-project { background: url('/_Global/images/projects/footer/dodge-footer-off.jpg') no-repeat fixed; background-size:cover;}
+.container.dodge .next-project { background: url('/_Global/images/projects/footer/chrysler-footer-off.jpg') no-repeat fixed; background-size:cover;}
+.container.chrysler .next-project { background: url('/_Global/images/projects/footer/rushmore-footer-off.jpg') no-repeat fixed; background-size:cover;}
+
+/* Preload these */
+.container.rushmore .next-project:hover, .container.rushmore .preload { background: url('/_Global/images/projects/footer/rideplanner-footer-on.jpg') no-repeat fixed; background-size:cover;}
+.container.rideplanner .next-project:hover, .container.rideplanner .preload { background: url('/_Global/images/projects/footer/dodge-footer-on.jpg') no-repeat fixed; background-size:cover;}
+.container.dodge .next-project:hover, .container.dodge .preload { background: url('/_Global/images/projects/footer/chrysler-footer-on.jpg') no-repeat fixed; background-size:cover;}
+.container.chrysler .next-project:hover, .container.chrysler .preload { background: url('/_Global/images/projects/footer/rushmore-footer-on.jpg') no-repeat fixed; background-size:cover;}

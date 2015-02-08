@@ -176,12 +176,13 @@ $(document).ready(function(){
     var $firstBG = $('#rushmore');
     var $secondBG = $('#dodge');
     var $thirdBG = $('#ride-planner');
+    var $fourthBG = $('#chrysler');
     var $contact = $('.contact');
 
     _windowHeight = $(window).height(); //get the height of the window
 
     //apply the class "inview" to a section that is in the viewport
-    $('#dodge, #ride-planner, #rushmore, #contact').bind('inview', function (event, visible) {
+    $('#dodge, #ride-planner, #rushmore, #chrysler, #contact').bind('inview', function (event, visible) {
       if (visible == true) {
         $(this).addClass("inview");
       } else {
@@ -212,27 +213,33 @@ $(document).ready(function(){
       var pos = $(window).scrollTop(); //position of the scrollbar
 
         if (!isMobileSize()) {
-          // Adjust the contact us section's opacity
-          $contact.css('opacity', newOpacity(0.5, _windowHeight, pos, 5));
+            // Adjust the contact us section's opacity
+            $contact.css('opacity', newOpacity(0.5, _windowHeight, pos, 5));
 
-          //if the first section is in view...
-          if ($firstBG.hasClass("inview")) {
-              //call the newPos function and change the background position
-              $firstBG.css({'backgroundPosition': newPos(50, _windowHeight, pos, 900, 0.005)});
-          }
+            //if the first section is in view...
+            if ($firstBG.hasClass("inview")) {
+                //call the newPos function and change the background position
+                $firstBG.css({'backgroundPosition': newPos(50, _windowHeight, pos, 0, 0.005)});
+            }
 
-          //if the second section is in view...
-          if ($secondBG.hasClass("inview")) {
-              //call the newPos function and change the background position
-              $secondBG.css({'backgroundPosition': newPos(50, _windowHeight, pos, 1900, 0.005)});
-          }
+            //if the second section is in view...
+            if ($secondBG.hasClass("inview")) {
+                //call the newPos function and change the background position
+                $secondBG.css({'backgroundPosition': newPos(50, _windowHeight, pos, 0, 0.005)});
+            }
 
-          //if the third section is in view...
-          if ($thirdBG.hasClass("inview")) {
-              //call the newPos function and change the background position
-              $thirdBG.css({'backgroundPosition': newPos(50, _windowHeight, pos, 2850, 0.005)});
-          }
-      }
+            //if the third section is in view...
+            if ($thirdBG.hasClass("inview")) {
+                //call the newPos function and change the background position
+                $thirdBG.css({'backgroundPosition': newPos(50, _windowHeight, pos, 0, 0.005)});
+            }
+
+            // if the fourth section is in view...
+            if($fourthBG.hasClass("inview")){
+                //call the newPos function and change the background position
+                $fourthBG.css({'backgroundPosition': newPos(50, _windowHeight, pos, 0, 0.005)});
+            }
+        }
     };
 
     //if the user resizes the window...
