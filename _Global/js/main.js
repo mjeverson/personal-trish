@@ -270,8 +270,8 @@ $(document).ready(function(){
 
     // click events for the parallax sections
     $('.parallax > div').bind('click', function(event, element){
-      var link = $(event.target).attr('data-href');
-      window.open(link, '_blank', '');
+      //var link = $(event.target).attr('data-href');
+      //window.open(link, '_blank', '');
     });
   };
 
